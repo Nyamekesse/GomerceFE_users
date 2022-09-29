@@ -1,0 +1,35 @@
+#footer{
+ 
+padding: 16px 0px;
+gap: 17px;
+position: absolute;
+height: 520px;
+left: 20px;
+right: 20px;
+bottom: 20px;
+
+background: #B69D74;
+
+}
+
+.footer-top{
+    height: 423px;
+    display: flex;
+    gap :17px;
+    padding: 16px;
+     
+}
+.footer-bottom{
+    height: 97px;
+    border-top: 1px solid #fff;
+    padding: 16px;
+}
+.footer-col{
+    width:25%;
+    
+    padding:50px;
+}
+.footer-col ul{
+    list-style: none;
+}
+ 
