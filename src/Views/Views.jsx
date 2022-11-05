@@ -23,7 +23,7 @@ const Views = () => {
       <Route exact path="/login" element={<LogIn />} />
       <Route exact path="/order-detail" element={<OrdersDetail />} />
       <Route exact path="/order-history" element={<OrdersHistory />} />
-      <Route exact path="/search" element={<SearchPage />} />
+      <Route exact path="/products/search" element={<SearchPage />} />
       <Route exact path="/signup" element={<SignUp />} />
       <Route path="*" element={<PageNotFound />} />
     </Routes>

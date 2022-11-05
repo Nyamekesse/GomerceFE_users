@@ -1,9 +1,14 @@
-import { FETCH_ALL, FETCH_CATEGORIES } from "../constants/actionTypes";
+import {
+  FETCH_ALL,
+  FETCH_CATEGORIES,
+  SEARCH_RESULTS,
+} from "../constants/actionTypes";
 const productReducer = (state = [], action) => {
   switch (action.type) {
     case FETCH_ALL:
       return action.payload;
-
+    case SEARCH_RESULTS:
+      return action.payload;
     default:
       return state;
   }
@@ -17,4 +22,5 @@ const productCategories = (state = [], action) => {
       return state;
   }
 };
+
 export { productReducer, productCategories };

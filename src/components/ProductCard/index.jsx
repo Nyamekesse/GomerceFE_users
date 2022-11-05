@@ -1,12 +1,13 @@
-import React from 'react'
-import './ProductCard.css'
+import React from "react";
+import "./ProductCard.css";
 // MUI
-import Card from '@mui/material/Card'
-import CardContent from '@mui/material/CardContent'
-import CardMedia from '@mui/material/CardMedia'
-import { Button, CardActionArea, CardActions } from '@mui/material/'
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
 
-function ProductCard({ image, name, price }) {
+import { Button, CardActionArea, CardActions } from "@mui/material/";
+
+function ProductCard({ image, name, price, description }) {
   return (
     <Card sx={{ maxWidth: 200 }} className="slider_card">
       <CardActionArea>
@@ -14,13 +15,14 @@ function ProductCard({ image, name, price }) {
       </CardActionArea>
       <CardContent sx={{}} className="card_content">
         <h5>{name}</h5>
+        <p>this is the description</p>
         <p className="price">${price}</p>
       </CardContent>
       <CardActions className="card_actions">
         <Button size="large">Add To Cart</Button>
       </CardActions>
     </Card>
-  )
+  );
 }
 
-export default ProductCard
+export default ProductCard;
