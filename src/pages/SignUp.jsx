@@ -21,10 +21,11 @@ const Register = () => {
     buttomText = "Let's get you started"
     isPassword = {true}
     buttonText = "CREATE ACCOUNT"
-    linkText = "Login"
+    linkText = "Log in"
     linkPath = "/login"
     loading = {false}
     isCreateAccount = {true}
+    linkMessage = "Already have an account? "
     />
   // <form onSubmit={handleSubmit}>
   //   <h2>Create User</h2>
