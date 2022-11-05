@@ -15,15 +15,17 @@ import Button from "@mui/material/Button";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import Person3OutlinedIcon from "@mui/icons-material/Person3Outlined";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
-
+import { useNavigate } from "react-router-dom";
 import {
   customAppBarStyle,
   toolBarStyles,
   StyledButtonGroup,
   buttonStyles,
 } from "./Navbar";
+import { Navigate } from "react-router-dom";
 
 export default function PrimarySearchAppBar() {
+  const navigate = useNavigate();
   const menuId = "primary-search-account-menu";
   const renderMenu = (
     <Menu
@@ -100,6 +102,7 @@ export default function PrimarySearchAppBar() {
             variant="h6"
             noWrap
             component="div"
+            onClick={() => navigate("/home")}
             sx={{
               display: { xs: "none", sm: "block" },
               height: "23px",
