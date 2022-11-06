@@ -4,11 +4,10 @@ import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
-
+import SearchInput from "../SearchInput";
 import Badge from "@mui/material/Badge";
 import MenuItem from "@mui/material/MenuItem";
 import Menu from "@mui/material/Menu";
-import SearchIcon from "@mui/icons-material/Search";
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import MailIcon from "@mui/icons-material/Mail";
 import NotificationsIcon from "@mui/icons-material/Notifications";
@@ -16,19 +15,17 @@ import Button from "@mui/material/Button";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import Person3OutlinedIcon from "@mui/icons-material/Person3Outlined";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
-
+import { useNavigate } from "react-router-dom";
 import {
-  Search,
-  SearchIconWrapper,
-  StyledInputBase,
   customAppBarStyle,
   toolBarStyles,
   StyledButtonGroup,
   buttonStyles,
-  customSearchIcon,
 } from "./Navbar";
+import { Navigate } from "react-router-dom";
 
 export default function PrimarySearchAppBar() {
+  const navigate = useNavigate();
   const menuId = "primary-search-account-menu";
   const renderMenu = (
     <Menu
@@ -105,6 +102,7 @@ export default function PrimarySearchAppBar() {
             variant="h6"
             noWrap
             component="div"
+            onClick={() => navigate("/home")}
             sx={{
               display: { xs: "none", sm: "block" },
               height: "23px",
@@ -116,15 +114,7 @@ export default function PrimarySearchAppBar() {
           >
             GOMERCE
           </Typography>
-          <Search>
-            <SearchIconWrapper>
-              <SearchIcon sx={customSearchIcon} />
-            </SearchIconWrapper>
-            <StyledInputBase
-              placeholder="Search"
-              inputProps={{ "aria-label": "search" }}
-            />
-          </Search>
+          <SearchInput />
           <StyledButtonGroup>
             <Button
               sx={buttonStyles}
