@@ -17,7 +17,7 @@ const Views = () => {
       <Route exact path="/" element={<LandingPage />} />
       <Route exact path="/home" element={<LandingPage />} />
       <Route exact path="/cart" element={<Cart />} />
-      <Route exact path="/checkout-address" element={< CheckoutAddress />} />
+      <Route exact path="/checkout-address" element={<CheckoutAddress />} />
       <Route exact path="/checkout-payment" element={<CheckoutPayment />} />
       <Route exact path="/item-page" element={<ItemPage />} />
       <Route exact path="/login" element={<LogIn />} />
