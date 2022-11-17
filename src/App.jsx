@@ -4,13 +4,12 @@ import AppContainer from "./components/AppContainer/AppContainer";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Wrapper from "./components/Wrapper/Wrapper";
-import { getProducts, getProductCategories } from "./actions/products";
+import { getProductCategories } from "./actions/products";
 import { useDispatch } from "react-redux";
 import React, { useEffect } from "react";
 const App = () => {
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(getProducts());
     dispatch(getProductCategories());
   }, [dispatch]);
   return (

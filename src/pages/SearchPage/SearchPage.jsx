@@ -3,6 +3,8 @@ import { Grid, Box } from "@mui/material";
 import Filters from "../../components/filters";
 import { SideFilters } from "./SearchPageStyle";
 import BreadCrumbs from "../../components/breadCrumbs";
+import SearchResultsDisplay from "../../components/SearchResultsDisplay";
+
 const SearchPage = () => {
   return (
     <>
@@ -16,7 +18,7 @@ const SearchPage = () => {
           </Box>
         </Grid>
         <Grid item xs={9}>
-          <Box sx={{ backgroundColor: "pink" }}>I am also here too</Box>
+          <SearchResultsDisplay />
         </Grid>
       </Grid>
     </>

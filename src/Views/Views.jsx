@@ -6,7 +6,7 @@ import CheckoutPayment from "../pages/CheckoutPayment";
 import ItemPage from "../pages/ItemPage";
 import LogIn from "../pages/LogIn";
 import OrdersDetail from "../pages/OrdersDetail";
-import OrdersHistory from "../pages/OrdersHistory";
+import OrdersHistory from "../pages/orderHistory/OrdersHistory";
 import SearchPage from "../pages/SearchPage/SearchPage";
 import SignUp from "../pages/SignUp";
 import PageNotFound from "../pages/PageNotFound";
@@ -23,7 +23,7 @@ const Views = () => {
       <Route exact path="/login" element={<LogIn />} />
       <Route exact path="/order-detail" element={<OrdersDetail />} />
       <Route exact path="/order-history" element={<OrdersHistory />} />
-      <Route exact path="/search" element={<SearchPage />} />
+      <Route exact path="/products/search" element={<SearchPage />} />
       <Route exact path="/signup" element={<SignUp />} />
       <Route path="*" element={<PageNotFound />} />
     </Routes>
