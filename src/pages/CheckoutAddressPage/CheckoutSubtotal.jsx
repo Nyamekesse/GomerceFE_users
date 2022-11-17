@@ -21,8 +21,10 @@ import phone from './phone1.jfif'
 export const CheckoutSubtotal = (props) =>
 {
     return (
-        <Box>
-            <Grid container sx={{mt:3}}>
+        <Box mb={1}>
+            <Grid container 
+            justifyContent="center"
+            alignItems="center" sx={{mt:3, width:'100%'}}>
 
 
                 <Grid item xs={3}>
@@ -30,7 +32,10 @@ export const CheckoutSubtotal = (props) =>
                         {props.text1}
                     </Typography>
                 </Grid>
-                <Grid item xs={9} >
+                <Grid item xs={6}>
+
+                </Grid>
+                <Grid item xs={3} >
                     <Typography variant="p" component="p">
                         {props.price }
                     </Typography>

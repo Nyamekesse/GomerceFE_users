@@ -17,27 +17,28 @@ import { Button } from '@mui/material';
 import InputLabel from '@mui/material/InputLabel';
 import { Typography } from '@mui/material';
 import phone from './phone1.jfif'
+import { orderPaneStyle } from './StylesCheckoutAddress';
 
 export const CheckoutOrders = (props) =>
 {
     return (
-        <Box sx={{mt:2}}>
+        <Box sx={{...orderPaneStyle, mt:2}}>
             <Grid container >
-                <Grid item xs={3}>
-                    <img src={props.image} alt={'phone'} width='100px'
-                        height='100px'></img>
+                <Grid item sm={3}>
+                    <img src={props.image} alt={'phone'} width='85px'
+                        height='85px'></img>
 
                 </Grid>
-                <Grid item xs={9}>
-                    <Typography variant="p" component="p">
+                <Grid item sm={9} pl = {2}>
+                    <Typography variant="p" component="p" sx={{mb:1}}>
                         SMART 6, 6.6", (2GB RAM + 32GB ROM), 5000MAH,
                         3G - BLACK
                     </Typography>
-                    <Box>
-                        $$$$
+                    <Box sx={{mb:1}}>
+                        <Typography variant="p" component="p">$$$$</Typography>
                     </Box>
-                    <Box>
-                        Qty: 1
+                    <Box sx={{mb:1}}>
+                        <Typography variant="p" component="p">Qty: 1</Typography>
                     </Box>
                 </Grid>
             </Grid>

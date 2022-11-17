@@ -9,6 +9,7 @@ import { Button } from '@mui/material';
 import InputLabel from '@mui/material/InputLabel';
 import { Typography } from '@mui/material';
 import phone from './phone1.jfif'
+import { modifyCartStyle, widthfull } from './StylesCheckoutAddress';
 
 export const NeedHelp = () =>
 {
@@ -21,7 +22,8 @@ export const NeedHelp = () =>
             <Typography variant="p" component="p">
                 Contact an expert to help you
             </Typography>
-            <Button variant='contained' color='info' sx={{mt:1}}>REACH OUT</Button>
+            <Button variant='contained' color='grey' width='100%' 
+            sx={{...modifyCartStyle, widthfull,  mt:1, width:'100%'}}>REACH OUT</Button>
 
         </Box>
     )
