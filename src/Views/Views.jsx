@@ -6,7 +6,7 @@ import CheckoutPayment from "../pages/CheckoutPayment";
 import ItemPage from "../pages/ItemPage";
 import LogIn from "../pages/LogIn";
 import OrdersDetail from "../pages/OrdersDetail";
-import OrdersHistory from "../pages/orderHistory/OrdersHistory";
+import OrdersHistory from "../pages/OrderHistory/OrdersHistory";
 import SearchPage from "../pages/SearchPage/SearchPage";
 import SignUp from "../pages/SignUp";
 import PageNotFound from "../pages/PageNotFound";

@@ -1,5 +1,5 @@
 import React from "react";
-
+import AppPagination from "../../components/Pagination";
 import {
   Typography,
   Breadcrumbs,
@@ -12,11 +12,11 @@ import {
   TableHead,
   TableRow,
   Paper,
-  TablePagination
 } from "@mui/material";
+import { useLocation } from "react-router-dom";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 
-import { BreadcrumbsContainer } from "./orderHistoryStyle";
+import { BreadcrumbsContainer } from "./OrderHistoryStyle";
 import {
   breadCrumbsButtonStyles,
   breadCrumbsText,
@@ -36,8 +36,11 @@ const rows = [
 ];
 
 const OrdersHistory = () => {
-
-
+  const useQuery = () => {
+    return new URLSearchParams(useLocation().search);
+  };
+  const query = useQuery();
+  const page = query.get("page") || 1;
   return (
     <>
       <BreadcrumbsContainer mt={3}>
@@ -46,7 +49,8 @@ const OrdersHistory = () => {
         </Typography>
         <Breadcrumbs
           arial-label="breadcrumb"
-          separator={<NavigateNextIcon fontSize="small" />}>
+          separator={<NavigateNextIcon fontSize="small" />}
+        >
           <Button sx={breadCrumbsButtonStyles}>
             <Link underline="hover" href="#" sx={breadCrumbsText}>
               Home
@@ -58,7 +62,8 @@ const OrdersHistory = () => {
 
       <TableContainer
         component={Paper}
-        style={{ marginTop: "25px", marginBottom: "25px" }}>
+        style={{ marginTop: "25px", marginBottom: "25px" }}
+      >
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           <TableHead>
             <TableRow>
@@ -75,7 +80,8 @@ const OrdersHistory = () => {
             {rows.map((row) => (
               <TableRow
                 key={row.ID}
-                sx={{ "&:last-child td, &:last-child th": { border: 0 } }}>
+                sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+              >
                 <TableCell component="th" scope="row">
                   {row.ID}
                 </TableCell>
@@ -89,6 +95,7 @@ const OrdersHistory = () => {
             ))}
           </TableBody>
         </Table>
+        <AppPagination count={10} page={page} />
       </TableContainer>
     </>
   );

@@ -4,9 +4,7 @@ const PageContainer = {
   justifyContent: "center",
   alignItems: "center",
   padding: "0px",
-
-  /* Inside auto layout */
-
+  margin: "3% 0",
   flex: "none",
   order: "3",
   alignSelf: "stretch",
