@@ -17,7 +17,7 @@ import { Button } from '@mui/material';
 import InputLabel from '@mui/material/InputLabel';
 import { Typography } from '@mui/material';
 import { CheckoutSummaryPane } from './CheckoutSummaryPane';
-import { flexBasisfull, outlineStyle, saveAndContinueBg, textStyle, widthfull } from './StylesCheckoutAddress';
+import { boldFont, flexBasisfull, outlineStyle, saveAndContinueBg, textStyle, widthfull } from './StylesCheckoutAddress';
 
 
 
@@ -32,19 +32,20 @@ const CheckoutAddress = () =>
 
 
       <Grid item justifyContent="start"
-        alignItems="center" md={8} sx={{width:"100%"}}>
+        alignItems="start" md={8} sx={{width:"100%"}}>
 
         <Grid item justifyContent="center"
           alignItems="center" md={8}>
-          <Box sx={{ mb: 3, px:5}}>Checkout</Box>
+          <Box sx={{ mb: 3, px:5}}>
+            <Typography variant='h6' >Checkout</Typography></Box>
         </Grid>
 
         <Grid item  sx={{  px:5, mb:5}}>
           <Grid container justifyContent="start"
             alignItems="center" spacing={2}>
-            <Grid item md={4}>1. Address Details</Grid>
-            <Grid item md={4}>2. Delivery Method</Grid>
-            <Grid item md={4}>3. Payment Method</Grid>
+            <Grid item md={4} sx={boldFont}>1. Address Details</Grid>
+            <Grid item md={4}  sx={boldFont}>2. Delivery Method</Grid>
+            <Grid item md={4}  sx={boldFont}>3. Payment Method</Grid>
 
           </Grid>
         </Grid>
@@ -64,48 +65,53 @@ const CheckoutAddress = () =>
                 label="First Name"
                 type="text"
                 onChange={handleInputChange}
+                sx={{width: '75%'}}
+                
               />
             </Grid>
 
             <Grid item md={6}>
               <Box sx={{ mt: 0, mb: 1 }}>Last Name</Box>
               <TextField
-                id="first-name-input"
-                name="first-name"
-                label="First Name"
+                id="last-name-input"
+                name="last-name"
+                label="Last Name"
                 type="text"
+                sx={{width: '75%'}}
+
                 onChange={handleInputChange}
               />
             </Grid>
           </Grid>
 
           <Box sx={{ mt: 3, mb: 1 }}>Mobile Number</Box>
-          <Grid container>
-            <Grid item md={6}>
-              {/* <InputLabel id="demo-simple-select-label">Country Code</InputLabel> */}
+          <Grid container columnSpacing={5}>
+
+            <Grid item md={3} pr={5}>
+
               <TextField
                 id="country-code"
                 name="country-code"
-                label='country-code'
+                label='open this select'
                 select
-                width='50%'
-                value=''
                 type='number'
                 // helperText="Please select your region/state'
-                // sx={widthfull}
+                sx={widthfull}
                 onChange={handleInputChange}
               />
             </Grid>
+            
+            {/* <Grid item md={1}></Grid> */}
 
-
-            <Grid Box md={6}>
+            <Grid Box md={9}>
               <TextField
                 id="first-name-input"
                 name="first-name"
                 label="placeholder"
                 type="number"
-                value=''
                 onChange={handleInputChange}
+                sx={{width: '50%'}}
+
               />  </Grid>
           </Grid>
 
@@ -119,7 +125,6 @@ const CheckoutAddress = () =>
                 // label="placeholder"
                 multiline
                 rows={2}
-                value=''
                 type='text'
                 onChange={handleInputChange}
                 sx={widthfull}
@@ -138,7 +143,6 @@ const CheckoutAddress = () =>
                 // label="placeholder"
                 multiline
                 rows={2}
-                value=''
                 type='text'
                 sx={widthfull}
                 onChange={handleInputChange}
@@ -154,7 +158,6 @@ const CheckoutAddress = () =>
                 name="region/state"
                 label='open this select'
                 select
-                value=''
                 type='text'
                 sx={widthfull}
 
@@ -172,7 +175,6 @@ const CheckoutAddress = () =>
                 label='open this select'
                 select
                 width='100%'
-                value=''
                 type='text'
                 // helperText="Please select your region/state"
 
@@ -191,8 +193,8 @@ const CheckoutAddress = () =>
 
 
 
-      <Grid item md={4} sx={{ px: 5 }}>
-        <Box>Order Summary</Box>
+      <Grid item md={4} sx={{ px: 4 }}>
+        <Box> <Typography variant='h6'> Order Summary</Typography></Box>
         <CheckoutSummaryPane />
       </Grid>
 

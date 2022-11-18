@@ -36,3 +36,7 @@ export const textStyle = {
 export const orderPaneStyle = {
     borderBottom : "1px solid #CED4DA"
 }
+
+export const boldFont = {
+    fontWeight: 'bold'
+}

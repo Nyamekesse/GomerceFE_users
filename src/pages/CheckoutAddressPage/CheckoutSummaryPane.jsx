@@ -28,8 +28,8 @@ export const CheckoutSummaryPane = () =>
         <Box sx={{ ...textStyle , mt: 5, pt:5}}>
             <Box sx={{...outlineStyle, p:3}}>
                 <Box>
-                    <Typography variant="h6" component="p">
-                        Your Order ( 2 Items)
+                    <Typography sx={textStyle}>
+                      Your Order ( 2 Items)
                     </Typography>
     
                 </Box>

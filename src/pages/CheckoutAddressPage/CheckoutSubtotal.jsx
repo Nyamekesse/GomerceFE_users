@@ -27,7 +27,7 @@ export const CheckoutSubtotal = (props) =>
             alignItems="center" sx={{mt:3, width:'100%'}}>
 
 
-            x``    <Grid item xs={3}>
+                <Grid item xs={3}>
                     <Typography variant="p" component="p">
                         {props.text1}
                     </Typography>
