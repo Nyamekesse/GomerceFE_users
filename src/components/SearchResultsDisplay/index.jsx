@@ -1,10 +1,11 @@
 import React from "react";
-import ResultContainer from "./SearchResultsDisplay";
+import { ResultContainer, Title, Label } from "./SearchResultsDisplay";
+import SortItems from "../SortContainer";
 import Grid from "@mui/material/Grid";
 import ProductCard from "../ProductCard";
 import { useSelector } from "react-redux";
 import AppPagination from "../Pagination";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 const useQuery = () => {
   return new URLSearchParams(useLocation().search);
@@ -17,14 +18,18 @@ const SearchResultsDisplay = () => {
   const search = query.get("searchQuery");
   return (
     <ResultContainer>
-      <Grid container spacing={2}>
+      <Title>
+        <Label>Displaying 8 out 100 results</Label>
+        <SortItems />
+      </Title>
+      <Grid container spacing={2} mt={2} mb={5}>
         {results.map((result) => (
           <Grid item key={result.id}>
             <ProductCard {...result} />
           </Grid>
         ))}
       </Grid>
-      <AppPagination count={10} page={page} />
+      <AppPagination count={10} page={page} mt={3} />
     </ResultContainer>
   );
 };
