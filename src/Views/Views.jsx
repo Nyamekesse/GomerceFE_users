@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import LandingPage from "../pages/LandingPage";
+import LandingPage from "../pages/LandingPage/LandingPage";
 import Cart from "../pages/Cart";
 import CheckoutPayment from "../pages/CheckoutPayment";
 import ItemPage from "../pages/ItemPage";
