@@ -1,27 +1,36 @@
 import React from "react";
 import Stack from "@mui/material/Stack";
 import Breadcrumbs from "@mui/material/Breadcrumbs";
-import Typography from "@mui/material/Typography";
 import CustomBreadcrumbDivider from "./CustomBreadcrumbDivider";
 import Button from "@mui/material/Button";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import { checkoutButtonStyle } from "./CustomBreadcrumbs";
 
-const CustomCheckoutBreadcrumb = () => {
+const CustomCheckoutBreadcrumb = ({ address, payment, delivery }) => {
   const breadcrumbs = [
     <Button
       key="1"
       size="small"
-      startIcon={<CheckCircleIcon />}
+      startIcon={address ? <CheckCircleIcon /> : "1."}
       sx={checkoutButtonStyle}
     >
       address details
     </Button>,
-    <Button key="1" size="small" startIcon={"2."} sx={checkoutButtonStyle}>
-      payment method
-    </Button>,
-    <Button key="1" size="small" startIcon={"3."} sx={checkoutButtonStyle}>
+    <Button
+      key="2"
+      size="small"
+      startIcon={delivery ? <CheckCircleIcon /> : "2."}
+      sx={checkoutButtonStyle}
+    >
       delivery method
+    </Button>,
+    <Button
+      key="3"
+      size="small"
+      startIcon={payment ? <CheckCircleIcon /> : "3."}
+      sx={checkoutButtonStyle}
+    >
+      payment method
     </Button>,
   ];
   return (

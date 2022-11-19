@@ -32,7 +32,7 @@ const Checkout = () => {
       <Typography variant="h3" sx={checkoutHeading}>
         Checkout
       </Typography>
-      <CustomCheckoutBreadcrumb />
+      <CustomCheckoutBreadcrumb address={true} />
       <Wrapper>
         <Typography variant="subtitle2">
           How do you want your order delivered?
