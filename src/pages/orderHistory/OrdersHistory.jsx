@@ -16,7 +16,7 @@ import {
 import { useLocation } from "react-router-dom";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 
-import { BreadcrumbsContainer } from "./OrderHistoryStyle";
+import { BreadcrumbsContainer } from "./orderHistoryStyle";
 import {
   breadCrumbsButtonStyles,
   breadCrumbsText,
