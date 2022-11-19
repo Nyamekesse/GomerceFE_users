@@ -1,4 +1,4 @@
-import { Button, Typography } from "@mui/material";
+import { Button, TextField, Typography } from "@mui/material";
 import React, { useState } from "react";
 import Radio from "@mui/material/Radio";
 import RadioGroup from "@mui/material/RadioGroup";
@@ -11,7 +11,7 @@ import Select from "@mui/material/Select";
 import CustomCheckoutBreadcrumb from "../CustomCheckoutBreadcrumb/index";
 import {
   Wrapper,
-  sortContainerStyle,
+  selectContainerStyle,
   selectLabelStyle,
   ShippingSection,
   shippingItemsTitle,
@@ -19,9 +19,11 @@ import {
   ListItem,
   btnStyle,
   checkoutHeading,
+  formControlStyle,
+  CustomTextField,
 } from "./Checkout";
 const Checkout = () => {
-  const [pickUpStation, setPickUpStation] = useState();
+  const [pickUpStation, setPickUpStation] = useState("");
 
   const handleChange = (event) => {
     setPickUpStation(event.target.value);
@@ -52,23 +54,36 @@ const Checkout = () => {
           Ready for pick up between Tuesday 20 Sep and Thursday 22 Sep with
           cheaper shipping fees?
         </Typography>
-        <Box mt={1} mb={1}>
-          <FormControl fullWidth size="small">
-            <InputLabel sx={selectLabelStyle} id="select-pickup-station">
-              Select pickup station
-            </InputLabel>
+        <Box mt={1} mb={1} sx={{ width: "240px", height: "34px" }}>
+          {/* <FormControl size="small" sx={formControlStyle}>
             <Select
-              sx={sortContainerStyle}
-              labelId="select-pickup-station"
+              sx={selectContainerStyle}
+              variant="standard"
               value={pickUpStation}
-              label="Select pickup station"
               onChange={handleChange}
+              InputLabelProps={selectContainerStyle}
             >
-              <MenuItem value={"london"}>London</MenuItem>
+              <MenuItem value={"london"} disabled>
+                London
+              </MenuItem>
               <MenuItem value={"abuja"}>Abuja</MenuItem>
               <MenuItem value={"ghana"}>Ghana</MenuItem>
             </Select>
-          </FormControl>
+          </FormControl> */}
+          <CustomTextField
+            select
+            onChange={handleChange}
+            value={pickUpStation}
+            fullWidth
+            size="medium"
+            variant="standard"
+          >
+            <MenuItem value={"london"} disabled>
+              London
+            </MenuItem>
+            <MenuItem value={"abuja"}>Abuja</MenuItem>
+            <MenuItem value={"ghana"}>Ghana</MenuItem>dth
+          </CustomTextField>
         </Box>
         <CustomDivider />
         <FormControl>

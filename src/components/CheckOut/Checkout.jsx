@@ -1,4 +1,4 @@
-import { Box, Divider } from "@mui/material";
+import { Box, Divider, TextField } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
 const Wrapper = styled(Box)(({ theme }) => ({
@@ -14,21 +14,46 @@ const Wrapper = styled(Box)(({ theme }) => ({
   margin: "2% 0",
 }));
 
-const sortContainerStyle = {
-  display: "flex",
-  flexDirection: "row",
-  alignItems: "center",
-  justifyContent: "center",
+const selectContainerStyle = {
+  // display: "flex",
+  // flexDirection: "row",
+  // alignItems: "center",
+  // justifyContent: "center",
+  // padding: "10px 8px",
+  // gap: "8px",
+  // width: "210px",
+  // height: "36px",
+};
+const formControlStyle = {
+  width: "240px",
   padding: "10px 8px",
-  gap: "8px",
-  width: "210px",
-  height: "36px",
-  background: "#F4F5EF",
+  borderRadius: "4px",
+  backgroundColor: "#F4F5EF",
+  "& .MuiInput-root": {
+    "&:before, :after, :hover:not(.Mui-disabled):before": {
+      borderBottom: 0,
+      backgroundColor: "transparent !important",
+    },
+    "&:focus": {
+      backgroundColor: "transparent !important",
+    },
+  },
+};
+const CustomTextField = styled(TextField)(({ theme }) => ({
   border: "none",
   outline: "none",
-  borderRadius: "4px",
-};
-
+  backgroundColor: "#f4f5ef",
+  padding: "10px 8px",
+  "& .MuiInput-root": {
+    "&:before, :after, :hover:not(.Mui-disabled):before": {
+      borderBottom: 0,
+      backgroundColor: "transparent !important",
+    },
+    "&:focus-visible": {
+      backgroundColor: "blue",
+    },
+  },
+}));
 const selectLabelStyle = {
   width: "187px",
   height: "16px",
@@ -110,7 +135,7 @@ const checkoutHeading = {
 };
 export {
   Wrapper,
-  sortContainerStyle,
+  selectContainerStyle,
   selectLabelStyle,
   ShippingSection,
   shippingItemsTitle,
@@ -118,4 +143,6 @@ export {
   ListItem,
   btnStyle,
   checkoutHeading,
+  formControlStyle,
+  CustomTextField,
 };
