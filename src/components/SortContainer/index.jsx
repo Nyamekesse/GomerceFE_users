@@ -6,10 +6,10 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import { sortContainerStyle, sortLabelStyle } from "./SortContainer";
 const SortItems = () => {
-  const [age, setAge] = useState("");
+  const [sort, setSort] = useState("");
 
   const handleChange = (event) => {
-    setAge(event.target.value);
+    setSort(event.target.value);
   };
 
   return (
@@ -22,7 +22,7 @@ const SortItems = () => {
           sx={sortContainerStyle}
           id="demo-simple-select"
           labelId="sort-items-label"
-          value={age}
+          value={sort}
           label="Sort By"
           onChange={handleChange}
         >
