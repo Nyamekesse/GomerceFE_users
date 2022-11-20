@@ -5,21 +5,16 @@ import RadioGroup from "@mui/material/RadioGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import FormControl from "@mui/material/FormControl";
 import Box from "@mui/material/Box";
-import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
-import Select from "@mui/material/Select";
 import CustomCheckoutBreadcrumb from "../CustomCheckoutBreadcrumb/index";
 import {
   Wrapper,
-  selectContainerStyle,
-  selectLabelStyle,
   ShippingSection,
   shippingItemsTitle,
   CustomDivider,
   ListItem,
   btnStyle,
   checkoutHeading,
-  formControlStyle,
   CustomTextField,
 } from "./Checkout";
 const Checkout = () => {
@@ -54,22 +49,7 @@ const Checkout = () => {
           Ready for pick up between Tuesday 20 Sep and Thursday 22 Sep with
           cheaper shipping fees?
         </Typography>
-        <Box mt={1} mb={1} sx={{ width: "240px", height: "34px" }}>
-          {/* <FormControl size="small" sx={formControlStyle}>
-            <Select
-              sx={selectContainerStyle}
-              variant="standard"
-              value={pickUpStation}
-              onChange={handleChange}
-              InputLabelProps={selectContainerStyle}
-            >
-              <MenuItem value={"london"} disabled>
-                London
-              </MenuItem>
-              <MenuItem value={"abuja"}>Abuja</MenuItem>
-              <MenuItem value={"ghana"}>Ghana</MenuItem>
-            </Select>
-          </FormControl> */}
+        <Box mt={1} mb={1} sx={{ width: "260px", height: "34px" }}>
           <CustomTextField
             select
             onChange={handleChange}
@@ -77,10 +57,9 @@ const Checkout = () => {
             fullWidth
             size="medium"
             variant="standard"
+            placeholder="select pickup station"
           >
-            <MenuItem value={"london"} disabled>
-              London
-            </MenuItem>
+            <MenuItem value={"london"}>London</MenuItem>
             <MenuItem value={"abuja"}>Abuja</MenuItem>
             <MenuItem value={"ghana"}>Ghana</MenuItem>dth
           </CustomTextField>

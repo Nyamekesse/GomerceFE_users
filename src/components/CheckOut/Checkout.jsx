@@ -14,16 +14,6 @@ const Wrapper = styled(Box)(({ theme }) => ({
   margin: "2% 0",
 }));
 
-const selectContainerStyle = {
-  // display: "flex",
-  // flexDirection: "row",
-  // alignItems: "center",
-  // justifyContent: "center",
-  // padding: "10px 8px",
-  // gap: "8px",
-  // width: "210px",
-  // height: "36px",
-};
 const formControlStyle = {
   width: "240px",
   padding: "10px 8px",
@@ -42,8 +32,9 @@ const formControlStyle = {
 const CustomTextField = styled(TextField)(({ theme }) => ({
   border: "none",
   outline: "none",
+  borderRadius: "4px",
   backgroundColor: "#f4f5ef",
-  padding: "10px 8px",
+  padding: "9px 8px",
   "& .MuiInput-root": {
     "&:before, :after, :hover:not(.Mui-disabled):before": {
       borderBottom: 0,
@@ -120,6 +111,10 @@ const btnStyle = {
   background: "#1F2839",
   border: "1px solid #1F2839",
   margin: "2% 0",
+  "&:hover": {
+    color: "#fff",
+    backgroundColor: "#1f2839",
+  },
 };
 
 const checkoutHeading = {
@@ -133,9 +128,32 @@ const checkoutHeading = {
   color: "#000000",
   flex: "none",
 };
+
+const Summary = styled(Box)({
+  display: "flex",
+  flexDirection: "column",
+  padding: "10px",
+  width: "100%",
+});
+const Row = styled(Box)({
+  display: "flex",
+  flexDirection: "row",
+  alignItems: "center",
+  justifyContent: "space-between",
+  marginBottom: "2%",
+});
+const textStyle = {
+  height: "16px",
+  fontWeight: "400",
+  fontSize: "14px",
+  lineHeight: "16px",
+  alignItems: "center",
+  color: "#000000",
+  textTransform: "capitalize",
+};
+
 export {
   Wrapper,
-  selectContainerStyle,
   selectLabelStyle,
   ShippingSection,
   shippingItemsTitle,
@@ -145,4 +163,7 @@ export {
   checkoutHeading,
   formControlStyle,
   CustomTextField,
+  Summary,
+  Row,
+  textStyle,
 };

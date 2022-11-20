@@ -1,28 +1,24 @@
-import {
-  Box,
-  FormControl,
-  InputLabel,
-  MenuItem,
-  Select,
-  Typography,
-} from "@mui/material";
+import { Box, Button, MenuItem, Typography } from "@mui/material";
 import React from "react";
-import OutlinedInput from "@mui/material/OutlinedInput";
 import { useState } from "react";
 import {
+  btnStyle,
   checkoutHeading,
   CustomDivider,
-  selectLabelStyle,
-  selectContainerStyle,
+  CustomTextField,
+  Row,
+  Summary,
+  textStyle,
   Wrapper,
 } from "../../components/CheckOut/Checkout";
 import CustomCheckoutBreadcrumb from "../../components/CustomCheckoutBreadcrumb";
-
+import { buttonStyles } from "../../components/Navbar/Navbar";
+import summary from "../../SetUpData/summaryData";
 const Payment = () => {
-  const [pickUpStation, setPickUpStation] = useState();
+  const [payment, setPayment] = useState("");
 
   const handleChange = (event) => {
-    setPickUpStation(event.target.value);
+    setPayment(event.target.value);
   };
   return (
     <>
@@ -36,38 +32,81 @@ const Payment = () => {
         </Typography>
 
         <Typography variant="subtitle2">Select payment option</Typography>
-        <Box mt={1} mb={1}>
-          <FormControl fullWidth size="small">
-            {/* <InputLabel
-              sx={selectLabelStyle}
-              id="select-pickup-station"
-              disableAnimation="true"
-              shrink="true"
-            >
-              open this select
-            </InputLabel> */}
-            <Select
-              variant="standard"
-              sx={selectContainerStyle}
-              labelId="select-pickup-station"
-              value={pickUpStation}
-              input={<OutlinedInput />}
-              inputProps={{ "aria-label": "Without label" }}
-              onChange={handleChange}
-            >
-              <MenuItem disabled value="">
-                open this select
-              </MenuItem>
-              <MenuItem value={"visa card"}>Visa Card</MenuItem>
-              <MenuItem value={"master card"}>Master Card</MenuItem>
-              <MenuItem value={"paypal"}>Paypal</MenuItem>
-            </Select>
-          </FormControl>
+        <Box mt={1} mb={1} sx={{ width: "260px", height: "34px" }}>
+          <CustomTextField
+            select
+            onChange={handleChange}
+            value={payment}
+            fullWidth
+            size="medium"
+            variant="standard"
+            placeholder="open this to select"
+          >
+            <MenuItem value={"master card"}>Master Card</MenuItem>
+            <MenuItem value={"visa card"}>Visa Card</MenuItem>
+            <MenuItem value={"paypal"}>Paypal</MenuItem>dth
+          </CustomTextField>
         </Box>
         <CustomDivider />
         <Typography variant="subtitle2" mt={2} mb={2}>
-          Deliver between Tuesday 20 Sep and Thursday 22 Sep
+          Do you have a voucher?
         </Typography>
+        <Box
+          sx={{
+            width: "410px",
+            display: "flex",
+            flexDirection: "row",
+            alignItems: "center",
+            justifyContent: "space-between",
+          }}
+        >
+          <Box sx={{ width: "272px" }}>
+            <CustomTextField
+              size="small"
+              variant="standard"
+              margin="none"
+              fullWidth
+              sx={{ height: "38px" }}
+            />
+          </Box>
+          <Button
+            size="medium"
+            variant="outlined"
+            sx={{ ...buttonStyles, width: "124px" }}
+          >
+            add voucher
+          </Button>
+        </Box>
+        <CustomDivider />
+        <Summary>
+          {summary.map((row, index) => {
+            const { label, value } = row;
+
+            return index === 4 ? (
+              <>
+                <CustomDivider />
+                <Row key={index}>
+                  <Box>
+                    <Typography sx={textStyle}>{label}</Typography>
+                  </Box>
+                  <Box>
+                    <Typography sx={textStyle}>{`$ ${value}`}</Typography>
+                  </Box>
+                </Row>
+              </>
+            ) : (
+              <Row key={index}>
+                <Box>
+                  <Typography sx={textStyle}>{label}</Typography>
+                </Box>
+                <Box>
+                  <Typography sx={textStyle}>{`$ ${value}`}</Typography>
+                </Box>
+              </Row>
+            );
+          })}
+        </Summary>
+        <Button sx={{ ...btnStyle, color: "#fff" }}>submit order</Button>
       </Wrapper>
     </>
   );
