@@ -22,7 +22,7 @@ const SearchResultsDisplay = () => {
         <Label>Displaying 8 out 100 results</Label>
         <SortItems />
       </Title>
-      <Grid container spacing={2} mt={2} mb={5}>
+      <Grid container spacing={5} mt={2} mb={5} justifyContent="space-between">
         {results.map((result) => (
           <Grid item key={result.id}>
             <ProductCard {...result} />

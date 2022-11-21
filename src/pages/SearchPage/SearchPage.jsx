@@ -9,7 +9,12 @@ const SearchPage = () => {
   return (
     <>
       <BreadCrumbs />
-      <Grid container direction="row" spacing={1}>
+      <Grid
+        container
+        direction="row"
+        spacing={4}
+        justifyContent="space-between"
+      >
         <Grid item xs={3}>
           <Box sx={SideFilters}>
             <Filters />
