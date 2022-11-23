@@ -1,6 +1,6 @@
 import React from "react";
 import { Grid, Box } from "@mui/material";
-import Filters from "../../components/filters";
+import Filters from "../../components/Filters";
 import { SideFilters } from "./SearchPageStyle";
 import BreadCrumbs from "../../components/breadCrumbs";
 import SearchResultsDisplay from "../../components/SearchResultsDisplay";
@@ -9,7 +9,12 @@ const SearchPage = () => {
   return (
     <>
       <BreadCrumbs />
-      <Grid container direction="row" spacing={1}>
+      <Grid
+        container
+        direction="row"
+        spacing={4}
+        justifyContent="space-between"
+      >
         <Grid item xs={3}>
           <Box sx={SideFilters}>
             <Filters />

@@ -1,26 +1,32 @@
 import React from "react";
-import "./ProductCard.css";
-// MUI
+
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
+import Typography from "@mui/material/Typography";
+import {
+  cardStyles,
+  imgStyle,
+  priceTag,
+  btnStyles,
+  secondSection,
+  descriptionTag,
+} from "./ProductCard";
+import { Button } from "@mui/material/";
 
-import { Button, CardActionArea, CardActions } from "@mui/material/";
-
-function ProductCard({ image, name, price, description }) {
+function ProductCard({ image, price, description }) {
   return (
-    <Card sx={{ maxWidth: 200 }} className="slider_card">
-      <CardActionArea>
-        <CardMedia component="img" height="200px" image={image} alt={name} />
-      </CardActionArea>
-      <CardContent sx={{}} className="card_content">
-        <h5>{name}</h5>
-        <p>this is the description</p>
-        <p className="price">${price}</p>
+    <Card sx={cardStyles} bg={"pink"}>
+      <CardMedia component="img" sx={imgStyle} image={image} alt={image} />
+      <CardContent sx={secondSection}>
+        <Typography variant="body2" sx={descriptionTag}>
+          {description.substring(0, 17) + "..."}
+        </Typography>
+        <Typography variant="h6" sx={priceTag}>
+          {`$ ${price}`}
+        </Typography>
+        <Button sx={btnStyles}>Add to Cart</Button>
       </CardContent>
-      <CardActions className="card_actions">
-        <Button size="large">Add To Cart</Button>
-      </CardActions>
     </Card>
   );
 }

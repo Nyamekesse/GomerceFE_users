@@ -1,5 +1,5 @@
-import SideNav from "../components/SideNav";
-import SideContents from "../components/SideContents";
+import SideNav from "../../components/SideNav";
+import SideContents from "../../components/SideContents";
 import { Grid } from "@mui/material";
 import React from "react";
 const LandingPage = () => {

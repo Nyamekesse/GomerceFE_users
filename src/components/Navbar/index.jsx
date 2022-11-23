@@ -119,7 +119,6 @@ export default function PrimarySearchAppBar() {
             <Button
               sx={buttonStyles}
               variant="outlined"
-              color="secondary"
               startIcon={<FavoriteBorderIcon />}
             >
               Wishlist
@@ -127,7 +126,6 @@ export default function PrimarySearchAppBar() {
             <Button
               sx={buttonStyles}
               variant="outlined"
-              color="secondary"
               startIcon={<Person3OutlinedIcon />}
             >
               Account
@@ -135,7 +133,6 @@ export default function PrimarySearchAppBar() {
             <Button
               sx={buttonStyles}
               variant="outlined"
-              color="secondary"
               startIcon={<ShoppingCartOutlinedIcon />}
             >
               Cart
