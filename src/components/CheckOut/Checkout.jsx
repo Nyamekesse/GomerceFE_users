@@ -95,13 +95,9 @@ const ListItem = styled(Box)(({ theme }) => ({
   display: "flex",
   flexDirection: "column",
   alignItems: "flex-start",
-  padding: "8px",
-  gap: "2px",
+  justifyContent: "space-between",
+  padding: "3%",
   borderRadius: "4px",
-  flex: "none",
-  order: "2",
-  alignSelf: "stretch",
-  flexGrow: "0",
 }));
 
 const btnStyle = {

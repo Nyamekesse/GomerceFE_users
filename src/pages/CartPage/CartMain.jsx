@@ -12,7 +12,7 @@ const CartMain = () => {
       <CartItem />
       <Box>
         <Typography variant="body1" align="right">
-          Subtotal (2 items): $59.45
+          Subtotal (2 items): <b>$59.45</b>
         </Typography>
       </Box>
     </CustomCartMain>

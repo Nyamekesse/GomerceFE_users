@@ -13,10 +13,16 @@ const Summary = () => {
           <Typography variant="body2">Subtotal (2 items)</Typography>
         </Box>
         <Box>
-          <Typography variant="body2">$ 59.9</Typography>
+          <Typography variant="body2" sx={{ fontSize: "20px" }}>
+            <b>$ 59.9</b>
+          </Typography>
         </Box>
       </Row>
-      <Button variant="contained" fullWidth={"true"}>
+      <Button
+        variant="contained"
+        fullWidth={"true"}
+        sx={{ backgroundColor: "#1F2839" }}
+      >
         proceed to checkOut
       </Button>
     </CustomSummary>
