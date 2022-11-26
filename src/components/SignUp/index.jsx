@@ -20,12 +20,11 @@ const SignUp = ({
   buttomText = "Please enter your details",
   isPassword = true,
   buttonText = "SIGN IN",
-  linkText = "Register",
+  linkText = "Sign in",
   linkPath = "/signup",
   loading = false,
   isCreateAccount = false,
-
-
+  linkMessage = "Don't have an account? "
 
   
 }) => {
@@ -76,7 +75,7 @@ const SignUp = ({
               {buttonText}
             </Button>
             <p style={{ textAlign: "left", marginTop: "12px" }}>
-              Don't have an account? <Link to={linkPath}>{linkText}</Link>
+              {linkMessage} <Link to={linkPath} style={{color:"black", textDecoration: "underline", fontWeight: "450"}}>{linkText}</Link>
             </p>
           </Form.Item>
         </Form>
