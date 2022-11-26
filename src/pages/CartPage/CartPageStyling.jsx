@@ -11,10 +11,12 @@ const ActionRow = styled(Box)({
   alignItems: "center",
   justifyContent: "space-between",
   padding: "1%",
+  width: "100%",
 });
 
 const CustomCartMain = styled(Box)({
   padding: "3%",
+  width: "100%",
   background: " #FFFFFF",
   boxShadow: "0px 2px 2px rgba(142, 142, 142, 0.25)",
 });
@@ -27,4 +29,18 @@ const CustomSummary = styled(Box)({
   background: "#FFFFFF",
   boxShadow: "0px 2px 2px rgba(142, 142, 142, 0.25)",
 });
-export { CustomSection, ActionRow, CustomSummary, CustomCartMain };
+
+const RecommendedItems = styled(Box)({
+  padding: "24px",
+  background: "#FFFFFF",
+  boxShadow: "0px 2px 2px rgba(142, 142, 142, 0.25)",
+  borderRadius: "2px",
+  margin: "5% 0",
+});
+export {
+  CustomSection,
+  ActionRow,
+  CustomSummary,
+  CustomCartMain,
+  RecommendedItems,
+};

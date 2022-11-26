@@ -15,33 +15,30 @@ function handleClick(event) {
   console.info("You clicked a breadcrumb.");
 }
 
-const BreadCrumbs = () => {
+const BreadCrumbs = (props) => {
+  const { navigation } = props;
   const breadcrumbs = [
-    <Button variant="outlined" sx={breadCrumbsButtonStyles}>
-      <Link
-        underline="hover"
-        key="1"
-        href="/"
-        onClick={handleClick}
-        sx={breadCrumbsText}
-      >
-        Home
-      </Link>
-    </Button>,
-    <Button variant="outlined" sx={breadCrumbsButtonStyles}>
-      <Link
-        underline="hover"
-        key="2"
-        href="/material-ui/getting-started/installation/"
-        onClick={handleClick}
-        sx={breadCrumbsText}
-      >
-        Collection
-      </Link>
-    </Button>,
-    <Typography key="3" sx={singleBreadCrumbTextStyle}>
-      Item Title
-    </Typography>,
+    navigation.length > 0 &&
+      navigation.map((item, index) => {
+        const { label, link } = item;
+        return index === navigation.length - 1 ? (
+          <Typography key={index} sx={singleBreadCrumbTextStyle}>
+            {label}
+          </Typography>
+        ) : (
+          <Button variant="outlined" sx={breadCrumbsButtonStyles} key={index}>
+            <Link
+              underline="hover"
+              key="1"
+              href={link}
+              onClick={handleClick}
+              sx={breadCrumbsText}
+            >
+              {label}
+            </Link>
+          </Button>
+        );
+      }),
   ];
 
   return (
