@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import  SignUp from "../components/SignUp";
+import Signup from "../Assets/Images/Signup.png";
 
 const Register = () => {
   const [user, setUser] = useState({name: "", email: "", password: "",})
@@ -8,6 +9,7 @@ const Register = () => {
     setUser({...user, [e.target.name]:e.target.value})
     
   }
+  
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -23,9 +25,11 @@ const Register = () => {
     buttonText = "CREATE ACCOUNT"
     linkText = "Log in"
     linkPath = "/login"
+    image = {Signup}
     loading = {false}
     isCreateAccount = {true}
     linkMessage = "Already have an account? "
+    signupStyle={true}
     />
   // <form onSubmit={handleSubmit}>
   //   <h2>Create User</h2>

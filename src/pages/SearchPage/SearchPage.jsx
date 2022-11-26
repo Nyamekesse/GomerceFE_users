@@ -1,6 +1,6 @@
 import React from "react";
 import { Grid, Box } from "@mui/material";
-import Filters from "../../components/Filters";
+import Filters from "../../components/filters";
 import { SideFilters } from "./SearchPageStyle";
 import BreadCrumbs from "../../components/breadCrumbs";
 import SearchResultsDisplay from "../../components/SearchResultsDisplay";
