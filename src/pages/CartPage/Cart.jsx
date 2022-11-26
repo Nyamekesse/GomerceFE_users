@@ -31,7 +31,7 @@ const cards = {
 const Cart = () => {
   return (
     <>
-      <CustomSection>
+      <CustomSection mt={3}>
         <Grid
           container
           direction="row"

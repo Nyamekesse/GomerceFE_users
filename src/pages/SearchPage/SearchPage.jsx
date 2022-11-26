@@ -6,9 +6,14 @@ import BreadCrumbs from "../../components/breadCrumbs";
 import SearchResultsDisplay from "../../components/SearchResultsDisplay";
 
 const SearchPage = () => {
+  const navigation = [
+    { label: "Home", link: "/" },
+    { label: "Collection", link: "/" },
+    { label: "Item Title", link: "/" },
+  ];
   return (
     <>
-      <BreadCrumbs />
+      <BreadCrumbs navigation={navigation} />
       <Grid
         container
         direction="row"
