@@ -5,11 +5,11 @@ import Cart from "../pages/CartPage/Cart";
 import CheckoutPayment from "../pages/CheckoutPayment/CheckoutPayment";
 import CheckoutDelivery from "../pages/CheckoutDelivery/CheckoutDelivery";
 import ItemPage from "../pages/ItemPage/ItemPage";
-import LogIn from "../pages/LogIn";
+import LogIn from "../pages/Login/LogIn";
 import OrdersDetail from "../pages/OrdersDetail/OrdersDetail";
 import OrdersHistory from "../pages/OrderHistory/OrdersHistory";
 import SearchPage from "../pages/SearchPage/SearchPage";
-import SignUp from "../pages/SignUp";
+import SignUp from "../pages/SignUp/SignUp";
 import PageNotFound from "../pages/PageNotFound";
 import CheckoutAddress from "../pages/CheckoutAddressPage/CheckoutAddress";
 const Views = () => {
