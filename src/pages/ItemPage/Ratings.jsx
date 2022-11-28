@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Box from "@mui/material/Box";
 import Rating from "@mui/material/Rating";
 
-const Ratings = ({ margin }) => {
+const Ratings = ({ margin, readOnly }) => {
   const [value, setValue] = useState(2);
 
   return (
@@ -15,6 +15,7 @@ const Ratings = ({ margin }) => {
         }}
         size={"small"}
         sx={{ color: "#1F2839" }}
+        readOnly={readOnly}
       />
     </Box>
   );

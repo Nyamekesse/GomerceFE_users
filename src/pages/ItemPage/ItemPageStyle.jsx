@@ -94,6 +94,18 @@ const RatingSummary = styled(Box)({
   width: "100%",
   height: "100%",
 });
+const CommentBox = styled(Box)({
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "space-between",
+  alignItems: "flex-start",
+  padding: "16px",
+  width: "848px",
+  height: "160px",
+  background: "#FFFFFF",
+  borderBottom: "1px solid #CED4DA",
+  margin: "2% 0",
+});
 export {
   Details,
   Image,
@@ -107,4 +119,5 @@ export {
   ListWrap,
   ReviewsSection,
   RatingSummary,
+  CommentBox,
 };

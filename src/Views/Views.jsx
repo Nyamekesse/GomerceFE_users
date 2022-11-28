@@ -4,7 +4,7 @@ import LandingPage from "../pages/LandingPage/LandingPage";
 import Cart from "../pages/CartPage/Cart";
 import CheckoutPayment from "../pages/CheckoutPayment/CheckoutPayment";
 import CheckoutDelivery from "../pages/CheckoutDelivery/CheckoutDelivery";
-import ItemPage from "../pages/ItemPage/ItemPage";
+import ItemPage from "../pages/ItemPage/";
 import LogIn from "../pages/Login/LogIn";
 import OrdersDetail from "../pages/OrdersDetail/OrdersDetail";
 import OrdersHistory from "../pages/OrderHistory/OrdersHistory";
