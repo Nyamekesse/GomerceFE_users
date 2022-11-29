@@ -15,13 +15,14 @@ import Tracking from "./Tracking";
 import orderInfo from "../../SetUpData/orderInfo";
 import { CustomDivider } from "../../components/CheckOut/Checkout";
 import SummaryTable from "./SummaryTable";
+import Wrapper from "../../components/Wrapper/Wrapper";
 const OrdersDetail = () => {
   const navigation = [
     { label: "Home", link: "/" },
     { label: "Detail", link: "/" },
   ];
   return (
-    <>
+    <Wrapper>
       <PageHeader>
         <Typography variant="h5">Orders detail</Typography>
         <BreadCrumbs navigation={navigation} />
@@ -83,7 +84,7 @@ const OrdersDetail = () => {
           <SummaryTable />
         </ProductSummary>
       </DetailsMain>
-    </>
+    </Wrapper>
   );
 };
 

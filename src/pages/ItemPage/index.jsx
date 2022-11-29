@@ -27,6 +27,7 @@ import ProductCard from "../../components/ProductCard";
 import LinearProgressBar from "./LinearProgressBar";
 import CommentsCard from "./CommentsCard";
 import FavoriteIcon from "@mui/icons-material/Favorite";
+import Wrapper from "../../components/Wrapper/Wrapper";
 SwiperCore.use([Navigation, A11y]);
 const ItemPage = () => {
   const navigation = [
@@ -36,7 +37,7 @@ const ItemPage = () => {
   ];
 
   return (
-    <>
+    <Wrapper>
       <BreadCrumbs navigation={navigation} />
       <Details>
         <Grid
@@ -366,7 +367,7 @@ const ItemPage = () => {
           })}
         </Swiper>
       </RecommendedItems>
-    </>
+    </Wrapper>
   );
 };
 

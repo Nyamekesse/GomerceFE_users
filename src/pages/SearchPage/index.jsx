@@ -4,7 +4,7 @@ import Filters from "../../components/Filters";
 import { SideFilters } from "./SearchPageStyle";
 import BreadCrumbs from "../../components/breadCrumbs";
 import SearchResultsDisplay from "../../components/SearchResultsDisplay";
-
+import Wrapper from "../../components/Wrapper/Wrapper";
 const SearchPage = () => {
   const navigation = [
     { label: "Home", link: "/" },
@@ -12,7 +12,7 @@ const SearchPage = () => {
     { label: "Item Title", link: "/" },
   ];
   return (
-    <>
+    <Wrapper>
       <BreadCrumbs navigation={navigation} />
       <Grid
         container
@@ -31,7 +31,7 @@ const SearchPage = () => {
           <SearchResultsDisplay />
         </Grid>
       </Grid>
-    </>
+    </Wrapper>
   );
 };
 

@@ -102,7 +102,7 @@ export default function PrimarySearchAppBar() {
             variant="h6"
             noWrap
             component="div"
-            onClick={() => navigate("/home")}
+            onClick={() => navigate("/")}
             sx={{
               display: { xs: "none", sm: "block" },
               height: "23px",

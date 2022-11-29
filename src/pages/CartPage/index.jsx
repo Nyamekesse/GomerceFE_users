@@ -3,7 +3,7 @@ import React from "react";
 import CartMain from "./CartMain";
 import { CustomSection, RecommendedItems } from "./CartPageStyling";
 import Summary from "./Summary";
-
+import Wrapper from "../../components/Wrapper/Wrapper";
 import "swiper/swiper.min.css";
 import "swiper/modules/navigation/navigation.min.css";
 import ProductCard from "../../components/ProductCard";
@@ -14,7 +14,7 @@ SwiperCore.use([Navigation, A11y]);
 
 const Cart = () => {
   return (
-    <>
+    <Wrapper>
       <CustomSection mt={3}>
         <Grid
           container
@@ -74,7 +74,7 @@ const Cart = () => {
           })}
         </Swiper>
       </RecommendedItems>
-    </>
+    </Wrapper>
   );
 };
 

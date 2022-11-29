@@ -22,7 +22,7 @@ import {
   breadCrumbsText,
   singleBreadCrumbTextStyle,
 } from "../../components/breadCrumbs/BreadCrumbs";
-
+import Wrapper from "../../components/Wrapper/Wrapper";
 function createData(ID, Customer, Email, Items, Price, Status, Date) {
   return { ID, Customer, Email, Items, Price, Status, Date };
 }
@@ -42,7 +42,7 @@ const OrdersHistory = () => {
   const query = useQuery();
   const page = query.get("page") || 1;
   return (
-    <>
+    <Wrapper>
       <BreadcrumbsContainer mt={3}>
         <Typography variant="h6" component="p">
           Orders history
@@ -97,7 +97,7 @@ const OrdersHistory = () => {
         </Table>
         <AppPagination count={10} page={page} />
       </TableContainer>
-    </>
+    </Wrapper>
   );
 };
 
