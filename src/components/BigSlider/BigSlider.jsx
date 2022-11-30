@@ -12,9 +12,8 @@ import {
   Button,
 } from "./style_slide";
 import { ArrowLeftOutlined, ArrowRightOutlined } from "@mui/icons-material";
-import { sliderItem } from "../../data";
+import { sliderItem } from "../../SetUpData/data";
 import { useState, useEffect } from "react";
-
 const BigSlider = () => {
   const [sliderIndex, setSliderIndex] = useState(0);
   const [sliderState, setSliderState] = useState(true);

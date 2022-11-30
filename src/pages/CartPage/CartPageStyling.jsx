@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import Box from "@mui/material/Box";
 import { styled } from "@mui/material/styles";
 
 const CustomSection = styled(Box)({
@@ -30,17 +30,4 @@ const CustomSummary = styled(Box)({
   boxShadow: "0px 2px 2px rgba(142, 142, 142, 0.25)",
 });
 
-const RecommendedItems = styled(Box)({
-  padding: "24px",
-  background: "#FFFFFF",
-  boxShadow: "0px 2px 2px rgba(142, 142, 142, 0.25)",
-  borderRadius: "2px",
-  margin: "5% 0",
-});
-export {
-  CustomSection,
-  ActionRow,
-  CustomSummary,
-  CustomCartMain,
-  RecommendedItems,
-};
+export { CustomSection, ActionRow, CustomSummary, CustomCartMain };

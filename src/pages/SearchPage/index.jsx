@@ -1,10 +1,11 @@
 import React from "react";
 import { Grid, Box } from "@mui/material";
-import Filters from "../../components/Filters";
+import Filters from "./Filters";
 import { SideFilters } from "./SearchPageStyle";
-import BreadCrumbs from "../../components/breadCrumbs";
-import SearchResultsDisplay from "../../components/SearchResultsDisplay";
+import BreadCrumbs from "../../components/BreadCrumbs";
+import SearchResultsDisplay from "./SearchResultsDisplay";
 import Wrapper from "../../components/Wrapper/Wrapper";
+import filters from "../../SetUpData/filter";
 const SearchPage = () => {
   const navigation = [
     { label: "Home", link: "/" },
@@ -22,9 +23,9 @@ const SearchPage = () => {
       >
         <Grid item xs={3}>
           <Box sx={SideFilters}>
-            <Filters />
-            <Filters />
-            <Filters />
+            {filters.map((element, index) => {
+              return <Filters {...element} key={index} />;
+            })}
           </Box>
         </Grid>
         <Grid item xs={9}>

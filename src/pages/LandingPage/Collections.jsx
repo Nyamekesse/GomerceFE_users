@@ -3,9 +3,9 @@ import {
   collectionHeading,
   CollectionsWrapper,
   CollectionRow,
-} from "./Collections";
+} from "./LandingPageStyle";
 import { Typography } from "@mui/material";
-import CollectionCard from "../CollectionCard";
+import CollectionCard from "./CollectionCard";
 import collectionData from "../../SetUpData/collectionData";
 
 const Collections = () => {

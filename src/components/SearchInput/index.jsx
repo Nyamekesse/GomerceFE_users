@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { getSearchProduct, getProducts } from "../../actions/products";
+import { getProducts } from "../../actions/products";
 import {
   Search,
   SearchIconWrapper,

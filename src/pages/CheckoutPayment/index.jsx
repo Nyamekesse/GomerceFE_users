@@ -1,7 +1,7 @@
 import { Box, Grid } from "@mui/material";
 import React from "react";
 import OrderSummary from "../../components/OrderSummary";
-import NeedHelp from "../../components/OrderSummary/NeedHelp";
+import NeedHelp from "../../components/NeedHelp";
 import Payment from "./Payment";
 import Wrapper from "../../components/Wrapper/Wrapper";
 const CheckoutPayment = () => {

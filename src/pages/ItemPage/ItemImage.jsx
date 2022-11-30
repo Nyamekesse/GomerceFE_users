@@ -1,4 +1,3 @@
-import { Box } from "@mui/material";
 import React from "react";
 import { Image, Preview, Thumbnail, ThumbnailsSection } from "./ItemPageStyle";
 import phone from "../../Assets/Images/1 (2).jpg";

@@ -1,6 +1,7 @@
 import { Box, Button, Typography } from "@mui/material";
 import React from "react";
-import { CustomDivider, Row } from "../../components/CheckOut/Checkout";
+import CustomDivider from "../../components/CustomDivider";
+import { Row } from "../CheckoutDelivery/CheckoutDeliveryStyle";
 import { CustomSummary } from "./CartPageStyling";
 
 const Summary = () => {
@@ -18,11 +19,7 @@ const Summary = () => {
           </Typography>
         </Box>
       </Row>
-      <Button
-        variant="contained"
-        fullWidth={"true"}
-        sx={{ backgroundColor: "#1F2839" }}
-      >
+      <Button variant="contained" fullWidth={"true"}>
         proceed to checkOut
       </Button>
     </CustomSummary>

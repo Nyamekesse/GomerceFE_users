@@ -1,4 +1,4 @@
-import { Button, TextField, Typography } from "@mui/material";
+import { Button, Typography } from "@mui/material";
 import React, { useState } from "react";
 import Radio from "@mui/material/Radio";
 import RadioGroup from "@mui/material/RadioGroup";
@@ -6,17 +6,16 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import FormControl from "@mui/material/FormControl";
 import Box from "@mui/material/Box";
 import MenuItem from "@mui/material/MenuItem";
-import CustomCheckoutBreadcrumb from "../CustomCheckoutBreadcrumb/index";
+import CustomCheckoutBreadcrumb from "../../components/CheckoutTimeLine/index";
+import CustomDivider from "../../components/CustomDivider";
 import {
-  Wrapper,
-  ShippingSection,
-  shippingItemsTitle,
-  CustomDivider,
-  ListItem,
-  btnStyle,
-  checkoutHeading,
   CustomTextField,
-} from "./Checkout";
+  ListItem,
+  ShippingSection,
+  Wrapper,
+  shippingItemsTitle,
+  checkoutHeading,
+} from "./CheckoutDeliveryStyle";
 const Checkout = () => {
   const [pickUpStation, setPickUpStation] = useState("");
 
@@ -102,7 +101,7 @@ const Checkout = () => {
             <CustomDivider />
           </ListItem>
         </ShippingSection>
-        <Button sx={btnStyle} variant="contained" disableElevation>
+        <Button variant="contained" disableElevation>
           save and continue
         </Button>
       </Wrapper>

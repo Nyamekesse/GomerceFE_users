@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
-import { CustomDivider } from "../../components/CheckOut/Checkout";
+import CustomDivider from "../../components/CustomDivider";
 import CartItem from "./CartItem";
 import { CustomCartMain } from "./CartPageStyling";
 const CartMain = () => {

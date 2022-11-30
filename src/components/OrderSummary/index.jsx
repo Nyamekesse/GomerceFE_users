@@ -1,8 +1,9 @@
 import React from "react";
-import { btnStyle, textStyle, Wrapper } from "./OrderSummary";
-import { checkoutHeading, CustomDivider } from "../CheckOut/Checkout";
+import { textStyle, Wrapper } from "./OrderSummary";
 import { Button, Grid, Typography } from "@mui/material";
 import OrderItemDetails from "./OrderItemDetails";
+import CustomDivider from "../CustomDivider";
+import { checkoutHeading } from "../../pages/CheckoutDelivery/CheckoutDeliveryStyle";
 
 const OrderSummary = () => {
   return (
@@ -48,7 +49,7 @@ const OrderSummary = () => {
           </Grid>
         </Grid>
         <CustomDivider />
-        <Button variant="contained" disableElevation sx={btnStyle} size="large">
+        <Button variant="outlined" disableElevation fullWidth size="large">
           Modify cart
         </Button>
       </Wrapper>

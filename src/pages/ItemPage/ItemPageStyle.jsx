@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { Box } from "@mui/material";
+import Box from "@mui/material/Box";
 
 const Details = styled(Box)({
   width: "100%",
@@ -106,6 +106,44 @@ const CommentBox = styled(Box)({
   borderBottom: "1px solid #CED4DA",
   margin: "2% 0",
 });
+const IconsWrapper = styled(Box)({
+  display: "flex",
+  flexDirection: "row",
+  margin: "2% 0",
+});
+const DetailsWrap = styled(Box)({
+  width: "100%",
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "space-between",
+});
+const ShareSection = styled(Box)({
+  width: "100%",
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "space-between",
+});
+const BarWrap = styled(Box)({
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "flex-start",
+  padding: "2% 1.5%",
+  width: "879px",
+});
+const ReviewsStatusText = styled(Box)({
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "flex-start",
+  height: "100%",
+});
+const ReviewsHeadWrap = styled(Box)({
+  display: "flex",
+  flexDirection: "row",
+  alignItems: "center",
+  justifyContent: "space-between",
+  width: "100%",
+});
+
 export {
   Details,
   Image,
@@ -120,4 +158,10 @@ export {
   ReviewsSection,
   RatingSummary,
   CommentBox,
+  IconsWrapper,
+  DetailsWrap,
+  ShareSection,
+  BarWrap,
+  ReviewsStatusText,
+  ReviewsHeadWrap,
 };

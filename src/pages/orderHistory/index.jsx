@@ -21,7 +21,7 @@ import {
   breadCrumbsButtonStyles,
   breadCrumbsText,
   singleBreadCrumbTextStyle,
-} from "../../components/breadCrumbs/BreadCrumbs";
+} from "../../components/BreadCrumbs/BreadCrumbs";
 import Wrapper from "../../components/Wrapper/Wrapper";
 function createData(ID, Customer, Email, Items, Price, Status, Date) {
   return { ID, Customer, Email, Items, Price, Status, Date };

@@ -1,19 +1,17 @@
 import { Box, Button, MenuItem, Typography } from "@mui/material";
 import React from "react";
 import { useState } from "react";
+import CustomCheckoutBreadcrumb from "../../components/CheckoutTimeLine";
+import summary from "../../SetUpData/summaryData";
+import CustomDivider from "../../components/CustomDivider";
 import {
-  btnStyle,
-  checkoutHeading,
-  CustomDivider,
   CustomTextField,
   Row,
+  checkoutHeading,
   Summary,
   textStyle,
   Wrapper,
-} from "../../components/CheckOut/Checkout";
-import CustomCheckoutBreadcrumb from "../../components/CustomCheckoutBreadcrumb";
-import { buttonStyles } from "../../components/Navbar/Navbar";
-import summary from "../../SetUpData/summaryData";
+} from "../CheckoutDelivery/CheckoutDeliveryStyle";
 const Payment = () => {
   const [payment, setPayment] = useState("");
 
@@ -69,11 +67,7 @@ const Payment = () => {
               sx={{ height: "38px" }}
             />
           </Box>
-          <Button
-            size="medium"
-            variant="outlined"
-            sx={{ ...buttonStyles, width: "124px" }}
-          >
+          <Button size="medium" variant="outlined">
             add voucher
           </Button>
         </Box>
@@ -106,7 +100,7 @@ const Payment = () => {
             );
           })}
         </Summary>
-        <Button sx={{ ...btnStyle, color: "#fff" }}>submit order</Button>
+        <Button variant="contained">submit order</Button>
       </Wrapper>
     </>
   );

@@ -10,10 +10,10 @@ import {
   Typography,
 } from "@mui/material";
 import React from "react";
-import { CustomDivider, ListItem } from "../../components/CheckOut/Checkout";
 import { textStyle } from "../../components/OrderSummary/OrderSummary";
 import { ActionRow } from "./CartPageStyling";
 import Phone from "../../Assets/Images/phone1.jfif";
+import CustomDivider from "../../components/CustomDivider";
 const CartItem = () => {
   const [quantity, setQuantity] = React.useState("");
 
@@ -32,7 +32,7 @@ const CartItem = () => {
       >
         <Grid item xs={3}>
           <Box>
-            <img src={Phone} alt="image phone" />
+            <img src={Phone} alt={Phone} />
           </Box>
         </Grid>
         <Grid
@@ -55,22 +55,13 @@ const CartItem = () => {
                   sx={{ width: "86px", marginRight: "2%" }}
                   size="small"
                 >
-                  <InputLabel id="demo-simple-select-label">Qty:</InputLabel>
+                  <InputLabel>Qty:</InputLabel>
                   <Select
                     size="small"
-                    labelId="demo-simple-select-label"
-                    id="demo-simple-select"
                     value={quantity}
                     label="Qty:"
                     defaultValue={1}
                     onChange={handleChange}
-                    renderValue={(selected) => {
-                      if (selected.length === 0) {
-                        return 1;
-                      }
-
-                      return selected;
-                    }}
                   >
                     <MenuItem value={1}>1</MenuItem>
                     <MenuItem value={2}>2</MenuItem>
@@ -78,9 +69,9 @@ const CartItem = () => {
                   </Select>
                 </FormControl>
                 <Divider orientation="vertical" variant="middle" flexItem />
-                <Button sx={{ color: "#1F2839" }}>delete</Button>
+                <Button variant="text">delete</Button>
                 <Divider orientation="vertical" variant="middle" flexItem />
-                <Button sx={{ color: "#1F2839" }}>save for later</Button>
+                <Button variant="text">save for later</Button>
               </ActionRow>
             </Box>
           </Grid>

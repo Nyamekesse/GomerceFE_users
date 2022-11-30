@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Button, Typography } from "@mui/material";
-import { checkoutHeading } from "../CheckOut/Checkout";
-import { btnStyle, Wrapper } from "./OrderSummary";
+import { Wrapper } from "./NeedHelpStyle";
+import { checkoutHeading } from "../../pages/CheckoutDelivery/CheckoutDeliveryStyle";
 const NeedHelp = () => {
   return (
     <Box mt={3}>
@@ -12,7 +12,7 @@ const NeedHelp = () => {
         <Typography variant="body1">
           Contact an expert to support you
         </Typography>
-        <Button variant="contained" disableElevation sx={btnStyle} size="large">
+        <Button variant="outlined" disableElevation fullWidth size="large">
           reach out
         </Button>
       </Wrapper>

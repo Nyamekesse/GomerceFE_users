@@ -1,7 +1,6 @@
 import { Typography } from "@mui/material";
-import { Box } from "@mui/system";
 import React from "react";
-import BreadCrumbs from "../../components/breadCrumbs";
+import BreadCrumbs from "../../components/BreadCrumbs";
 import {
   Delivery,
   DetailsMain,
@@ -13,9 +12,9 @@ import {
 } from "./OrderDetailStyle";
 import Tracking from "./Tracking";
 import orderInfo from "../../SetUpData/orderInfo";
-import { CustomDivider } from "../../components/CheckOut/Checkout";
 import SummaryTable from "./SummaryTable";
 import Wrapper from "../../components/Wrapper/Wrapper";
+import CustomDivider from "../../components/CustomDivider";
 const OrdersDetail = () => {
   const navigation = [
     { label: "Home", link: "/" },

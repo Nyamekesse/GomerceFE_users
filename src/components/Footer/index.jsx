@@ -11,8 +11,8 @@ import {
   SocialStack,
   CopyRightStyling,
   SocialMediaIconStyles,
-} from "./Footer";
-import FooterColumn from "../FooterColumn";
+} from "./FooterStyles";
+import FooterColumn from "./FooterColumn";
 import Divider from "@mui/material/Divider";
 import footerData from "../../SetUpData/footerColumnData";
 

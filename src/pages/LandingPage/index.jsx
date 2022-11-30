@@ -1,5 +1,5 @@
-import SideNav from "../../components/SideNav";
-import SideContents from "../../components/SideContents";
+import SideNav from "./SideNav";
+import AsideMain from "./AsideMain";
 import { Grid } from "@mui/material";
 import React from "react";
 import Wrapper from "../../components/Wrapper/Wrapper";
@@ -11,7 +11,7 @@ const LandingPage = () => {
           <SideNav />
         </Grid>
         <Grid item xs={9}>
-          <SideContents />
+          <AsideMain />
         </Grid>
       </Grid>
     </Wrapper>
