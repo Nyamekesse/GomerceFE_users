@@ -8,7 +8,7 @@ import ItemPage from "../pages/ItemPage/";
 import OrdersDetail from "../pages/OrdersDetail";
 import OrdersHistory from "../pages/OrderHistory";
 import SearchPage from "../pages/SearchPage";
-import CheckoutAddress from "../pages/CheckoutAddressPage";
+import CheckoutAddress from "../pages/CheckoutAddress";
 import PageNotFound from "../pages/404 page/PageNotFound";
 import SignUp from "../pages/SignUp";
 import LogIn from "../pages/Login";

@@ -6,7 +6,6 @@ import summary from "../../SetUpData/summaryData";
 import CustomDivider from "../../components/CustomDivider";
 import {
   Row,
-  checkoutHeading,
   Summary,
   textStyle,
   Wrapper,
@@ -19,9 +18,7 @@ const Payment = () => {
   };
   return (
     <>
-      <Typography variant="h3" sx={checkoutHeading}>
-        Checkout
-      </Typography>
+      <Typography variant="h5">Checkout</Typography>
       <CustomCheckoutBreadcrumb address={true} delivery={true} />
       <Wrapper>
         <Typography variant="subtitle2">

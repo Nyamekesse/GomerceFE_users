@@ -8,7 +8,7 @@ import Box from "@mui/material/Box";
 import MenuItem from "@mui/material/MenuItem";
 import CustomCheckoutBreadcrumb from "../../components/CheckoutTimeLine/index";
 import CustomDivider from "../../components/CustomDivider";
-import { Wrapper, checkoutHeading } from "./CheckoutDeliveryStyle";
+import { Wrapper } from "./CheckoutDeliveryStyle";
 import { Button, FormLabel, TextField } from "@mui/material";
 import ShipmentSection from "./ShipmentSection";
 const Checkout = () => {
@@ -20,9 +20,7 @@ const Checkout = () => {
 
   return (
     <>
-      <Typography variant="h3" sx={checkoutHeading}>
-        Checkout
-      </Typography>
+      <Typography variant="h5">Checkout</Typography>
       <CustomCheckoutBreadcrumb address={true} />
       <Wrapper>
         <FormControl>

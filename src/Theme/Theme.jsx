@@ -101,7 +101,7 @@ const theme = createTheme({
         root: {
           textTransform: "uppercase",
           color: black,
-          border: `1px solid grey`,
+          border: `1px solid ${borders}`,
           borderRadius: "4px",
           width: "100%",
           "& .MuiOutlinedInput-input": {

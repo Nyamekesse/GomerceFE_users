@@ -1,19 +1,16 @@
 import React from "react";
-import { textStyle, Wrapper } from "./OrderSummary";
+import { Wrapper } from "./OrderSummary";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
 import OrderItemDetails from "./OrderItemDetails";
 import CustomDivider from "../CustomDivider";
-import { checkoutHeading } from "../../pages/CheckoutDelivery/CheckoutDeliveryStyle";
 import Box from "@mui/material/Box";
 
 const OrderSummary = () => {
   return (
     <>
-      <Typography variant="h3" sx={checkoutHeading}>
-        Order summary
-      </Typography>
+      <Typography variant="h5">Order summary</Typography>
       <Wrapper>
         <Typography variant="subtitle2">Your Order (2 items)</Typography>
         <OrderItemDetails />
