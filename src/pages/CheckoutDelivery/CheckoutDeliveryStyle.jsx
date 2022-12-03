@@ -1,4 +1,4 @@
-import { Box, TextField } from "@mui/material";
+import Box from "@mui/material/Box";
 import { styled } from "@mui/material/styles";
 
 const Wrapper = styled(Box)(({ theme }) => ({
@@ -29,22 +29,7 @@ const formControlStyle = {
     },
   },
 };
-const CustomTextField = styled(TextField)(({ theme }) => ({
-  border: "none",
-  outline: "none",
-  borderRadius: "4px",
-  backgroundColor: "#f4f5ef",
-  padding: "9px 8px",
-  "& .MuiInput-root": {
-    "&:before, :after, :hover:not(.Mui-disabled):before": {
-      borderBottom: 0,
-      backgroundColor: "transparent !important",
-    },
-    "&:focus-visible": {
-      backgroundColor: "blue",
-    },
-  },
-}));
+
 const selectLabelStyle = {
   width: "187px",
   height: "16px",
@@ -63,13 +48,11 @@ const ShippingSection = styled(Box)(({ theme }) => ({
   display: "flex",
   flexDirection: "column",
   alignItems: "flex-start",
-  padding: "8px",
-  gap: "4px",
+  padding: "1.5% 3%",
   border: "1px solid #CED4DA",
   borderRadius: "4px",
   flex: "none",
   alignSelf: "stretch",
-  flexGrow: "0",
   marginBottom: "2%",
 }));
 
@@ -88,7 +71,7 @@ const ListItem = styled(Box)(({ theme }) => ({
   flexDirection: "column",
   alignItems: "flex-start",
   justifyContent: "space-between",
-  padding: "3%",
+  // padding: "3%",
   borderRadius: "4px",
   width: "100%",
 }));
@@ -108,14 +91,10 @@ const btnStyle = {
 
 const checkoutHeading = {
   display: "flex",
-  justifyContent: "left",
   height: "32px",
-  fontWeight: "400",
   fontSize: "24px",
   alignSelf: "flex-start",
   lineHeight: "32px",
-  color: "#000000",
-  flex: "none",
 };
 
 const Summary = styled(Box)({
@@ -150,7 +129,6 @@ export {
   btnStyle,
   checkoutHeading,
   formControlStyle,
-  CustomTextField,
   Summary,
   Row,
   textStyle,

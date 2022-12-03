@@ -1,6 +1,6 @@
 import React from "react";
 import { ResultContainer, Title, Label } from "./SearchPageStyle";
-import SortItems from "../../components/SortContainer";
+import CustomSelect from "../../components/CustomSelect";
 import Grid from "@mui/material/Grid";
 import ProductCard from "../../components/ProductCard";
 import { useSelector } from "react-redux";
@@ -11,7 +11,7 @@ import { useState, useEffect } from "react";
 const useQuery = () => {
   return new URLSearchParams(useLocation().search);
 };
-
+const options = ["color", "size", "brand"];
 const SearchResultsDisplay = () => {
   let results = useSelector((state) => state.productReducer);
   const query = useQuery();
@@ -23,7 +23,13 @@ const SearchResultsDisplay = () => {
     <ResultContainer>
       <Title>
         <Label>Displaying 8 out 100 results</Label>
-        <SortItems />
+        <CustomSelect
+          showBackground={true}
+          showBorder={false}
+          width={"111px"}
+          label="sort by"
+          items={options}
+        />
       </Title>
       <Grid container spacing={5} mt={2} mb={5} justifyContent="space-between">
         {results.map((result) => (

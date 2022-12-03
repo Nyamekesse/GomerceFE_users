@@ -1,11 +1,10 @@
-import { Box, Button, MenuItem, Typography } from "@mui/material";
+import { Box, Button, MenuItem, TextField, Typography } from "@mui/material";
 import React from "react";
 import { useState } from "react";
 import CustomCheckoutBreadcrumb from "../../components/CheckoutTimeLine";
 import summary from "../../SetUpData/summaryData";
 import CustomDivider from "../../components/CustomDivider";
 import {
-  CustomTextField,
   Row,
   checkoutHeading,
   Summary,
@@ -30,20 +29,18 @@ const Payment = () => {
         </Typography>
 
         <Typography variant="subtitle2">Select payment option</Typography>
-        <Box mt={1} mb={1} sx={{ width: "260px", height: "34px" }}>
-          <CustomTextField
+        <Box mt={1} mb={1} sx={{ width: "260px" }}>
+          <TextField
             select
             onChange={handleChange}
             value={payment}
             fullWidth
-            size="medium"
-            variant="standard"
-            placeholder="open this to select"
+            size="small"
           >
             <MenuItem value={"master card"}>Master Card</MenuItem>
             <MenuItem value={"visa card"}>Visa Card</MenuItem>
             <MenuItem value={"paypal"}>Paypal</MenuItem>dth
-          </CustomTextField>
+          </TextField>
         </Box>
         <CustomDivider />
         <Typography variant="subtitle2" mt={2} mb={2}>
@@ -59,13 +56,7 @@ const Payment = () => {
           }}
         >
           <Box sx={{ width: "272px" }}>
-            <CustomTextField
-              size="small"
-              variant="standard"
-              margin="none"
-              fullWidth
-              sx={{ height: "38px" }}
-            />
+            <TextField size="small" fullWidth />
           </Box>
           <Button size="medium" variant="outlined">
             add voucher

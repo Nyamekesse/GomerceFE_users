@@ -93,19 +93,20 @@ const theme = createTheme({
         root: {
           textTransform: "uppercase",
           color: black,
+          border: `1px solid grey`,
+          borderRadius: "4px",
+          width: "100%",
           "& .MuiOutlinedInput-input": {
-            backgroundColor: greyLight,
+            // backgroundColor: greyLight,
           },
-
           "& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": {
-            borderColor: greyLight,
+            border: "none",
           },
-
           "&:hover .MuiInputLabel-root": {
             color: black,
           },
           "&:hover .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": {
-            borderColor: greyLight,
+            border: "none",
           },
           "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-input": {
             color: black,
@@ -114,7 +115,7 @@ const theme = createTheme({
             color: black,
           },
           "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline": {
-            borderColor: greyLight,
+            border: "none",
           },
         },
       },
@@ -126,6 +127,13 @@ const theme = createTheme({
           borderRadius: 4,
           color: black,
           margin: "0 1%",
+        },
+      },
+    },
+    MuiFormLabel: {
+      styleOverrides: {
+        root: {
+          color: black,
         },
       },
     },

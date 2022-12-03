@@ -12,29 +12,91 @@ import {
   TableHead,
   TableRow,
   Paper,
+  Box,
 } from "@mui/material";
 import { useLocation } from "react-router-dom";
-import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 
-import { BreadcrumbsContainer } from "./OrderHistoryStyle";
-import {
-  breadCrumbsButtonStyles,
-  breadCrumbsText,
-  singleBreadCrumbTextStyle,
-} from "../../components/BreadCrumbs/BreadCrumbs";
+import { PageHeader, StatusBadge } from "./OrderHistoryStyle";
+
 import Wrapper from "../../components/Wrapper/Wrapper";
+import BreadCrumbs from "../../components/BreadCrumbs";
+import MiniSearchInput from "../../components/MiniSearchInput";
+import CustomSelect from "../../components/CustomSelect";
 function createData(ID, Customer, Email, Items, Price, Status, Date) {
   return { ID, Customer, Email, Items, Price, Status, Date };
 }
-
-const rows = [
-  createData(1, "John Doe", "johndoe@gmail.com", 6, 24, 4.0, 9),
-  createData(1, "John Doe", "johndoe@gmail.com", 9, 37, 4.3, 54, 54),
-  createData(1, "John Doe", "johndoe@gmail.com", 16.0, 24, 6.0, 9),
-  createData(1, "John Doe", "johndoe@gmail.com", 3.7, 67, 4.3, 9),
-  createData(1, "John Doe", "johndoe@gmail.com", 16.0, 49, 3.9, 9),
+const navigation = [
+  { label: "Home", link: "/" },
+  { label: "History", link: "/" },
 ];
-
+const rows = [
+  createData(
+    1,
+    "John Doe",
+    "johndoe@gmail.com",
+    6,
+    "$$$$",
+    <StatusBadge color={"green"}>
+      <Typography variant="body2">
+        <b>delivered</b>
+      </Typography>
+    </StatusBadge>,
+    "17/09/2022"
+  ),
+  createData(
+    1,
+    "John Doe",
+    "johndoe@gmail.com",
+    9,
+    "$$$$",
+    <StatusBadge color={"yellow"} sx={{ color: "#000" }}>
+      <Typography variant="body2">
+        <b>delayed</b>
+      </Typography>
+    </StatusBadge>,
+    "17/09/2022"
+  ),
+  createData(
+    1,
+    "John Doe",
+    "johndoe@gmail.com",
+    16.0,
+    "$$$$",
+    <StatusBadge color={"grey"}>
+      <Typography variant="body2">
+        <b>pending</b>
+      </Typography>
+    </StatusBadge>,
+    "17/09/2022"
+  ),
+  createData(
+    1,
+    "John Doe",
+    "johndoe@gmail.com",
+    3.7,
+    "$$$$",
+    <StatusBadge color={"blue"}>
+      <Typography variant="body2">
+        <b>processing</b>
+      </Typography>
+    </StatusBadge>,
+    "17/09/2022"
+  ),
+  createData(
+    1,
+    "John Doe",
+    "johndoe@gmail.com",
+    16.0,
+    "$$$$",
+    <StatusBadge color={"red"}>
+      <Typography variant="body2">
+        <b>cancelled</b>
+      </Typography>
+    </StatusBadge>,
+    "17/09/2022"
+  ),
+];
+const options = [10, 20, 30];
 const OrdersHistory = () => {
   const useQuery = () => {
     return new URLSearchParams(useLocation().search);
@@ -43,37 +105,39 @@ const OrdersHistory = () => {
   const page = query.get("page") || 1;
   return (
     <Wrapper>
-      <BreadcrumbsContainer mt={3}>
+      <PageHeader mt={3}>
         <Typography variant="h6" component="p">
           Orders history
         </Typography>
-        <Breadcrumbs
-          arial-label="breadcrumb"
-          separator={<NavigateNextIcon fontSize="small" />}
+        <BreadCrumbs navigation={navigation} />
+      </PageHeader>
+      <PageHeader>
+        <Box
+          sx={{ display: "flex", flexDirection: "row", alignItems: "center" }}
         >
-          <Button sx={breadCrumbsButtonStyles}>
-            <Link underline="hover" href="#" sx={breadCrumbsText}>
-              Home
-            </Link>
-          </Button>
-          <Typography sx={singleBreadCrumbTextStyle}>History</Typography>
-        </Breadcrumbs>
-      </BreadcrumbsContainer>
-
-      <TableContainer
-        component={Paper}
-        style={{ marginTop: "25px", marginBottom: "25px" }}
-      >
-        <Table sx={{ minWidth: 650 }} aria-label="simple table">
+          <Typography variant="body2">show</Typography>
+          <CustomSelect
+            showBorder={true}
+            showBackground={false}
+            width={"70px"}
+            items={options}
+            margin="0 5%"
+          />{" "}
+          <Typography variant="body2"> entries</Typography>
+        </Box>
+        <MiniSearchInput />
+      </PageHeader>
+      <TableContainer style={{ marginTop: "25px", marginBottom: "25px" }}>
+        <Table>
           <TableHead>
             <TableRow>
               <TableCell>ID</TableCell>
-              <TableCell align="right">Customer</TableCell>
-              <TableCell align="right">Email</TableCell>
-              <TableCell align="right">Items</TableCell>
-              <TableCell align="right">Price</TableCell>
-              <TableCell align="right">Status</TableCell>
-              <TableCell align="right">Date</TableCell>
+              <TableCell align="left">Customer</TableCell>
+              <TableCell align="left">Email</TableCell>
+              <TableCell align="left">Items</TableCell>
+              <TableCell align="left">Price</TableCell>
+              <TableCell align="left">Status</TableCell>
+              <TableCell align="left">Date</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -85,12 +149,24 @@ const OrdersHistory = () => {
                 <TableCell component="th" scope="row">
                   {row.ID}
                 </TableCell>
-                <TableCell align="right">{row.Customer}</TableCell>
-                <TableCell align="right">{row.Email}</TableCell>
-                <TableCell align="right">{row.Items}</TableCell>
-                <TableCell align="right">{row.Price}</TableCell>
-                <TableCell align="right">{row.Status}</TableCell>
-                <TableCell align="right">{row.Date}</TableCell>
+                <TableCell align="left" padding="normal">
+                  {row.Customer}
+                </TableCell>
+                <TableCell align="left" padding="normal">
+                  {row.Email}
+                </TableCell>
+                <TableCell align="left" padding="normal">
+                  {row.Items}
+                </TableCell>
+                <TableCell align="left" padding="normal">
+                  {row.Price}
+                </TableCell>
+                <TableCell align="left" padding="normal">
+                  {row.Status}
+                </TableCell>
+                <TableCell align="left" padding="normal">
+                  {row.Date}
+                </TableCell>
               </TableRow>
             ))}
           </TableBody>

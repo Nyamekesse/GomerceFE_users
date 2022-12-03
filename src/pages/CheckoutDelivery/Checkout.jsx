@@ -1,4 +1,4 @@
-import { Button, Typography } from "@mui/material";
+import Typography from "@mui/material/Typography";
 import React, { useState } from "react";
 import Radio from "@mui/material/Radio";
 import RadioGroup from "@mui/material/RadioGroup";
@@ -8,16 +8,11 @@ import Box from "@mui/material/Box";
 import MenuItem from "@mui/material/MenuItem";
 import CustomCheckoutBreadcrumb from "../../components/CheckoutTimeLine/index";
 import CustomDivider from "../../components/CustomDivider";
-import {
-  CustomTextField,
-  ListItem,
-  ShippingSection,
-  Wrapper,
-  shippingItemsTitle,
-  checkoutHeading,
-} from "./CheckoutDeliveryStyle";
+import { Wrapper, checkoutHeading } from "./CheckoutDeliveryStyle";
+import { Button, FormLabel, TextField } from "@mui/material";
+import ShipmentSection from "./ShipmentSection";
 const Checkout = () => {
-  const [pickUpStation, setPickUpStation] = useState("");
+  const [pickupStation, setPickUpStation] = useState("");
 
   const handleChange = (event) => {
     setPickUpStation(event.target.value);
@@ -30,77 +25,46 @@ const Checkout = () => {
       </Typography>
       <CustomCheckoutBreadcrumb address={true} />
       <Wrapper>
-        <Typography variant="subtitle2">
-          How do you want your order delivered?
-        </Typography>
-        <Box mt={2} mb={2}>
-          <FormControl>
-            <RadioGroup row>
-              <FormControlLabel
-                value="female"
-                control={<Radio />}
-                label="Pickup Station"
-              />
-            </RadioGroup>
-          </FormControl>
-        </Box>
-        <Typography variant="subtitle2">
-          Ready for pick up between Tuesday 20 Sep and Thursday 22 Sep with
-          cheaper shipping fees?
-        </Typography>
-        <Box mt={1} mb={1} sx={{ width: "260px", height: "34px" }}>
-          <CustomTextField
-            select
-            onChange={handleChange}
-            value={pickUpStation}
-            fullWidth
-            size="medium"
-            variant="standard"
-            placeholder="select pickup station"
-          >
-            <MenuItem value={"london"}>London</MenuItem>
-            <MenuItem value={"abuja"}>Abuja</MenuItem>
-            <MenuItem value={"ghana"}>Ghana</MenuItem>dth
-          </CustomTextField>
-        </Box>
-        <CustomDivider />
         <FormControl>
-          <RadioGroup row>
+          <FormLabel>
+            <Typography variant="subtitle2">
+              How do you want your order delivered?
+            </Typography>
+          </FormLabel>
+          <RadioGroup defaultValue={"pickup station"}>
             <FormControlLabel
-              value="female"
-              disabled
+              value="pickup station"
+              control={<Radio />}
+              label="Pickup Station"
+            />
+            <Typography variant="subtitle2" mt={1} mb={1}>
+              Ready for pick up between Tuesday 20 Sep and Thursday 22 Sep with
+              cheaper shipping fees?
+            </Typography>
+            <Box mt={1} mb={1} sx={{ width: "260px" }}>
+              <TextField
+                select
+                onChange={handleChange}
+                value={pickupStation}
+                fullWidth
+                margin="dense"
+                size="small"
+                variant="outlined"
+              >
+                <MenuItem value={"london"}>London</MenuItem>
+                <MenuItem value={"abuja"}>Abuja</MenuItem>
+                <MenuItem value={"ghana"}>Ghana</MenuItem>
+              </TextField>
+            </Box>
+            <CustomDivider />
+            <FormControlLabel
+              value="home or office"
               control={<Radio />}
               label="Deliver to your home or office"
             />
           </RadioGroup>
         </FormControl>
-        <Typography variant="subtitle2" mt={2} mb={2}>
-          Deliver between Tuesday 20 Sep and Thursday 22 Sep
-        </Typography>
-        <ShippingSection>
-          <Typography sx={shippingItemsTitle} variant="h6">
-            Shipping items
-          </Typography>
-          <CustomDivider />
-          <ListItem>
-            <Typography variant="p">Shipment 1 of 3</Typography>
-            <Typography variant="p">
-              Laptop Bag USB Back Pack Antitheft Bag
-            </Typography>
-            <Typography variant="p">Qty - 1</Typography>
-            <Typography variant="p">Delivered by ---</Typography>
-            <CustomDivider />
-          </ListItem>
-          <ListItem>
-            <Typography variant="p">Shipment 1 of 3</Typography>
-            <Typography variant="p">
-              Laptop Bag USB Back Pack Antitheft Bag
-            </Typography>
-            <Typography variant="p">Qty - 1</Typography>
-            <Typography variant="p">Delivered by ---</Typography>
-            <CustomDivider />
-          </ListItem>
-        </ShippingSection>
+        <ShipmentSection />
         <Button variant="contained" disableElevation>
           save and continue
         </Button>

@@ -1,4 +1,4 @@
-const orderInfo = [
+export const orderInfo = [
   {
     label: "Customer",
     description:
@@ -21,4 +21,4 @@ const orderInfo = [
   },
 ];
 
-export default orderInfo;
+export const orderHistory = [];

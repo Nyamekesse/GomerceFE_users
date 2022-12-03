@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Box } from "@mui/material";
+import Grid from "@mui/material/Grid";
 import Checkout from "./Checkout";
 import OrderSummary from "../../components/OrderSummary";
 import NeedHelp from "../../components/NeedHelp";
@@ -9,9 +9,7 @@ const CheckoutPayment = () => {
     <Wrapper>
       <Grid container direction="row" spacing={4} mt={2} mb={3}>
         <Grid item xs={8}>
-          <Box>
-            <Checkout />
-          </Box>
+          <Checkout />
         </Grid>
         <Grid item xs={4}>
           <OrderSummary />

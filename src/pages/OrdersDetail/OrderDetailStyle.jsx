@@ -66,7 +66,7 @@ const DetailsMain = styled(Box)({
   background: "#FFFFFF",
   boxShadow: "0px 2px 2px rgba(142, 142, 142, 0.25)",
   borderRadius: "8px",
-  marginBottom: "2%",
+  margin: "5% 0 2%",
 });
 const InfoWrapper = styled(Box)({
   width: "100%",
