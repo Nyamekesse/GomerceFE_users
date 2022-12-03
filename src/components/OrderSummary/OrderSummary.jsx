@@ -1,18 +1,5 @@
-import { Box, Divider } from "@mui/material";
 import { styled } from "@mui/material/styles";
-
-const Wrapper = styled(Box)(({ theme }) => ({
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "center",
-  alignItems: "flex-start",
-  padding: "16px",
-  gap: "14px",
-  background: "#FFFFFF",
-  boxShadow: "0px 2px 2px rgba(142, 142, 142, 0.25)",
-  borderRadius: "4px",
-}));
-
+import Box from "@mui/material/Box";
 const textStyle = {
   height: "36px",
   fontWeight: "400",
@@ -36,5 +23,16 @@ const btnStyle = {
   alignSelf: "stretch",
   flexGrow: "0",
 };
-
+const Wrapper = styled(Box)(({ theme }) => ({
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  alignItems: "flex-start",
+  padding: "16px",
+  gap: "14px",
+  background: "#FFFFFF",
+  boxShadow: "0px 2px 2px rgba(142, 142, 142, 0.25)",
+  borderRadius: "4px",
+  width: "100%",
+}));
 export { Wrapper, textStyle, btnStyle };

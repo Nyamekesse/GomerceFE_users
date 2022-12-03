@@ -1,8 +1,12 @@
 import React from "react";
-import { btnStyle, textStyle, Wrapper } from "./OrderSummary";
-import { checkoutHeading, CustomDivider } from "../CheckOut/Checkout";
-import { Button, Grid, Typography } from "@mui/material";
+import { textStyle, Wrapper } from "./OrderSummary";
+import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
+import Grid from "@mui/material/Grid";
 import OrderItemDetails from "./OrderItemDetails";
+import CustomDivider from "../CustomDivider";
+import { checkoutHeading } from "../../pages/CheckoutDelivery/CheckoutDeliveryStyle";
+import Box from "@mui/material/Box";
 
 const OrderSummary = () => {
   return (
@@ -18,37 +22,37 @@ const OrderSummary = () => {
           container
           direction="row"
           spacing={3}
-          sx={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-          }}
+          justifyContent="space-between"
         >
           <Grid item xs={6}>
-            <Typography variant="subtitle2" sx={textStyle}>
-              Subtotal
-            </Typography>
-            <Typography variant="subtitle2" sx={textStyle}>
-              VAT
-            </Typography>
-            <Typography variant="subtitle2" sx={textStyle}>
-              Total
-            </Typography>
+            <Box>
+              <Typography variant="subtitle2" mt={1.5} mb={1.5} align={"left"}>
+                Subtotal
+              </Typography>
+              <Typography variant="subtitle2" mt={1.5} mb={1.5} align={"left"}>
+                VAT
+              </Typography>
+              <Typography variant="subtitle2" mt={1.5} mb={1.5} align={"left"}>
+                Total
+              </Typography>
+            </Box>
           </Grid>
           <Grid item xs={6}>
-            <Typography variant="subtitle2" sx={textStyle}>
-              $$$$$$
-            </Typography>
-            <Typography variant="subtitle2" sx={textStyle}>
-              $$$$$$
-            </Typography>
-            <Typography variant="subtitle2" sx={textStyle}>
-              $$$$$$
-            </Typography>
+            <Box>
+              <Typography variant="subtitle2" mt={1.5} mb={1.5} align={"right"}>
+                $$$$$$
+              </Typography>
+              <Typography variant="subtitle2" mt={1.5} mb={1.5} align={"right"}>
+                $$$$$$
+              </Typography>
+              <Typography variant="subtitle2" mt={1.5} mb={1.5} align={"right"}>
+                $$$$$$
+              </Typography>
+            </Box>
           </Grid>
         </Grid>
         <CustomDivider />
-        <Button variant="contained" disableElevation sx={btnStyle} size="large">
+        <Button variant="outlined" disableElevation fullWidth size="large">
           Modify cart
         </Button>
       </Wrapper>

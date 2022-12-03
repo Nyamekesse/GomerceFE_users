@@ -8,7 +8,6 @@ import {
   cardStyles,
   imgStyle,
   priceTag,
-  btnStyles,
   secondSection,
   descriptionTag,
 } from "./ProductCard";
@@ -25,7 +24,7 @@ function ProductCard({ image, price, description }) {
         <Typography variant="h6" sx={priceTag}>
           {`$ ${price}`}
         </Typography>
-        <Button sx={btnStyles}>Add to Cart</Button>
+        <Button variant="outlined">Add to Cart</Button>
       </CardContent>
     </Card>
   );

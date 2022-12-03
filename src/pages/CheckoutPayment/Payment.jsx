@@ -1,19 +1,16 @@
-import { Box, Button, MenuItem, Typography } from "@mui/material";
+import { Box, Button, MenuItem, TextField, Typography } from "@mui/material";
 import React from "react";
 import { useState } from "react";
+import CustomCheckoutBreadcrumb from "../../components/CheckoutTimeLine";
+import summary from "../../SetUpData/summaryData";
+import CustomDivider from "../../components/CustomDivider";
 import {
-  btnStyle,
-  checkoutHeading,
-  CustomDivider,
-  CustomTextField,
   Row,
+  checkoutHeading,
   Summary,
   textStyle,
   Wrapper,
-} from "../../components/CheckOut/Checkout";
-import CustomCheckoutBreadcrumb from "../../components/CustomCheckoutBreadcrumb";
-import { buttonStyles } from "../../components/Navbar/Navbar";
-import summary from "../../SetUpData/summaryData";
+} from "../CheckoutDelivery/CheckoutDeliveryStyle";
 const Payment = () => {
   const [payment, setPayment] = useState("");
 
@@ -32,20 +29,18 @@ const Payment = () => {
         </Typography>
 
         <Typography variant="subtitle2">Select payment option</Typography>
-        <Box mt={1} mb={1} sx={{ width: "260px", height: "34px" }}>
-          <CustomTextField
+        <Box mt={1} mb={1} sx={{ width: "260px" }}>
+          <TextField
             select
             onChange={handleChange}
             value={payment}
             fullWidth
-            size="medium"
-            variant="standard"
-            placeholder="open this to select"
+            size="small"
           >
             <MenuItem value={"master card"}>Master Card</MenuItem>
             <MenuItem value={"visa card"}>Visa Card</MenuItem>
             <MenuItem value={"paypal"}>Paypal</MenuItem>dth
-          </CustomTextField>
+          </TextField>
         </Box>
         <CustomDivider />
         <Typography variant="subtitle2" mt={2} mb={2}>
@@ -61,19 +56,9 @@ const Payment = () => {
           }}
         >
           <Box sx={{ width: "272px" }}>
-            <CustomTextField
-              size="small"
-              variant="standard"
-              margin="none"
-              fullWidth
-              sx={{ height: "38px" }}
-            />
+            <TextField size="small" fullWidth />
           </Box>
-          <Button
-            size="medium"
-            variant="outlined"
-            sx={{ ...buttonStyles, width: "124px" }}
-          >
+          <Button size="medium" variant="outlined">
             add voucher
           </Button>
         </Box>
@@ -106,7 +91,7 @@ const Payment = () => {
             );
           })}
         </Summary>
-        <Button sx={{ ...btnStyle, color: "#fff" }}>submit order</Button>
+        <Button variant="contained">submit order</Button>
       </Wrapper>
     </>
   );

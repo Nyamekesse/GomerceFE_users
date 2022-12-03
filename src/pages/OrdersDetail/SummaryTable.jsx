@@ -10,7 +10,7 @@ import { Box } from "@mui/system";
 function createData(id, item, quantity, unitCost, subTotal) {
   return { id, item, quantity, unitCost, subTotal };
 }
-const TAX_RATE = 0.07;
+
 const rows = [
   createData(
     "1",
@@ -66,9 +66,8 @@ const SummaryTable = () => {
               <TableCell align="left" sx={{ width: "168px" }} padding="normal">
                 {row.item.map((item, index) => {
                   return (
-                    <Typography variant="caption" key={index}>{`${
-                      item + " "
-                    }`}</Typography>
+                    <Typography variant="caption" key={index}>{`${item +
+                      " "}`}</Typography>
                   );
                 })}
               </TableCell>

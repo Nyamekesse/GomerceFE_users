@@ -1,16 +1,14 @@
-const categoriesData = [
+const categories = [
   {
     id: 1,
     title: "Phones & Accessories",
-    subList: [
-      { subCategory: "Iphone" },
-      { subCategory: "Samsung" },
-      { subCategory: "Huawei" },
-    ],
+    isOpen: true,
+    subList: [],
   },
   {
     id: 2,
     title: "Health & Beauty",
+
     subList: [
       { subCategory: "Hair wigs" },
       { subCategory: "Nails" },
@@ -21,11 +19,13 @@ const categoriesData = [
   {
     id: 3,
     title: "Home & Office",
+    isOpen: true,
     subList: [{ subCategory: "Decors" }],
   },
   {
     id: 4,
     title: "Fashion",
+
     subList: [
       { subCategory: "African wears" },
       { subCategory: "Dinner wear" },
@@ -37,17 +37,15 @@ const categoriesData = [
   {
     id: 5,
     title: "Gaming",
+
     subList: [{ subCategory: "Action game" }, { subCategory: "Arcade games" }],
   },
   {
     id: 6,
     title: "Other categories",
-    subList: [
-      { subCategory: "Iphone" },
-      { subCategory: "Samsung" },
-      { subCategory: "Huawei" },
-    ],
+
+    subList: [],
   },
 ];
 
-export default categoriesData;
+export default categories;

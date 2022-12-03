@@ -1,27 +1,34 @@
-import { BrowserRouter } from "react-router-dom";
 import Views from "./Views/Views";
-import AppContainer from "./components/AppContainer/AppContainer";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import Wrapper from "./components/Wrapper/Wrapper";
 import { getProductCategories } from "./actions/products";
 import { useDispatch } from "react-redux";
 import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+import { Box, styled } from "@mui/material";
+
 const App = () => {
+  let location = useLocation();
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getProductCategories());
   }, [dispatch]);
+  const AppContainer = styled(Box)(({ theme }) => ({
+    width: "100%",
+    margin: "0 auto",
+    display: "flex",
+    flexDirection: "column",
+  }));
   return (
-    <BrowserRouter>
-      <AppContainer>
+    <AppContainer>
+      {location.pathname !== "/login" && location.pathname !== "/signup" && (
         <Navbar />
-        <Wrapper>
-          <Views />
-        </Wrapper>
+      )}
+      <Views />
+      {location.pathname !== "/login" && location.pathname !== "/signup" && (
         <Footer />
-      </AppContainer>
-    </BrowserRouter>
+      )}
+    </AppContainer>
   );
 };
 
