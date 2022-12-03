@@ -12,6 +12,14 @@ const green = "#198754";
 const offWhite = "#F4F5EF";
 const grey = "#6C757D";
 const theme = createTheme({
+  breakpoints: {
+    values: {
+      xs: 0, //mobile
+      sm: 640, //tablet
+      md: 1024, //laptop
+      lg: 1200, //desktop
+    },
+  },
   styleOverrides: {
     MuiOutlinedInput: {
       root: {

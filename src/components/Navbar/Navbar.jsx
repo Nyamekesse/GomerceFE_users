@@ -1,8 +1,7 @@
 import { styled } from "@mui/material/styles";
-
 import { Box } from "@mui/material";
 
-const customAppBarStyle = {
+const customAppBarStyle = (theme) => ({
   display: "flex",
   flexDirection: "row",
   alignItems: "center",
@@ -12,9 +11,10 @@ const customAppBarStyle = {
   padding: "20px, 53px",
   margin: "0 auto",
   backgroundColor: "#fff",
-  top: 0,
-  left: 0,
-};
+  [theme.breakpoints.down("md")]: {
+    // display: "none",
+  },
+});
 
 const toolBarStyles = {
   width: "100%",
@@ -32,6 +32,9 @@ const StyledButtonGroup = styled(Box)(({ theme }) => ({
   justifyContent: "space-between",
   width: "368px",
   height: "34px",
+  [theme.breakpoints.down("md")]: {
+    width: "100px",
+  },
 }));
 
 const buttonStyles = {

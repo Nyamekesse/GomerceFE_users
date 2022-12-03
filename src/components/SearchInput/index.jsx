@@ -22,7 +22,7 @@ const SearchInput = () => {
       setSearchWord("");
       navigate(`/products/search?searchTerm=${searchWord || "none"}`);
     } else {
-      navigate("/home");
+      navigate("/");
     }
   };
   const handleKeyPress = (e) => {

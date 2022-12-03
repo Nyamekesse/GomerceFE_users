@@ -10,12 +10,23 @@ import Person3OutlinedIcon from "@mui/icons-material/Person3Outlined";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import { useNavigate } from "react-router-dom";
 import { customAppBarStyle, toolBarStyles, StyledButtonGroup } from "./Navbar";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import IconButton from "@mui/material/IconButton";
+import MenuIcon from "@mui/icons-material/Menu";
+import { useTheme } from "@mui/material/styles";
 const PrimarySearchAppBar = () => {
+  const theme = useTheme();
   const navigate = useNavigate();
-
+  const matches = useMediaQuery(theme.breakpoints.down("md"));
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="sticky" sx={customAppBarStyle}>
+        {matches && (
+          <IconButton sx={{ backgroundColor: "inherit" }}>
+            <MenuIcon />
+          </IconButton>
+        )}
+
         <Toolbar sx={toolBarStyles}>
           <Typography
             variant="h6"
@@ -23,27 +34,45 @@ const PrimarySearchAppBar = () => {
             component="div"
             onClick={() => navigate("/")}
             sx={{
-              display: { xs: "none", sm: "block" },
+              display: "block",
               height: "23px",
               color: "#1F2839",
               fontWeight: "700",
               fontSize: "20px",
               lineHeight: "23px",
+              textTransform: "uppercase",
             }}
           >
-            GOMERCE
+            gomerce
           </Typography>
+
           <SearchInput />
           <StyledButtonGroup>
-            <Button variant="outlined" startIcon={<FavoriteBorderIcon />}>
-              Wishlist
-            </Button>
-            <Button variant="outlined" startIcon={<Person3OutlinedIcon />}>
-              Account
-            </Button>
-            <Button variant="outlined" startIcon={<ShoppingCartOutlinedIcon />}>
-              Cart
-            </Button>
+            {!matches ? (
+              <>
+                <Button variant="outlined" startIcon={<FavoriteBorderIcon />}>
+                  Wishlist
+                </Button>
+                <Button variant="outlined" startIcon={<Person3OutlinedIcon />}>
+                  Account
+                </Button>
+                <Button
+                  variant="outlined"
+                  startIcon={<ShoppingCartOutlinedIcon />}
+                >
+                  Cart
+                </Button>
+              </>
+            ) : (
+              <>
+                <IconButton>
+                  <Person3OutlinedIcon />
+                </IconButton>
+                <IconButton>
+                  <ShoppingCartOutlinedIcon />
+                </IconButton>
+              </>
+            )}
           </StyledButtonGroup>
         </Toolbar>
       </AppBar>
