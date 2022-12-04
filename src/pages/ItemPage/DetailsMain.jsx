@@ -14,7 +14,7 @@ import {
   IconsWrapper,
   ItemDetails,
   ShareSection,
-} from "./ItemPageStyle";
+} from "./styles";
 const DetailsMain = () => {
   return (
     <Details>
@@ -25,10 +25,10 @@ const DetailsMain = () => {
         mb={3}
         justifyContent="space-between"
       >
-        <Grid item xs={4}>
+        <Grid item mobile={4}>
           <ItemImage />
         </Grid>
-        <Grid item xs={8}>
+        <Grid item mobile={8}>
           <ItemDetails>
             <Box
               sx={{

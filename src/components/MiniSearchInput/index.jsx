@@ -8,7 +8,7 @@ import {
   SearchIconWrapper,
   StyledInputBase,
   customSearchIcon,
-} from "./SearchInputStyles";
+} from "./styles";
 
 const MiniSearchInput = () => {
   const [searchWord, setSearchWord] = useState("");

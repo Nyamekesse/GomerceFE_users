@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Button, Typography } from "@mui/material";
-import { Wrapper } from "./NeedHelpStyle";
-import { checkoutHeading } from "../../pages/CheckoutDelivery/CheckoutDeliveryStyle";
+import { Wrapper } from "./styles";
+import { checkoutHeading } from "../../pages/CheckoutDelivery/styles";
 const NeedHelp = () => {
   return (
     <Box mt={3}>

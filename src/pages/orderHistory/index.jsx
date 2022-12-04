@@ -16,7 +16,7 @@ import {
 } from "@mui/material";
 import { useLocation } from "react-router-dom";
 
-import { PageHeader, StatusBadge } from "./OrderHistoryStyle";
+import { PageHeader, StatusBadge } from "./styles";
 
 import Wrapper from "../../components/Wrapper/Wrapper";
 import BreadCrumbs from "../../components/BreadCrumbs";

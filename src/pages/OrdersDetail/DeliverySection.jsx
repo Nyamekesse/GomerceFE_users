@@ -1,6 +1,6 @@
 import Typography from "@mui/material/Typography";
 import React from "react";
-import { Delivery, Frame } from "./OrderDetailStyle";
+import { Delivery, Frame } from "./styles";
 import Tracking from "./Tracking";
 const DeliverySection = () => {
   return (

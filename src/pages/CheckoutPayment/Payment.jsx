@@ -4,12 +4,7 @@ import { useState } from "react";
 import CustomCheckoutBreadcrumb from "../../components/CheckoutTimeLine";
 import summary from "../../SetUpData/summaryData";
 import CustomDivider from "../../components/CustomDivider";
-import {
-  Row,
-  Summary,
-  textStyle,
-  Wrapper,
-} from "../CheckoutDelivery/CheckoutDeliveryStyle";
+import { Row, Summary, textStyle, Wrapper } from "../CheckoutDelivery/styles";
 const Payment = () => {
   const [payment, setPayment] = useState("");
 

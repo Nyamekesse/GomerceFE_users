@@ -4,7 +4,7 @@ import Breadcrumbs from "@mui/material/Breadcrumbs";
 import CustomBreadcrumbDivider from "./CustomBreadcrumbDivider";
 import Button from "@mui/material/Button";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
-import { checkoutButtonStyle } from "./CustomBreadcrumbs";
+import { checkoutButtonStyle } from "./styles";
 
 const CustomCheckoutBreadcrumb = ({ address, payment, delivery }) => {
   const breadcrumbs = [

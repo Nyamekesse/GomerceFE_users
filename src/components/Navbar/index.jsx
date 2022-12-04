@@ -9,7 +9,7 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import Person3OutlinedIcon from "@mui/icons-material/Person3Outlined";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import { useNavigate } from "react-router-dom";
-import { customAppBarStyle, toolBarStyles, StyledButtonGroup } from "./Navbar";
+import { customAppBarStyle, toolBarStyles, StyledButtonGroup } from "./styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -17,7 +17,7 @@ import { useTheme } from "@mui/material/styles";
 const PrimarySearchAppBar = () => {
   const theme = useTheme();
   const navigate = useNavigate();
-  const matches = useMediaQuery(theme.breakpoints.down("md"));
+  const matches = useMediaQuery(theme.breakpoints.down("laptop"));
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="sticky" sx={customAppBarStyle}>

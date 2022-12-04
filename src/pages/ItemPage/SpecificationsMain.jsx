@@ -1,6 +1,6 @@
 import React from "react";
 import Typography from "@mui/material/Typography";
-import { Card, ListWrap, Specifications, Wrap } from "./ItemPageStyle";
+import { Card, ListWrap, Specifications, Wrap } from "./styles";
 import CustomDivider from "../../components/CustomDivider";
 const SpecificationsMain = () => {
   return (

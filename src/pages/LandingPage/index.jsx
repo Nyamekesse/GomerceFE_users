@@ -7,10 +7,10 @@ const LandingPage = () => {
   return (
     <Wrapper>
       <Grid container direction="row" spacing={1}>
-        <Grid item xs={3}>
+        <Grid item mobile={3}>
           <SideNav />
         </Grid>
-        <Grid item xs={9}>
+        <Grid item mobile={9}>
           <AsideMain />
         </Grid>
       </Grid>

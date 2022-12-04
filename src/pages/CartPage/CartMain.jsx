@@ -2,7 +2,7 @@ import { Box, Typography } from "@mui/material";
 import React from "react";
 import CustomDivider from "../../components/CustomDivider";
 import CartItem from "./CartItem";
-import { CustomCartMain } from "./CartPageStyling";
+import { CustomCartMain } from "./styles";
 const CartMain = () => {
   return (
     <CustomCartMain>

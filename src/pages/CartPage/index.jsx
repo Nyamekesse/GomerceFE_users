@@ -1,7 +1,7 @@
 import Grid from "@mui/material/Grid";
 import React from "react";
 import CartMain from "./CartMain";
-import { CustomSection } from "./CartPageStyling";
+import { CustomSection } from "./styles";
 import Summary from "./Summary";
 import Wrapper from "../../components/Wrapper/Wrapper";
 import RecommendedItems from "../../components/RecommendedItems";
@@ -17,10 +17,10 @@ const Cart = () => {
           mb={3}
           justifyContent="space-between"
         >
-          <Grid item xs={7}>
+          <Grid item mobile={7}>
             <CartMain />
           </Grid>
-          <Grid item xs={4}>
+          <Grid item mobile={4}>
             <Summary />
           </Grid>
         </Grid>

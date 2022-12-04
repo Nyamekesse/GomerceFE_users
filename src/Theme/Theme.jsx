@@ -14,10 +14,10 @@ const grey = "#6C757D";
 const theme = createTheme({
   breakpoints: {
     values: {
-      xs: 0, //mobile
-      sm: 640, //tablet
-      md: 1024, //laptop
-      lg: 1200, //desktop
+      mobile: 0, //mobile   xs
+      tablet: 640, //tablet   sm
+      laptop: 1024, //laptop  md
+      desktop: 1200, //desktop ld
     },
   },
   styleOverrides: {

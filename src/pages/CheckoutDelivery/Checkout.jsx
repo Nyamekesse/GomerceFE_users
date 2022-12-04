@@ -8,7 +8,7 @@ import Box from "@mui/material/Box";
 import MenuItem from "@mui/material/MenuItem";
 import CustomCheckoutBreadcrumb from "../../components/CheckoutTimeLine/index";
 import CustomDivider from "../../components/CustomDivider";
-import { Wrapper } from "./CheckoutDeliveryStyle";
+import { Wrapper } from "./styles";
 import { Button, FormLabel, TextField } from "@mui/material";
 import ShipmentSection from "./ShipmentSection";
 const Checkout = () => {

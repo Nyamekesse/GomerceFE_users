@@ -7,7 +7,7 @@ import {
   ReviewsHeadWrap,
   ReviewsSection,
   ReviewsStatusText,
-} from "./ItemPageStyle";
+} from "./styles";
 import Ratings from "./Ratings";
 import LinearProgressBar from "./LinearProgressBar";
 import CommentsCard from "./CommentsCard";

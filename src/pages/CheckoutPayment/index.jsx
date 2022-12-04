@@ -8,12 +8,12 @@ const CheckoutPayment = () => {
   return (
     <Wrapper>
       <Grid container direction="row" spacing={4} mt={2} mb={3}>
-        <Grid item xs={8}>
+        <Grid item mobile={8}>
           <Box>
             <Payment />
           </Box>
         </Grid>
-        <Grid item xs={4}>
+        <Grid item mobile={4}>
           <OrderSummary />
           <NeedHelp />
         </Grid>

@@ -1,7 +1,7 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
 import tracking from "../../SetUpData/tracking";
-import { CustomHr, IconBox, TrackDisplay, TrackItem } from "./OrderDetailStyle";
+import { CustomHr, IconBox, TrackDisplay, TrackItem } from "./styles";
 const Tracking = () => {
   return (
     <TrackDisplay>

@@ -10,7 +10,7 @@ import {
   priceTag,
   secondSection,
   descriptionTag,
-} from "./ProductCard";
+} from "./styles";
 import { Button } from "@mui/material/";
 
 function ProductCard({ image, price, description }) {

@@ -11,7 +11,7 @@ const customAppBarStyle = (theme) => ({
   padding: "20px, 53px",
   margin: "0 auto",
   backgroundColor: "#fff",
-  [theme.breakpoints.down("md")]: {
+  [theme.breakpoints.down("laptop")]: {
     // display: "none",
   },
 });
@@ -32,7 +32,7 @@ const StyledButtonGroup = styled(Box)(({ theme }) => ({
   justifyContent: "space-between",
   width: "368px",
   height: "34px",
-  [theme.breakpoints.down("md")]: {
+  [theme.breakpoints.down("laptop")]: {
     width: "100px",
   },
 }));

@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  DetailsMain,
-  InfoWrapper,
-  OrderInfo,
-  ProductSummary,
-} from "./OrderDetailStyle";
+import { DetailsMain, InfoWrapper, OrderInfo, ProductSummary } from "./styles";
 import { orderInfo } from "../../SetUpData/data_orders";
 import SummaryTable from "./SummaryTable";
 import CustomDivider from "../../components/CustomDivider";

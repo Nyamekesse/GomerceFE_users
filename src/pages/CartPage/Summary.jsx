@@ -1,8 +1,8 @@
 import { Box, Button, Typography } from "@mui/material";
 import React from "react";
 import CustomDivider from "../../components/CustomDivider";
-import { Row } from "../CheckoutDelivery/CheckoutDeliveryStyle";
-import { CustomSummary } from "./CartPageStyling";
+import { Row } from "../CheckoutDelivery/styles";
+import { CustomSummary } from "./styles";
 
 const Summary = () => {
   return (

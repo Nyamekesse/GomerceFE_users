@@ -10,8 +10,8 @@ import {
   Typography,
 } from "@mui/material";
 import React from "react";
-import { textStyle } from "../../components/OrderSummary/OrderSummary";
-import { ActionRow } from "./CartPageStyling";
+import { textStyle } from "../../components/OrderSummary/styles";
+import { ActionRow } from "./styles";
 import Phone from "../../Assets/Images/phone1.jfif";
 import CustomDivider from "../../components/CustomDivider";
 const CartItem = () => {
@@ -30,14 +30,14 @@ const CartItem = () => {
         alignItems={"flex-start"}
         sx={{ padding: "2%" }}
       >
-        <Grid item xs={3}>
+        <Grid item mobile={3}>
           <Box>
             <img src={Phone} alt={Phone} />
           </Box>
         </Grid>
         <Grid
           item
-          xs={9}
+          mobile={9}
           container
           direction="row"
           justifyContent={"space-between"}

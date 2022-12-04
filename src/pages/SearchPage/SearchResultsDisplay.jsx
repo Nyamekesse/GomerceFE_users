@@ -1,5 +1,5 @@
 import React from "react";
-import { ResultContainer, Title, Label } from "./SearchPageStyle";
+import { ResultContainer, Title, Label } from "./styles";
 import CustomSelect from "../../components/CustomSelect";
 import Grid from "@mui/material/Grid";
 import ProductCard from "../../components/ProductCard";

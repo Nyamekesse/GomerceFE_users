@@ -1,7 +1,7 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
 import Ratings from "./Ratings";
-import { CommentBox } from "./ItemPageStyle";
+import { CommentBox } from "./styles";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 const CommentsCard = () => {
   return (

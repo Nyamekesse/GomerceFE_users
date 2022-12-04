@@ -1,11 +1,7 @@
 import { Typography } from "@mui/material";
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import {
-  ColumnWrapper,
-  CustomListItems,
-  ColumnTitleStyle,
-} from "./FooterStyles";
+import { ColumnWrapper, CustomListItems, ColumnTitleStyle } from "./styles";
 const FooterColumn = ({ title, links }) => {
   const navigate = useNavigate();
   return (
