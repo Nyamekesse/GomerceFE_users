@@ -1,4 +1,4 @@
-const breadCrumbsText = {
+export const breadCrumbsText = {
   fontWeight: "500",
   fontSize: "14px",
   lineHeight: "16px",
@@ -11,7 +11,7 @@ const breadCrumbsText = {
   color: "#1F2839",
 };
 
-const breadCrumbsButtonStyles = {
+export const breadCrumbsButtonStyles = {
   display: "flex",
   flexDirection: "row",
   alignItems: "center",
@@ -27,7 +27,7 @@ const breadCrumbsButtonStyles = {
   flexGrow: "0",
 };
 
-const singleBreadCrumbTextStyle = {
+export const singleBreadCrumbTextStyle = {
   fontWeight: "400",
   fontSize: "14px",
   lineHeight: "16px",
@@ -39,4 +39,3 @@ const singleBreadCrumbTextStyle = {
   flexGrow: "0",
   textTransform: "uppercase",
 };
-export { breadCrumbsText, breadCrumbsButtonStyles, singleBreadCrumbTextStyle };

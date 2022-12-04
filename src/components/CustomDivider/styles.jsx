@@ -1,6 +1,7 @@
-import { Divider, styled } from "@mui/material";
+import Divider from "@mui/material/Divider";
+import { styled } from "@mui/material/styles";
 
-const CustomDivider = styled(Divider)(({ theme }) => ({
+export const CustomDivider = styled(Divider)(({ theme }) => ({
   width: "100%",
   border: "1px solid #CED4DA",
   flex: "none",
@@ -8,5 +9,3 @@ const CustomDivider = styled(Divider)(({ theme }) => ({
   alignSelf: "stretch",
   margin: "2% 0",
 }));
-
-export { CustomDivider };

@@ -1,7 +1,7 @@
 import Box from "@mui/material/Box";
 import { styled } from "@mui/material/styles";
 
-const Wrapper = styled(Box)(({ theme }) => ({
+export const Wrapper = styled(Box)(({ theme }) => ({
   display: "flex",
   flexDirection: "column",
   justifyContent: "space-between",
@@ -14,7 +14,7 @@ const Wrapper = styled(Box)(({ theme }) => ({
   margin: "2% 0",
 }));
 
-const formControlStyle = {
+export const formControlStyle = {
   width: "240px",
   padding: "10px 8px",
   borderRadius: "4px",
@@ -30,7 +30,7 @@ const formControlStyle = {
   },
 };
 
-const selectLabelStyle = {
+export const selectLabelStyle = {
   width: "187px",
   height: "16px",
   fontWeight: "500",
@@ -44,7 +44,7 @@ const selectLabelStyle = {
   flexGrow: "0",
 };
 
-const ShippingSection = styled(Box)(({ theme }) => ({
+export const ShippingSection = styled(Box)(({ theme }) => ({
   display: "flex",
   flexDirection: "column",
   alignItems: "flex-start",
@@ -56,7 +56,7 @@ const ShippingSection = styled(Box)(({ theme }) => ({
   marginBottom: "2%",
 }));
 
-const shippingItemsTitle = {
+export const shippingItemsTitle = {
   fontWeight: "400",
   fontSize: "14px",
   lineHeight: "16px",
@@ -66,7 +66,7 @@ const shippingItemsTitle = {
   flex: "none",
 };
 
-const ListItem = styled(Box)(({ theme }) => ({
+export const ListItem = styled(Box)(({ theme }) => ({
   display: "flex",
   flexDirection: "column",
   alignItems: "flex-start",
@@ -76,7 +76,7 @@ const ListItem = styled(Box)(({ theme }) => ({
   width: "100%",
 }));
 
-const btnStyle = {
+export const btnStyle = {
   display: "flex",
   flexDirection: "row",
   alignItems: "flex-start",
@@ -89,7 +89,7 @@ const btnStyle = {
   },
 };
 
-const checkoutHeading = {
+export const checkoutHeading = {
   display: "flex",
   height: "32px",
   fontSize: "24px",
@@ -97,20 +97,20 @@ const checkoutHeading = {
   lineHeight: "32px",
 };
 
-const Summary = styled(Box)({
+export const Summary = styled(Box)({
   display: "flex",
   flexDirection: "column",
   padding: "10px",
   width: "100%",
 });
-const Row = styled(Box)({
+export const Row = styled(Box)({
   display: "flex",
   flexDirection: "row",
   alignItems: "center",
   justifyContent: "space-between",
   marginBottom: "2%",
 });
-const textStyle = {
+export const textStyle = {
   height: "16px",
   fontWeight: "400",
   fontSize: "14px",
@@ -118,18 +118,4 @@ const textStyle = {
   alignItems: "center",
   color: "#000000",
   textTransform: "capitalize",
-};
-
-export {
-  Wrapper,
-  selectLabelStyle,
-  ShippingSection,
-  shippingItemsTitle,
-  ListItem,
-  btnStyle,
-  checkoutHeading,
-  formControlStyle,
-  Summary,
-  Row,
-  textStyle,
 };

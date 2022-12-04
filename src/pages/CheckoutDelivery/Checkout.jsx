@@ -9,7 +9,9 @@ import MenuItem from "@mui/material/MenuItem";
 import CustomCheckoutBreadcrumb from "../../components/CheckoutTimeLine/index";
 import CustomDivider from "../../components/CustomDivider";
 import { Wrapper } from "./styles";
-import { Button, FormLabel, TextField } from "@mui/material";
+import Button from "@mui/material/Button";
+import FormLabel from "@mui/material/FormLabel";
+import TextField from "@mui/material/TextField";
 import ShipmentSection from "./ShipmentSection";
 const Checkout = () => {
   const [pickupStation, setPickUpStation] = useState("");

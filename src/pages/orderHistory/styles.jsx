@@ -1,7 +1,7 @@
-import { Box } from "@mui/material";
+import Box from "@mui/material/Box";
 import { styled } from "@mui/material/styles";
 
-const PageHeader = styled(Box)({
+export const PageHeader = styled(Box)({
   display: "flex",
   flexDirection: "row",
   alignItems: "center",
@@ -9,7 +9,7 @@ const PageHeader = styled(Box)({
   width: "100%",
 });
 
-const StatusBadge = styled(Box)(({ color }) => ({
+export const StatusBadge = styled(Box)(({ color }) => ({
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
@@ -21,4 +21,3 @@ const StatusBadge = styled(Box)(({ color }) => ({
   backgroundColor: `${color}`,
   textTransform: "uppercase",
 }));
-export { PageHeader, StatusBadge };

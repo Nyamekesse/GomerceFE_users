@@ -1,6 +1,6 @@
 import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
-const textStyle = {
+export const textStyle = {
   height: "36px",
   fontWeight: "400",
   fontSize: "12px",
@@ -11,7 +11,7 @@ const textStyle = {
   textTransform: "uppercase",
 };
 
-const btnStyle = {
+export const btnStyle = {
   display: "flex",
   flexDirection: "row",
   justifyContent: "center",
@@ -23,7 +23,7 @@ const btnStyle = {
   alignSelf: "stretch",
   flexGrow: "0",
 };
-const Wrapper = styled(Box)(({ theme }) => ({
+export const Wrapper = styled(Box)(({ theme }) => ({
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
@@ -35,4 +35,3 @@ const Wrapper = styled(Box)(({ theme }) => ({
   borderRadius: "4px",
   width: "100%",
 }));
-export { Wrapper, textStyle, btnStyle };

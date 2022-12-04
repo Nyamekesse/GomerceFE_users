@@ -1,4 +1,5 @@
-import { Box, Grid } from "@mui/material";
+import Box from "@mui/material/Box";
+import Grid from "@mui/material/Grid";
 import React from "react";
 import OrderSummary from "../../components/OrderSummary";
 import NeedHelp from "../../components/NeedHelp";
@@ -8,12 +9,12 @@ const CheckoutPayment = () => {
   return (
     <Wrapper>
       <Grid container direction="row" spacing={4} mt={2} mb={3}>
-        <Grid item mobile={8}>
+        <Grid item mobile_large={8}>
           <Box>
             <Payment />
           </Box>
         </Grid>
-        <Grid item mobile={4}>
+        <Grid item mobile_large={4}>
           <OrderSummary />
           <NeedHelp />
         </Grid>

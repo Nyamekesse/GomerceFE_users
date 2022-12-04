@@ -4,7 +4,7 @@ import CardMedia from "@mui/material/CardMedia";
 import CardActions from "@mui/material/CardActions";
 import Button from "@mui/material/Button";
 import { CollectionCardStyle } from "./styles";
-import { Typography } from "@mui/material";
+import Typography from "@mui/material/Typography";
 const CollectionCard = ({ title, image, link }) => {
   return (
     <Card sx={CollectionCardStyle}>

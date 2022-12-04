@@ -1,5 +1,4 @@
 import React from "react";
-
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
@@ -11,7 +10,7 @@ import {
   secondSection,
   descriptionTag,
 } from "./styles";
-import { Button } from "@mui/material/";
+import Button from "@mui/material/Button";
 
 function ProductCard({ image, price, description }) {
   return (

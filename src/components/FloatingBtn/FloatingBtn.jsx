@@ -1,4 +1,4 @@
-const FloatingBtnStyles = {
+export const FloatingBtnStyles = {
   position: "absolute",
   height: "60px",
   left: "85%",
@@ -9,10 +9,9 @@ const FloatingBtnStyles = {
   borderRadius: "5px",
 };
 
-const IconStyle = {
+export const IconStyle = {
   left: "24.67%",
   right: "62%",
   top: "61.67%",
   bottom: "21.67%",
 };
-export { FloatingBtnStyles, IconStyle };

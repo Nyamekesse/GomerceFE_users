@@ -1,4 +1,4 @@
-const cardStyles = {
+export const cardStyles = {
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
@@ -8,13 +8,13 @@ const cardStyles = {
   borderRadius: "4px",
 };
 
-const imgStyle = {
+export const imgStyle = {
   width: "200px",
   height: "200px",
   objectFit: "contain",
 };
 
-const priceTag = {
+export const priceTag = {
   width: "168px",
   height: "19px",
   fontStyle: "normal",
@@ -29,7 +29,7 @@ const priceTag = {
   margin: "10px 0",
 };
 
-const descriptionTag = {
+export const descriptionTag = {
   width: "168px",
   height: "16px",
   fontWeight: "400",
@@ -42,7 +42,7 @@ const descriptionTag = {
   flexGrow: "0",
   textTransform: "capitalize",
 };
-const btnStyles = {
+export const btnStyles = {
   width: "100%",
   height: "34px",
   border: "none",
@@ -58,15 +58,7 @@ const btnStyles = {
   },
 };
 
-const secondSection = {
+export const secondSection = {
   padding: "16px",
   gap: "16px",
-};
-export {
-  cardStyles,
-  imgStyle,
-  priceTag,
-  btnStyles,
-  secondSection,
-  descriptionTag,
 };

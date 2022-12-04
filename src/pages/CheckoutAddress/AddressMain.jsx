@@ -1,12 +1,9 @@
-import {
-  Box,
-  Button,
-  FormControl,
-  FormLabel,
-  MenuItem,
-  TextField,
-  Typography,
-} from "@mui/material";
+import Button from "@mui/material/Button";
+import Box from "@mui/material/Box";
+import FormControl from "@mui/material/FormControl";
+import MenuItem from "@mui/material/MenuItem";
+import TextField from "@mui/material/TextField";
+import Typography from "@mui/material/Typography";
 import React, { useState } from "react";
 import CustomCheckoutBreadcrumb from "../../components/CheckoutTimeLine";
 import { Group, Wrapper } from "./styles";

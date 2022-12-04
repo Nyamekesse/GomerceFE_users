@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 import {
   CategoriesSideBar,
   categoryText,
@@ -8,15 +7,13 @@ import {
 } from "./styles";
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
-import {
-  List,
-  ListSubheader,
-  ListItemText,
-  ListItemButton,
-  ListItemIcon,
-  Collapse,
-  Box,
-} from "@mui/material";
+import List from "@mui/material/List";
+import ListSubheader from "@mui/material/ListSubheader";
+import ListItemText from "@mui/material/ListItemText";
+import ListItemButton from "@mui/material/ListItemButton";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import Collapse from "@mui/material/Collapse";
+import Box from "@mui/material/Box";
 import categories from "../../SetUpData/categoriesData";
 const SideNav = () => {
   // const categories = useSelector((state) => state.productCategories);

@@ -14,69 +14,75 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useTheme } from "@mui/material/styles";
+import MenuSearchInput from "../MobileSearchInput";
 const PrimarySearchAppBar = () => {
   const theme = useTheme();
   const navigate = useNavigate();
-  const matches = useMediaQuery(theme.breakpoints.down("laptop"));
+  const matchesLaptop = useMediaQuery(theme.breakpoints.down("laptop"));
+  const matchesMobileLarge = useMediaQuery(
+    theme.breakpoints.up("mobile_large")
+  );
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="sticky" sx={customAppBarStyle}>
-        {matches && (
-          <IconButton sx={{ backgroundColor: "inherit" }}>
-            <MenuIcon />
-          </IconButton>
-        )}
-
-        <Toolbar sx={toolBarStyles}>
+    <AppBar position="sticky" sx={customAppBarStyle}>
+      <Toolbar sx={toolBarStyles}>
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "row",
+            alignItems: "center",
+            justifyContent: "flex-start",
+          }}
+        >
+          {matchesLaptop && (
+            <MenuIcon
+              color="black"
+              sx={{ marginRight: "8px", cursor: "pointer" }}
+            />
+          )}
           <Typography
             variant="h6"
-            noWrap
-            component="div"
             onClick={() => navigate("/")}
             sx={{
-              display: "block",
-              height: "23px",
               color: "#1F2839",
               fontWeight: "700",
               fontSize: "20px",
-              lineHeight: "23px",
-              textTransform: "uppercase",
             }}
           >
-            gomerce
+            Gomerce
           </Typography>
+        </Box>
 
-          <SearchInput />
-          <StyledButtonGroup>
-            {!matches ? (
-              <>
-                <Button variant="outlined" startIcon={<FavoriteBorderIcon />}>
-                  Wishlist
-                </Button>
-                <Button variant="outlined" startIcon={<Person3OutlinedIcon />}>
-                  Account
-                </Button>
-                <Button
-                  variant="outlined"
-                  startIcon={<ShoppingCartOutlinedIcon />}
-                >
-                  Cart
-                </Button>
-              </>
-            ) : (
-              <>
-                <IconButton>
-                  <Person3OutlinedIcon />
-                </IconButton>
-                <IconButton>
-                  <ShoppingCartOutlinedIcon />
-                </IconButton>
-              </>
-            )}
-          </StyledButtonGroup>
-        </Toolbar>
-      </AppBar>
-    </Box>
+        {matchesMobileLarge && <SearchInput />}
+        <StyledButtonGroup>
+          {!matchesLaptop ? (
+            <>
+              <Button variant="outlined" startIcon={<FavoriteBorderIcon />}>
+                Wishlist
+              </Button>
+              <Button variant="outlined" startIcon={<Person3OutlinedIcon />}>
+                Account
+              </Button>
+              <Button
+                variant="outlined"
+                startIcon={<ShoppingCartOutlinedIcon />}
+              >
+                Cart
+              </Button>
+            </>
+          ) : (
+            <>
+              <IconButton>
+                <Person3OutlinedIcon />
+              </IconButton>
+              <IconButton>
+                <ShoppingCartOutlinedIcon />
+              </IconButton>
+            </>
+          )}
+        </StyledButtonGroup>
+      </Toolbar>
+      {!matchesMobileLarge && <MenuSearchInput />}
+    </AppBar>
   );
 };
 

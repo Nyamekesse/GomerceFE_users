@@ -1,4 +1,4 @@
-const checkoutButtonStyle = {
+export const checkoutButtonStyle = {
   height: "16px",
   fontWeight: "600",
   fontSize: "14px",
@@ -10,5 +10,3 @@ const checkoutButtonStyle = {
   order: "0",
   flexGrow: "0",
 };
-
-export { checkoutButtonStyle };

@@ -5,8 +5,8 @@ import TableCell from "@mui/material/TableCell";
 import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
-import { Typography } from "@mui/material";
-import { Box } from "@mui/system";
+import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
 function createData(id, item, quantity, unitCost, subTotal) {
   return { id, item, quantity, unitCost, subTotal };
 }

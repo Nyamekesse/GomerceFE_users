@@ -1,7 +1,7 @@
-import { Box } from "@mui/material";
+import Box from "@mui/material/Box";
 import { styled } from "@mui/material/styles";
 
-const ColumnWrapper = styled(Box)(({ theme }) => ({
+export const ColumnWrapper = styled(Box)(({ theme }) => ({
   display: "flex",
   flexDirection: "column",
   alignItems: "flex-start",
@@ -10,7 +10,7 @@ const ColumnWrapper = styled(Box)(({ theme }) => ({
   width: "220px",
   height: "306px",
 }));
-const ColumnTitleStyle = {
+export const ColumnTitleStyle = {
   width: "196px",
   height: "21px",
   fontFamily: "Roboto",
@@ -19,7 +19,7 @@ const ColumnTitleStyle = {
   lineHeight: "21px",
   color: "#F4F5EF",
 };
-const CustomListItems = styled("li")(({ theme }) => ({
+export const CustomListItems = styled("li")(({ theme }) => ({
   listStyle: "none",
   color: "#ffffff",
   display: "flex",
@@ -30,7 +30,7 @@ const CustomListItems = styled("li")(({ theme }) => ({
   cursor: "pointer",
 }));
 
-const FooterContainer = styled(Box)(({ theme }) => ({
+export const FooterContainer = styled(Box)(({ theme }) => ({
   display: "flex",
   flexDirection: "column",
   alignItems: "flex-start",
@@ -44,7 +44,7 @@ const FooterContainer = styled(Box)(({ theme }) => ({
   position: "relative",
 }));
 
-const FooterContent = styled(Box)(({ theme }) => ({
+export const FooterContent = styled(Box)(({ theme }) => ({
   width: "100%",
   display: "flex",
   flexDirection: "row",
@@ -58,7 +58,7 @@ const FooterContent = styled(Box)(({ theme }) => ({
   flexGrow: "0",
 }));
 
-const DividerStyle = {
+export const DividerStyle = {
   width: "100%",
   background: "#FFFFFF",
   flex: "none",
@@ -67,7 +67,7 @@ const DividerStyle = {
   flexGrow: "0",
 };
 
-const FooterBottom = styled(Box)(({ theme }) => ({
+export const FooterBottom = styled(Box)(({ theme }) => ({
   display: "flex",
   flexDirection: "row",
   justifyContent: "space-between",
@@ -80,7 +80,7 @@ const FooterBottom = styled(Box)(({ theme }) => ({
   alignSelf: "stretch",
   flexGrow: "0",
 }));
-const SocialStack = styled(Box)(({ theme }) => ({
+export const SocialStack = styled(Box)(({ theme }) => ({
   display: "flex",
   flexDirection: "row",
   alignItems: "flex-start",
@@ -90,7 +90,7 @@ const SocialStack = styled(Box)(({ theme }) => ({
   height: "40px",
 }));
 
-const CopyRightStyling = {
+export const CopyRightStyling = {
   height: "25px",
   fontFamily: "Nunito Sans",
   fontWeight: "400",
@@ -100,23 +100,11 @@ const CopyRightStyling = {
   color: "#F4F5EF",
 };
 
-const SocialMediaIconStyles = {
+export const SocialMediaIconStyles = {
   width: "24px",
   height: "24px",
   flex: "none",
   order: "0",
   flexGrow: "0",
   color: "#F4F5EF",
-};
-export {
-  FooterContainer,
-  FooterContent,
-  DividerStyle,
-  FooterBottom,
-  SocialStack,
-  CopyRightStyling,
-  SocialMediaIconStyles,
-  ColumnWrapper,
-  CustomListItems,
-  ColumnTitleStyle,
 };

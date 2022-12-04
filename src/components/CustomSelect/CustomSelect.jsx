@@ -1,11 +1,14 @@
-import { styled, TextField } from "@mui/material";
+import { styled } from "@mui/material/styles";
+import TextField from "@mui/material/TextField";
 
-const StyledSelect = styled(TextField)(({ showBackground, showBorder }) => ({
-  background: showBackground ? "#F4F5EF" : "",
-  border: showBorder ? "1px solid #CED4DA" : "none",
-}));
+export const StyledSelect = styled(TextField)(
+  ({ showBackground, showBorder }) => ({
+    background: showBackground ? "#F4F5EF" : "",
+    border: showBorder ? "1px solid #CED4DA" : "none",
+  })
+);
 
-const sortLabelStyle = {
+export const sortLabelStyle = {
   width: "63px",
   height: "16px",
   fontSize: "14px",
@@ -20,5 +23,3 @@ const sortLabelStyle = {
   order: "0",
   flexGrow: "0",
 };
-
-export { StyledSelect, sortLabelStyle };

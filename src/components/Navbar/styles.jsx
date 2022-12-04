@@ -1,22 +1,20 @@
 import { styled } from "@mui/material/styles";
-import { Box } from "@mui/material";
+import Box from "@mui/material/Box";
 
-const customAppBarStyle = (theme) => ({
+export const customAppBarStyle = (theme) => ({
   display: "flex",
-  flexDirection: "row",
-  alignItems: "center",
+  flexDirection: "column",
+  // alignItems: "center",
+  justifyContent: "center",
   width: "100%",
-  maxWidth: "1440px",
-  height: "90px",
-  padding: "20px, 53px",
+  // maxWidth: "1440px",
+  minHeight: "90px",
+  // padding: "20px, 53px",
   margin: "0 auto",
-  backgroundColor: "#fff",
-  [theme.breakpoints.down("laptop")]: {
-    // display: "none",
-  },
+  alignItems: "center",
 });
 
-const toolBarStyles = {
+export const toolBarStyles = {
   width: "100%",
   display: "flex",
   flexDirection: "row",
@@ -24,7 +22,7 @@ const toolBarStyles = {
   alignItems: "center",
 };
 
-const StyledButtonGroup = styled(Box)(({ theme }) => ({
+export const StyledButtonGroup = styled(Box)(({ theme }) => ({
   display: "flex",
   flexDirection: "row",
   padding: 0,
@@ -37,7 +35,7 @@ const StyledButtonGroup = styled(Box)(({ theme }) => ({
   },
 }));
 
-const buttonStyles = {
+export const buttonStyles = {
   width: "114px",
   height: "34px",
   border: "none",
@@ -49,5 +47,3 @@ const buttonStyles = {
     border: "none",
   },
 };
-
-export { customAppBarStyle, toolBarStyles, StyledButtonGroup, buttonStyles };

@@ -1,14 +1,12 @@
-import {
-  Box,
-  Button,
-  Divider,
-  FormControl,
-  Grid,
-  InputLabel,
-  MenuItem,
-  Select,
-  Typography,
-} from "@mui/material";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Divider from "@mui/material/Divider";
+import FormControl from "@mui/material/FormControl";
+import Grid from "@mui/material/Grid";
+import InputLabel from "@mui/material/InputLabel";
+import MenuItem from "@mui/material/MenuItem";
+import Select from "@mui/material/Select";
+import Typography from "@mui/material/Typography";
 import React from "react";
 import { textStyle } from "../../components/OrderSummary/styles";
 import { ActionRow } from "./styles";
@@ -30,14 +28,14 @@ const CartItem = () => {
         alignItems={"flex-start"}
         sx={{ padding: "2%" }}
       >
-        <Grid item mobile={3}>
+        <Grid item mobile_large={3}>
           <Box>
             <img src={Phone} alt={Phone} />
           </Box>
         </Grid>
         <Grid
           item
-          mobile={9}
+          mobile_large={9}
           container
           direction="row"
           justifyContent={"space-between"}

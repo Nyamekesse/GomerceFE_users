@@ -1,7 +1,7 @@
 import { styled } from "@mui/material/styles";
-import { Box } from "@mui/material";
+import Box from "@mui/material/Box";
 
-const Wrapper = styled(Box)(({ theme }) => ({
+export const Wrapper = styled(Box)(({ theme }) => ({
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
@@ -12,5 +12,3 @@ const Wrapper = styled(Box)(({ theme }) => ({
   boxShadow: "0px 2px 2px rgba(142, 142, 142, 0.25)",
   borderRadius: "4px",
 }));
-
-export { Wrapper };

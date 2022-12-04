@@ -3,7 +3,7 @@ import { DetailsMain, InfoWrapper, OrderInfo, ProductSummary } from "./styles";
 import { orderInfo } from "../../SetUpData/data_orders";
 import SummaryTable from "./SummaryTable";
 import CustomDivider from "../../components/CustomDivider";
-import { Typography } from "@mui/material";
+import Typography from "@mui/material/Typography";
 const Details = () => {
   return (
     <DetailsMain>

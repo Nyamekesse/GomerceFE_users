@@ -6,7 +6,6 @@ import ProductCard from "../../components/ProductCard";
 import { useSelector } from "react-redux";
 import AppPagination from "../../components/Pagination";
 import { useLocation } from "react-router-dom";
-import { useState, useEffect } from "react";
 
 const useQuery = () => {
   return new URLSearchParams(useLocation().search);

@@ -1,5 +1,6 @@
 import React from "react";
-import { Grid, Box } from "@mui/material";
+import Grid from "@mui/material/Grid";
+import Box from "@mui/material/Box";
 import Filters from "./Filters";
 import { SideFilters } from "./styles";
 import BreadCrumbs from "../../components/BreadCrumbs";
@@ -21,14 +22,14 @@ const SearchPage = () => {
         spacing={4}
         justifyContent="space-between"
       >
-        <Grid item mobile={3}>
+        <Grid item mobile_large={3}>
           <Box sx={SideFilters}>
             {filters.map((element, index) => {
               return <Filters {...element} key={index} />;
             })}
           </Box>
         </Grid>
-        <Grid item mobile={9}>
+        <Grid item mobile_large={9}>
           <SearchResultsDisplay />
         </Grid>
       </Grid>

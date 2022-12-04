@@ -1,6 +1,6 @@
 import React from "react";
 import { ListItem, ShippingSection } from "./styles";
-import { Typography } from "@mui/material";
+import Typography from "@mui/material/Typography";
 import { CustomDivider } from "../../components/CustomDivider/styles";
 const ShipmentSection = () => {
   return (

@@ -14,8 +14,9 @@ const grey = "#6C757D";
 const theme = createTheme({
   breakpoints: {
     values: {
-      mobile: 0, //mobile   xs
-      tablet: 640, //tablet   sm
+      mobile_small: 0, //mobile   xs
+      mobile_large: 640, //tablet   sm
+      tablet: 840, //tablet   sm
       laptop: 1024, //laptop  md
       desktop: 1200, //desktop ld
     },
@@ -142,6 +143,13 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           color: black,
+        },
+      },
+    },
+    MuiAppBar: {
+      styleOverrides: {
+        root: {
+          backgroundColor: white,
         },
       },
     },

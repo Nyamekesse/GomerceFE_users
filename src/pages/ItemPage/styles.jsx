@@ -1,7 +1,7 @@
-import styled from "@emotion/styled";
+import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 
-const Details = styled(Box)({
+export const Details = styled(Box)({
   width: "100%",
   height: "553px",
   background: "#FFFFFF",
@@ -9,7 +9,7 @@ const Details = styled(Box)({
   boxShadow: "0px 2px 2px rgba(142, 142, 142, 0.25)",
 });
 
-const Image = styled(Box)({
+export const Image = styled(Box)({
   display: "flex",
   flexDirection: "column",
   alignItems: "flex-end",
@@ -17,7 +17,7 @@ const Image = styled(Box)({
   height: "406px",
   background: "#FFFFFF",
 });
-const Preview = styled("div")(({ img }) => ({
+export const Preview = styled("div")(({ img }) => ({
   width: "305px",
   height: "305px",
   objectFit: "contain",
@@ -25,7 +25,7 @@ const Preview = styled("div")(({ img }) => ({
   backgroundImage: `url(${img})`,
   border: "none",
 }));
-const ThumbnailsSection = styled(Box)({
+export const ThumbnailsSection = styled(Box)({
   display: "flex",
   flexDirection: "row",
   alignItems: "center",
@@ -33,7 +33,7 @@ const ThumbnailsSection = styled(Box)({
   width: "100%",
   margin: "2% 0 1%",
 });
-const Thumbnail = styled("div")(({ img }) => ({
+export const Thumbnail = styled("div")(({ img }) => ({
   width: "50px",
   height: "50px",
   objectFit: "contain",
@@ -41,7 +41,7 @@ const Thumbnail = styled("div")(({ img }) => ({
   backgroundImage: `url(${img})`,
   border: "none",
 }));
-const ItemDetails = styled(Box)({
+export const ItemDetails = styled(Box)({
   display: "flex",
   flexDirection: "column",
   alignItems: "flex-start",
@@ -49,13 +49,13 @@ const ItemDetails = styled(Box)({
   width: "100%",
 });
 
-const Wrap = styled(Box)({
+export const Wrap = styled(Box)({
   display: "flex",
   flexWrap: "wrap",
   alignItems: "flex-start",
   gap: "60px",
 });
-const Card = styled(Box)({
+export const Card = styled(Box)({
   display: "flex",
   flexDirection: "column",
   alignItems: "flex-start",
@@ -66,18 +66,18 @@ const Card = styled(Box)({
   borderRadius: "8px",
   padding: "2%",
 });
-const ListWrap = styled("ul")({
+export const ListWrap = styled("ul")({
   width: "100%",
   height: "100%",
   marginLeft: "5%",
 });
-const Specifications = styled(Box)({
+export const Specifications = styled(Box)({
   margin: "3% 0",
   padding: "1.5% 2.5%",
   background: "#FFFFFF",
   boxShadow: "0px 2px 2px rgba(142, 142, 142, 0.25)",
 });
-const ReviewsSection = styled(Box)({
+export const ReviewsSection = styled(Box)({
   width: "100%",
   display: "flex",
   flexDirection: "column",
@@ -86,7 +86,7 @@ const ReviewsSection = styled(Box)({
   background: "#FFFFFF",
   boxShadow: "0px 2px 2px rgba(142, 142, 142, 0.25)",
 });
-const RatingSummary = styled(Box)({
+export const RatingSummary = styled(Box)({
   display: "flex",
   flexDirection: "row",
   alignItems: "center",
@@ -94,7 +94,7 @@ const RatingSummary = styled(Box)({
   width: "100%",
   height: "100%",
 });
-const CommentBox = styled(Box)({
+export const CommentBox = styled(Box)({
   display: "flex",
   flexDirection: "column",
   justifyContent: "space-between",
@@ -106,62 +106,40 @@ const CommentBox = styled(Box)({
   borderBottom: "1px solid #CED4DA",
   margin: "2% 0",
 });
-const IconsWrapper = styled(Box)({
+export const IconsWrapper = styled(Box)({
   display: "flex",
   flexDirection: "row",
   margin: "2% 0",
 });
-const DetailsWrap = styled(Box)({
+export const DetailsWrap = styled(Box)({
   width: "100%",
   display: "flex",
   flexDirection: "column",
   justifyContent: "space-between",
 });
-const ShareSection = styled(Box)({
+export const ShareSection = styled(Box)({
   width: "100%",
   display: "flex",
   flexDirection: "column",
   justifyContent: "space-between",
 });
-const BarWrap = styled(Box)({
+export const BarWrap = styled(Box)({
   display: "flex",
   flexDirection: "column",
   alignItems: "flex-start",
   padding: "2% 1.5%",
   width: "879px",
 });
-const ReviewsStatusText = styled(Box)({
+export const ReviewsStatusText = styled(Box)({
   display: "flex",
   flexDirection: "column",
   alignItems: "flex-start",
   height: "100%",
 });
-const ReviewsHeadWrap = styled(Box)({
+export const ReviewsHeadWrap = styled(Box)({
   display: "flex",
   flexDirection: "row",
   alignItems: "center",
   justifyContent: "space-between",
   width: "100%",
 });
-
-export {
-  Details,
-  Image,
-  Preview,
-  Thumbnail,
-  ThumbnailsSection,
-  ItemDetails,
-  Specifications,
-  Wrap,
-  Card,
-  ListWrap,
-  ReviewsSection,
-  RatingSummary,
-  CommentBox,
-  IconsWrapper,
-  DetailsWrap,
-  ShareSection,
-  BarWrap,
-  ReviewsStatusText,
-  ReviewsHeadWrap,
-};

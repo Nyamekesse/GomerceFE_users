@@ -1,7 +1,7 @@
-import styled from "@emotion/styled";
-import { Box } from "@mui/material";
+import { styled } from "@mui/material/styles";
+import Box from "@mui/material/Box";
 
-const PageHeader = styled(Box)({
+export const PageHeader = styled(Box)({
   display: "flex",
   flexDirection: "row",
   alignItems: "center",
@@ -9,7 +9,7 @@ const PageHeader = styled(Box)({
   width: "100%",
 });
 
-const Delivery = styled(Box)({
+export const Delivery = styled(Box)({
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
@@ -20,7 +20,7 @@ const Delivery = styled(Box)({
   borderRadius: "8px",
   marginBottom: "2%",
 });
-const Frame = styled(Box)({
+export const Frame = styled(Box)({
   display: "flex",
   flexDirection: "row",
   justifyContent: "center",
@@ -31,7 +31,7 @@ const Frame = styled(Box)({
   margin: "3% 0 1%",
   width: "100%",
 });
-const TrackDisplay = styled(Box)({
+export const TrackDisplay = styled(Box)({
   display: "flex",
   flexDirection: "row",
   width: "100%",
@@ -39,12 +39,12 @@ const TrackDisplay = styled(Box)({
   justifyContent: "center",
   padding: "1%",
 });
-const TrackItem = styled(Box)({
+export const TrackItem = styled(Box)({
   display: "flex",
   flexDirection: "row",
   alignItems: "center",
 });
-const IconBox = styled(Box)({
+export const IconBox = styled(Box)({
   borderRadius: "8px",
   display: "flex",
   justifyContent: "center",
@@ -52,12 +52,12 @@ const IconBox = styled(Box)({
   width: "70px",
   height: "70px",
 });
-const CustomHr = styled("hr")(({ isChecked }) => ({
+export const CustomHr = styled("hr")(({ isChecked }) => ({
   width: "170px",
   border: isChecked ? "1px solid #B69D74" : "1px dashed #F4F5EF",
 }));
 
-const DetailsMain = styled(Box)({
+export const DetailsMain = styled(Box)({
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
@@ -68,7 +68,7 @@ const DetailsMain = styled(Box)({
   borderRadius: "8px",
   margin: "5% 0 2%",
 });
-const InfoWrapper = styled(Box)({
+export const InfoWrapper = styled(Box)({
   width: "100%",
   padding: "0 1%",
   display: "flex",
@@ -76,7 +76,7 @@ const InfoWrapper = styled(Box)({
   alignItems: "center",
   justifyContent: "space-between",
 });
-const OrderInfo = styled(Box)({
+export const OrderInfo = styled(Box)({
   display: "flex",
   flexDirection: "column",
   padding: "1%",
@@ -87,23 +87,10 @@ const OrderInfo = styled(Box)({
   borderRadius: "8px",
   margin: "2% 0",
 });
-const ProductSummary = styled(Box)({
+export const ProductSummary = styled(Box)({
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
   width: "100%",
   padding: "0 5%",
 });
-export {
-  PageHeader,
-  Delivery,
-  Frame,
-  TrackDisplay,
-  IconBox,
-  TrackItem,
-  CustomHr,
-  DetailsMain,
-  OrderInfo,
-  InfoWrapper,
-  ProductSummary,
-};

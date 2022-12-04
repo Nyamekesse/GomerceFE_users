@@ -1,4 +1,4 @@
-import { Typography } from "@mui/material";
+import Typography from "@mui/material/Typography";
 import React from "react";
 import BreadCrumbs from "../../components/BreadCrumbs";
 import { PageHeader } from "./styles";

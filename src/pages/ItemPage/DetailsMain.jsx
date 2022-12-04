@@ -1,5 +1,9 @@
 import React from "react";
-import { Box, Button, Grid, IconButton, Typography } from "@mui/material";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Grid from "@mui/material/Grid";
+import IconButton from "@mui/material/IconButton";
+import Typography from "@mui/material/Typography";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
@@ -25,10 +29,10 @@ const DetailsMain = () => {
         mb={3}
         justifyContent="space-between"
       >
-        <Grid item mobile={4}>
+        <Grid item mobile_large={4}>
           <ItemImage />
         </Grid>
-        <Grid item mobile={8}>
+        <Grid item mobile_large={8}>
           <ItemDetails>
             <Box
               sx={{

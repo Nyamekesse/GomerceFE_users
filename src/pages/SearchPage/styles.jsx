@@ -1,8 +1,8 @@
-import { Typography } from "@mui/material";
+import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import { styled } from "@mui/material/styles";
 
-const ResultContainer = styled(Box)(({ theme }) => ({
+export const ResultContainer = styled(Box)(({ theme }) => ({
   display: "flex",
   flexDirection: "column",
   justifyContent: "space-between",
@@ -10,7 +10,7 @@ const ResultContainer = styled(Box)(({ theme }) => ({
   padding: "0px",
 }));
 
-const Title = styled(Box)(({ theme }) => ({
+export const Title = styled(Box)(({ theme }) => ({
   display: "flex",
   flexDirection: "row",
   alignItems: "center",
@@ -23,7 +23,7 @@ const Title = styled(Box)(({ theme }) => ({
   flexGrow: "0",
 }));
 
-const Label = styled(Typography)(({ theme }) => ({
+export const Label = styled(Typography)(({ theme }) => ({
   width: "192px",
   height: "16px",
   fontWeight: "400",
@@ -37,7 +37,7 @@ const Label = styled(Typography)(({ theme }) => ({
   flexGrow: "0",
 }));
 
-const SideFilters = {
+export const SideFilters = {
   display: "flex",
   flexDirection: "column",
   padding: "3% 1%",
@@ -45,7 +45,7 @@ const SideFilters = {
   background: "#FFFFFF",
   boxShadow: "0px 2px 2px rgba(142, 142, 142, 0.25)",
 };
-const FilterCover = {
+export const FilterCover = {
   display: "flex",
   flexDirection: "column",
   alignItems: "flex-start",
@@ -57,7 +57,7 @@ const FilterCover = {
   flexGrow: "0",
 };
 
-const HeadingStyles = {
+export const HeadingStyles = {
   display: "flex",
   flexDirection: "row",
   alignItems: "flex-start",
@@ -69,7 +69,7 @@ const HeadingStyles = {
   flexGrow: "0",
 };
 
-const TextLabel = {
+export const TextLabel = {
   fontWeight: "400",
   fontSize: "14px",
   lineHeight: "16px",
@@ -79,14 +79,4 @@ const TextLabel = {
   flex: "none",
   order: "1",
   flexGrow: "0",
-};
-
-export {
-  SideFilters,
-  HeadingStyles,
-  FilterCover,
-  TextLabel,
-  ResultContainer,
-  Title,
-  Label,
 };
