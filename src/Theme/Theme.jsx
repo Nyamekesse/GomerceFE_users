@@ -9,7 +9,6 @@ const black = "#000000";
 const yellow = "#FFC107";
 const red = "#DC3545";
 const green = "#198754";
-const offWhite = "#F4F5EF";
 const grey = "#6C757D";
 const theme = createTheme({
   breakpoints: {
@@ -32,7 +31,6 @@ const theme = createTheme({
         },
         color: black,
       },
-      notchedOutline: {},
     },
   },
   palette: {
@@ -47,7 +45,7 @@ const theme = createTheme({
       main: goldenBrown,
     },
     tertiary: {
-      main: offWhite,
+      main: greyLight,
     },
     grey: {
       main: grey,
@@ -98,6 +96,9 @@ const theme = createTheme({
       },
     },
     MuiTextField: {
+      InputLabelProps: {
+        shrink: true,
+      },
       styleOverrides: {
         root: {
           textTransform: "uppercase",

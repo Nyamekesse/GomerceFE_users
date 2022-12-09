@@ -11,25 +11,38 @@ import {
   SocialStack,
   CopyRightStyling,
   SocialMediaIconStyles,
+  ColumnTitleStyle,
 } from "./styles";
 import FooterColumn from "./FooterColumn";
 import Divider from "@mui/material/Divider";
 import footerData from "../../SetUpData/footerColumnData";
-
-import FloatingBtn from "../FloatingBtn";
+import Box from "@mui/material/Box";
+// import FloatingBtn from "../FloatingBtn";
 const Footer = () => {
   return (
     <FooterContainer>
       <FooterContent>
-        {footerData.map((setup) => {
-          return (
-            <FooterColumn
-              key={setup.id}
-              title={setup.title}
-              links={setup.links}
-            />
-          );
-        })}
+        <Typography variant="h6" mr={"6%"} sx={ColumnTitleStyle}>
+          Gomerce
+        </Typography>
+        <Box
+          sx={{
+            width: "100%",
+            display: "flex",
+            justifyContent: "space-between",
+            flexWrap: { mobile_small: "wrap", tablet: "nowrap" },
+          }}
+        >
+          {footerData.map((setup) => {
+            return (
+              <FooterColumn
+                key={setup.id}
+                title={setup.title}
+                links={setup.links}
+              />
+            );
+          })}
+        </Box>
       </FooterContent>
       <Divider sx={DividerStyle} />
       <FooterBottom>
@@ -38,11 +51,11 @@ const Footer = () => {
           <FacebookIcon sx={SocialMediaIconStyles} />
           <InstagramIcon sx={SocialMediaIconStyles} />
         </SocialStack>
-        <Typography variant="caption" sx={CopyRightStyling}>
+        <Typography variant="caption" noWrap sx={CopyRightStyling}>
           &copy; {new Date().getFullYear()} Gomerce
         </Typography>
       </FooterBottom>
-      <FloatingBtn />
+      {/* <FloatingBtn /> */}
     </FooterContainer>
   );
 };

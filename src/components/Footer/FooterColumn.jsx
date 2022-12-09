@@ -9,15 +9,14 @@ const FooterColumn = ({ title, links }) => {
       <Typography variant="h6" sx={ColumnTitleStyle}>
         {title}
       </Typography>
-      {links &&
-        links.map((link, index) => {
-          const { label, url } = link;
-          return (
-            <CustomListItems onClick={() => navigate(url)} key={index}>
-              {label}
-            </CustomListItems>
-          );
-        })}
+      {links.map((link, index) => {
+        const { label, url } = link;
+        return (
+          <CustomListItems onClick={() => navigate(url)} key={index}>
+            {label}
+          </CustomListItems>
+        );
+      })}
     </ColumnWrapper>
   );
 };

@@ -1,10 +1,5 @@
 const footerData = [
   {
-    id: 1,
-    title: "Gomerce",
-    links: [],
-  },
-  {
     id: 2,
     title: "About",
     links: [
