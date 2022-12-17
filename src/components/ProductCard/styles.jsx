@@ -1,4 +1,4 @@
-export const cardStyles = {
+export const cardStyles = (theme) => ({
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
@@ -6,7 +6,10 @@ export const cardStyles = {
   width: "200px",
   filter: "drop-shadow(0px 2px 2px rgba(142, 142, 142, 0.1))",
   borderRadius: "4px",
-};
+  [theme.breakpoints.down("mobile_average")]: {
+    margin: "0 auto",
+  },
+});
 
 export const imgStyle = {
   width: "200px",

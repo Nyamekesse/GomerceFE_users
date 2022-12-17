@@ -14,7 +14,7 @@ import Button from "@mui/material/Button";
 
 function ProductCard({ image, price, description }) {
   return (
-    <Card sx={cardStyles} bg={"pink"}>
+    <Card sx={cardStyles}>
       <CardMedia component="img" sx={imgStyle} image={image} alt={image} />
       <CardContent sx={secondSection}>
         <Typography variant="body2" sx={descriptionTag}>

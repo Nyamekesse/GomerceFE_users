@@ -7,7 +7,14 @@ import collectionData from "../../SetUpData/collectionData";
 const Collections = () => {
   return (
     <CollectionsWrapper>
-      <Typography sx={collectionHeading}>Collections</Typography>
+      <Typography
+        variant="h6"
+        fontSize={"18.75px"}
+        fontWeight={"600"}
+        color={"#8E8E8E"}
+      >
+        Collections
+      </Typography>
       <CollectionRow>
         {collectionData.map((data, index) => {
           return (
