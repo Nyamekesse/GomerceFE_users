@@ -32,7 +32,7 @@ const SearchResultsDisplay = () => {
       </Title>
       <Grid container spacing={5} mt={2} mb={5} justifyContent="space-between">
         {results.map((result) => (
-          <Grid item key={result.id}>
+          <Grid item key={result.id} sx={{ alignItems: "center" }}>
             <ProductCard {...result} />
           </Grid>
         ))}

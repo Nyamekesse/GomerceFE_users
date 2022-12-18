@@ -45,38 +45,51 @@ export const listLabelStyles = {
 };
 
 export const CollectionsWrapper = styled(Box)(({ theme }) => ({
-  maxWidth: "1012px",
-  left: "358px",
+  width: "100%",
   display: "flex",
-  flexWrap: "wrap",
+  flexDirection: "column",
+  alignItems: "flex-start",
+  margin: "5% 0 2%",
+  padding: "4px",
 }));
 
 export const CollectionRow = styled(Box)(({ theme }) => ({
   width: "100%",
   display: "flex",
   flexDirection: "row",
-  margin: "3% auto",
+  alignItems: "flex-start",
+  justifyContent: "space-between",
+  marginTop: "3%",
+  padding: "0px",
+  [theme.breakpoints.down("mobile_large")]: {
+    flexWrap: "wrap",
+  },
 }));
-export const collectionHeading = {
-  fontWeight: "600",
-  fontSize: "18.75px",
-  lineHeight: "22px",
-  color: "#8E8E8E",
-};
-export const CollectionCardStyle = {
+
+export const Card = styled(Box)(({ theme }) => ({
   display: "flex",
   flexDirection: "column",
   justifyContent: "space-between",
   alignItems: "flex-start",
-  padding: "15px 20px",
-  width: "290px",
+  padding: "2%",
+  width: "279px",
   height: "383px",
-  gab: "10px",
   background: "#FDFDFD",
   boxShadow: "0px 2px 2px rgba(142, 142, 142, 0.25)",
   borderRadius: "4px",
-  margin: "0 5px",
-};
+  margin: "4px",
+  [theme.breakpoints.down("tablet")]: {
+    width: "240px",
+  },
+  [theme.breakpoints.down("mobile_large")]: {
+    width: "250px",
+    height: "",
+  },
+
+  [theme.breakpoints.down("mobile_average")]: {
+    margin: "4px auto",
+  },
+}));
 
 export const CardTextHeading = {
   fontWeight: "600",
