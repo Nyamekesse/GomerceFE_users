@@ -6,7 +6,7 @@ import { useMediaQuery } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 const AsideMain = () => {
   const theme = useTheme();
-  const matchesLaptop = useMediaQuery(theme.breakpoints.down("laptop"));
+  const matchesLaptop = useMediaQuery(theme.breakpoints.down("laptop_1024"));
   return (
     <>
       <BigSlider />

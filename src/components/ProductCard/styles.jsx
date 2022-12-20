@@ -6,7 +6,7 @@ export const cardStyles = (theme) => ({
   width: "200px",
   filter: "drop-shadow(0px 2px 2px rgba(142, 142, 142, 0.1))",
   borderRadius: "4px",
-  [theme.breakpoints.down("mobile_average")]: {
+  [theme.breakpoints.down("mobile_450")]: {
     margin: "0 auto",
   },
 });

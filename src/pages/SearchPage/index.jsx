@@ -16,7 +16,7 @@ const SearchPage = () => {
     { label: "Item Title", link: "/" },
   ];
   const theme = useTheme();
-  const matchesTablet = useMediaQuery(theme.breakpoints.down("tablet"));
+  const matchesTablet = useMediaQuery(theme.breakpoints.down("tablet_840"));
   return (
     <Wrapper>
       <BreadCrumbs navigation={navigation} />
@@ -27,7 +27,7 @@ const SearchPage = () => {
         justifyContent="space-between"
       >
         {matchesTablet ? null : (
-          <Grid item mobile_large={3}>
+          <Grid item mobile_650={3}>
             <Box sx={SideFilters}>
               {filters.map((element, index) => {
                 return <Filters {...element} key={index} />;
@@ -36,7 +36,7 @@ const SearchPage = () => {
           </Grid>
         )}
 
-        <Grid item mobile_small={12} tablet={9}>
+        <Grid item mobile_0={12} tablet_840={9}>
           <SearchResultsDisplay />
         </Grid>
       </Grid>

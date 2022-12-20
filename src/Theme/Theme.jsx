@@ -13,12 +13,25 @@ const grey = "#6C757D";
 const theme = createTheme({
   breakpoints: {
     values: {
-      mobile_small: 0, //mobile   xs
-      mobile_average: 450, //mobile medium
-      mobile_large: 650, //mobile   lg
-      tablet: 840, //tablet   sm
-      laptop: 1024, //laptop  md
-      desktop: 1200, //desktop ld
+      mobile_0: 0,
+      mobile_240: 240,
+      mobile_320: 320,
+      mobile_360: 360,
+      mobile_375: 375,
+      mobile_384: 384,
+      mobile_393: 393,
+      mobile_414: 414,
+      mobile_450: 450,
+      mobile_650: 650,
+      tablet_600: 600,
+      tablet_688: 688,
+      tablet_769: 768,
+      tablet_800: 800,
+      tablet_834: 834,
+      tablet_840: 840,
+      laptop_1024: 1024,
+      laptop_1280: 1280,
+      desktop_1440: 1440,
     },
   },
   styleOverrides: {

@@ -17,10 +17,10 @@ const Cart = () => {
           mb={3}
           justifyContent="space-between"
         >
-          <Grid item mobile_large={7}>
+          <Grid item mobile_650={7}>
             <CartMain />
           </Grid>
-          <Grid item mobile_large={4}>
+          <Grid item mobile_650={4}>
             <Summary />
           </Grid>
         </Grid>

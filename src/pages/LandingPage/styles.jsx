@@ -61,7 +61,7 @@ export const CollectionRow = styled(Box)(({ theme }) => ({
   justifyContent: "space-between",
   marginTop: "3%",
   padding: "0px",
-  [theme.breakpoints.down("mobile_large")]: {
+  [theme.breakpoints.down("mobile_650")]: {
     flexWrap: "wrap",
   },
 }));
@@ -78,15 +78,15 @@ export const Card = styled(Box)(({ theme }) => ({
   boxShadow: "0px 2px 2px rgba(142, 142, 142, 0.25)",
   borderRadius: "4px",
   margin: "4px",
-  [theme.breakpoints.down("tablet")]: {
+  [theme.breakpoints.down("tablet_840")]: {
     width: "240px",
   },
-  [theme.breakpoints.down("mobile_large")]: {
+  [theme.breakpoints.down("mobile_650")]: {
     width: "250px",
     height: "",
   },
 
-  [theme.breakpoints.down("mobile_average")]: {
+  [theme.breakpoints.down("mobile_450")]: {
     margin: "4px auto",
   },
 }));
