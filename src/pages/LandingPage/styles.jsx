@@ -112,3 +112,15 @@ export const buttonStyles = {
     border: "none",
   },
 };
+
+export const BestSellers = styled(Box)(({ theme }) => ({
+  width: "100%",
+  display: "flex",
+  flexDirection: "column",
+  background: "#FFFFFF",
+  padding: "2%",
+  margin: "1% 0 2%",
+  background: "#FFFFFF",
+  boxShadow: "0px 2px 2px rgba(142, 142, 142, 0.25)",
+  borderRadius: "2px",
+}));

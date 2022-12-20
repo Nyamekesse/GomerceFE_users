@@ -4,7 +4,6 @@ import CartMain from "./CartMain";
 import { CustomSection } from "./styles";
 import Summary from "./Summary";
 import Wrapper from "../../components/Wrapper/Wrapper";
-import RecommendedItems from "../../components/RecommendedItems";
 
 const Cart = () => {
   return (
@@ -25,7 +24,7 @@ const Cart = () => {
           </Grid>
         </Grid>
       </CustomSection>
-      <RecommendedItems />
+      {/* <RecommendedItems /> */}
     </Wrapper>
   );
 };

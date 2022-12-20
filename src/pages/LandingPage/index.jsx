@@ -17,11 +17,11 @@ const LandingPage = () => {
           </Grid>
         )}
         {matchesLaptop ? (
-          <Grid item mobile_650={12}>
+          <Grid item mobile_0={12}>
             <AsideMain />
           </Grid>
         ) : (
-          <Grid item mobile_650={9}>
+          <Grid item mobile_0={9}>
             <AsideMain />
           </Grid>
         )}
