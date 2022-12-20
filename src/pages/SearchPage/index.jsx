@@ -3,7 +3,8 @@ import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import Filters from "./Filters";
 import { SideFilters } from "./styles";
-import BreadCrumbs from "../../components/BreadCrumbs";
+// import BreadCrumbs from '../../components/Breadcrumbs'
+import BreadCrumbs from '../../components/Breadcrumbs'
 import SearchResultsDisplay from "./SearchResultsDisplay";
 import Wrapper from "../../components/Wrapper/Wrapper";
 import filters from "../../SetUpData/filter";
@@ -19,7 +20,7 @@ const SearchPage = () => {
   const matchesTablet = useMediaQuery(theme.breakpoints.down("tablet"));
   return (
     <Wrapper>
-      <BreadCrumbs navigation={navigation} />
+      {/* <BreadCrumbs navigation={navigation} /> */}
       <Grid
         container
         direction="row"

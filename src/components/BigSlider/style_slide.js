@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { mobile } from "../../responsive";
+import { mobile } from "./responsive";
 
 export const Container = styled.div`
   width: 100%;
@@ -7,7 +7,9 @@ export const Container = styled.div`
   display: flex;
   position: relative;
   overflow: hidden;
-  ${mobile({ display: "none" })}
+  ${mobile({ 
+    display: "none"
+   })}
 `;
 
 export const Arrow = styled.div`
@@ -53,7 +55,7 @@ export const Image = styled.img`
   height: 80%;
   margin: 0 auto;
   padding: 20px 0 20px 80px;
-  ${mobile({ margin: "0 auto", padding: "0", minWidth: "360px" })}
+  ${mobile({ margin: "0 auto", padding: "0", width: "100%" })}
 `;
 
 export const InfoContainer = styled.div`

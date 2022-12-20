@@ -1,5 +1,5 @@
 import React from "react";
-import BreadCrumbs from "../../components/BreadCrumbs";
+import BreadCrumbs from '../../components/Breadcrumbs'
 import Wrapper from "../../components/Wrapper/Wrapper";
 import DetailsMain from "./DetailsMain";
 import SpecificationsMain from "./SpecificationsMain";

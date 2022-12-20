@@ -10,12 +10,14 @@ export const ColumnWrapper = styled(Box)(({ theme }) => ({
     marginTop: "3%",
   },
 }));
+
 export const ColumnTitleStyle = {
   fontWeight: "700",
   fontSize: "18px",
   lineHeight: "21px",
   color: "#F4F5EF",
 };
+
 export const CustomListItems = styled("li")(({ theme }) => ({
   listStyle: "none",
   color: "#ffffff",
@@ -74,6 +76,7 @@ export const FooterBottom = styled(Box)(({ theme }) => ({
     flexDirection: "column",
   },
 }));
+
 export const SocialStack = styled(Box)(({ theme }) => ({
   display: "flex",
   flexDirection: "row",

@@ -5,6 +5,9 @@ import React from "react";
 import Wrapper from "../../components/Wrapper/Wrapper";
 import { useMediaQuery } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
+
+
+
 const LandingPage = () => {
   const theme = useTheme();
   const matchesLaptop = useMediaQuery(theme.breakpoints.down("laptop"));

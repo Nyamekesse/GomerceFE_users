@@ -15,6 +15,9 @@ import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useTheme } from "@mui/material/styles";
 import MenuSearchInput from "../MobileSearchInput";
+
+
+
 const PrimarySearchAppBar = () => {
   const theme = useTheme();
   const navigate = useNavigate();

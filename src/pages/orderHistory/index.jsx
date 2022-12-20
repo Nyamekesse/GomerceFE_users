@@ -13,7 +13,7 @@ import { useLocation } from "react-router-dom";
 import { PageHeader, StatusBadge } from "./styles";
 
 import Wrapper from "../../components/Wrapper/Wrapper";
-import BreadCrumbs from "../../components/BreadCrumbs";
+import BreadCrumbs from '../../components/Breadcrumbs'
 import MiniSearchInput from "../../components/MiniSearchInput";
 import CustomSelect from "../../components/CustomSelect";
 function createData(ID, Customer, Email, Items, Price, Status, Date) {

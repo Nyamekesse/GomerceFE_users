@@ -6,7 +6,7 @@ export const customAppBarStyle = (theme) => ({
   flexDirection: "column",
   // alignItems: "center",
   justifyContent: "center",
-  width: "100%",
+  minWidth: "98.7vw",
   // maxWidth: "1440px",
   minHeight: "90px",
   // padding: "20px, 53px",

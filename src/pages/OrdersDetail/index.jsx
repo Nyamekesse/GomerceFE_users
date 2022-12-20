@@ -1,6 +1,6 @@
 import Typography from "@mui/material/Typography";
 import React from "react";
-import BreadCrumbs from "../../components/BreadCrumbs";
+import BreadCrumbs from '../../components/Breadcrumbs'
 import { PageHeader } from "./styles";
 import Wrapper from "../../components/Wrapper/Wrapper";
 import Details from "./DetailsMain";
