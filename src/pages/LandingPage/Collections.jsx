@@ -1,5 +1,5 @@
 import React from "react";
-import { collectionHeading, CollectionsWrapper, CollectionRow } from "./styles";
+import { CollectionsWrapper, CollectionRow } from "./styles";
 import Typography from "@mui/material/Typography";
 import CollectionCard from "./CollectionCard";
 import collectionData from "../../SetUpData/collectionData";

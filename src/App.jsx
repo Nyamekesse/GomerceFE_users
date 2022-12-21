@@ -1,8 +1,7 @@
 import Views from "./Views/Views";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import { getProductCategories } from "./actions/products";
-import React, { useEffect } from "react";
+import React from "react";
 import { useLocation } from "react-router-dom";
 import { Box, styled } from "@mui/material";
 

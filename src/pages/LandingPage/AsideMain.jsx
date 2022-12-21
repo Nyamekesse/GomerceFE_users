@@ -1,13 +1,10 @@
 import React from "react";
 import ItemsCarousel from "../../components/ItemsCarousel";
 import Collections from "./Collections";
-import BigSlider from "../../components/BigSlider/BigSlider";
-import { Typography, useMediaQuery } from "@mui/material";
-import { useTheme } from "@mui/material/styles";
+// import BigSlider from "../../components/BigSlider";
+import { Typography } from "@mui/material";
 import { BestSellers } from "./styles";
 const AsideMain = () => {
-  const theme = useTheme();
-  const matchesLaptop = useMediaQuery(theme.breakpoints.down("laptop_1024"));
   return (
     <>
       {/* <BigSlider /> */}

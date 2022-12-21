@@ -8,6 +8,7 @@ const CustomSelect = (props) => {
 
   const handleChange = (event) => {
     setSort(event.target.value);
+    console.log(sort);
   };
 
   return (
@@ -23,7 +24,7 @@ const CustomSelect = (props) => {
       >
         {items.map((item, index) => {
           return (
-            <MenuItem value={item} key={index}>
+            <MenuItem value={item} key={index} onClick={handleChange}>
               {item}
             </MenuItem>
           );

@@ -1,6 +1,6 @@
 import React from "react";
 import Typography from "@mui/material/Typography";
-import { priceTag, descriptionTag, CardBox, Image, Details } from "./styles";
+import { CardBox, Image, Details } from "./styles";
 import Button from "@mui/material/Button";
 function ProductCard({ name, image, description, price }) {
   return (
