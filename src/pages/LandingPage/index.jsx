@@ -12,7 +12,7 @@ const LandingPage = () => {
     <Wrapper>
       <Grid container direction={{ laptop_1024: "row" }} spacing={1}>
         {!matchesLaptop && (
-          <Grid item mobile_650={3}>
+          <Grid item tablet_650={3}>
             <SideNav />
           </Grid>
         )}

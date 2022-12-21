@@ -70,7 +70,7 @@ export const FooterBottom = styled(Box)(({ theme }) => ({
   [theme.breakpoints.down("laptop_1024")]: {
     padding: "1.5% 4% ",
   },
-  [theme.breakpoints.down("mobile_650")]: {
+  [theme.breakpoints.down("tablet_650")]: {
     flexDirection: "column",
   },
 }));
@@ -89,7 +89,7 @@ export const CopyRightStyling = (theme) => ({
   fontSize: "18px",
   lineHeight: "25px",
   color: "#F4F5EF",
-  [theme.breakpoints.down("mobile_650")]: {
+  [theme.breakpoints.down("tablet_650")]: {
     marginTop: "1%",
   },
 });

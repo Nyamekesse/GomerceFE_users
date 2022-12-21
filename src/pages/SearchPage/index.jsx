@@ -27,7 +27,7 @@ const SearchPage = () => {
         justifyContent="space-between"
       >
         {matchesTablet ? null : (
-          <Grid item mobile_650={3}>
+          <Grid item tablet_650={3}>
             <Box sx={SideFilters}>
               {filters.map((element, index) => {
                 return <Filters {...element} key={index} />;

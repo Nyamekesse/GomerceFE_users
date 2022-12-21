@@ -16,7 +16,7 @@ const ItemsCarousel = () => {
             name={item.name}
             image={item.image}
             price={item.price}
-            description={"Item description"}
+            description={item.desc}
           />
         );
       })}

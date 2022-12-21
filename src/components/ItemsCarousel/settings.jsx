@@ -40,26 +40,27 @@ export const carouselSettings = {
       },
     },
     {
-      breakpoint: 698,
+      breakpoint: 688,
       settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2,
-        initialSlide: 2,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        initialSlide: 3,
       },
     },
     {
       breakpoint: 600,
       settings: {
         slidesToShow: 2,
-        slidesToScroll: 2,
+        slidesToScroll: 1,
         initialSlide: 2,
       },
     },
     {
       breakpoint: 480,
       settings: {
-        slidesToShow: 1,
+        slidesToShow: 2,
         slidesToScroll: 1,
+        initialSlide: 2,
       },
     },
   ],
