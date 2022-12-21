@@ -3,12 +3,15 @@ import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import Filters from "./Filters";
 import { SideFilters } from "./styles";
-import BreadCrumbs from "../../components/BreadCrumbs";
+import BreadCrumbs from "../../components/Breadcrumbs";
 import SearchResultsDisplay from "./SearchResultsDisplay";
 import Wrapper from "../../components/Wrapper/Wrapper";
 import filters from "../../SetUpData/filter";
 import { useTheme } from "@mui/material/styles";
 import { useMediaQuery } from "@mui/material";
+
+
+
 const SearchPage = () => {
   const navigation = [
     { label: "Home", link: "/" },

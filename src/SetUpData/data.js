@@ -10,6 +10,7 @@ import Item9 from "../Assets/Images/Afcs_9.jpg";
 import Item10 from "../Assets/Images/Afcs_10.jpg";
 import Item11 from "../Assets/Images/shoe.jpg";
 import Item12 from "../Assets/Images/shoe2.jpg";
+import Item13 from "../Assets/Images/collections.jpg";
 
 export const sliderItem = [
   {
@@ -17,21 +18,79 @@ export const sliderItem = [
     img: Item1,
     title: "SUMMER SALE",
     desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOE NEW ARRIVALS.",
-    bg: "fff",
   },
   {
     id: 2,
     img: Item2,
     title: "AUTUM COLLECTION",
     desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOE NEW ARRIVALS.",
-    bg: "fff",
   },
   {
     id: 3,
     img: Item3,
     title: "EXCLUSIVE SALE",
     desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOE NEW ARRIVALS.",
-    bg: "fff",
+  },
+  {
+    id: 4,
+    img: Item4,
+    title: "SUMMER SALE",
+    desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOE NEW ARRIVALS.",
+  },
+  {
+    id: 5,
+    img: Item5,
+    title: "AUTUM COLLECTION",
+    desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOE NEW ARRIVALS.",
+  },
+  {
+    id: 6,
+    img: Item6,
+    title: "EXCLUSIVE SALE",
+    desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOE NEW ARRIVALS.",
+  },
+  {
+    id: 7,
+    img: Item7,
+    title: "SUMMER SALE",
+    desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOE NEW ARRIVALS.",
+  },
+  {
+    id: 8,
+    img: Item8,
+    title: "AUTUM COLLECTION",
+    desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOE NEW ARRIVALS.",
+  },
+  {
+    id: 9,
+    img: Item9,
+    title: "EXCLUSIVE SALE",
+    desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOE NEW ARRIVALS.",
+  },
+
+  {
+    id: 10,
+    img: Item10,
+    title: "SUMMER SALE",
+    desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOE NEW ARRIVALS.",
+  },
+  {
+    id: 11,
+    img: Item11,
+    title: "AUTUM COLLECTION",
+    desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOE NEW ARRIVALS.",
+  },
+  {
+    id: 12,
+    img: Item12,
+    title: "EXCLUSIVE SALE",
+    desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOE NEW ARRIVALS.",
+  },
+  {
+    id: 13,
+    img: Item13,
+    title: "EXCLUSIVE SALE",
+    desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOE NEW ARRIVALS.",
   },
 ];
 

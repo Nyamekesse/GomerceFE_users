@@ -1,85 +1,66 @@
-import React from "react";
-import {
-  Arrow,
-  Container,
-  Wrapper,
-  Slide,
-  ImgContainer,
-  InfoContainer,
-  Image,
-  Title,
-  Description,
-  Button,
-} from "./style_slide";
-import { ArrowLeftOutlined, ArrowRightOutlined } from "@mui/icons-material";
+import React, { useState, useEffect } from 'react';
+import { FiChevronRight, FiChevronLeft } from 'react-icons/fi';
 import { sliderItem } from "../../SetUpData/data";
-import { useState, useEffect } from "react";
-const BigSlider = () => {
-  const [sliderIndex, setSliderIndex] = useState(0);
-  const [sliderState, setSliderState] = useState(true);
+import './module.BigSlider.css'
 
-  const handleClick = (direction) => {
-    if (direction === "left") {
-      setSliderIndex(sliderIndex > 0 ? sliderIndex - 1 : sliderItem.length - 1);
-    } else {
-      setSliderIndex(sliderIndex < sliderItem.length - 1 ? sliderIndex + 1 : 0);
-    }
-  };
 
-  const autoChange = () => {
-    if (sliderState) {
-      if (sliderIndex < sliderItem.length - 1) {
-        setSliderIndex(sliderIndex + 1);
-      }
-      if (sliderIndex === sliderItem.length - 1) {
-        setSliderIndex(sliderItem.length - 1);
-        setSliderState(false);
-      }
-    } else {
-      if (!sliderState) {
-        setSliderIndex(sliderIndex - 1);
-      }
-      if (sliderIndex === 0) {
-        setSliderIndex(0);
-        setSliderState(true);
-      }
-    }
-  };
+function Bigslider() {
+
+  const [index, setIndex] = useState(0);
 
   useEffect(() => {
-    let sliderForward = setInterval(() => {
-      autoChange();
-    }, 6000);
-    return () => clearInterval(sliderForward);
-  });
+    const lastIndex = sliderItem.length-1;
+    if(index < 0) setIndex(lastIndex);
+    if(index > lastIndex) setIndex(0)
+  }, [index, sliderItem])
+
+  useEffect(() => {
+   let slider =  setInterval(() => {
+      setIndex(index+1);
+    },6000);
+    return() => clearInterval(slider);
+  }, [index]);
 
   return (
-    <Container>
-      <Arrow direction="left" onClick={() => handleClick("left")}>
-        <ArrowLeftOutlined />
-      </Arrow>
-      <Wrapper position={sliderIndex}>
-        {sliderItem.map((arrival) => {
-          const { bg, img, title, desc, id } = arrival;
-          return (
-            <Slide bg={bg} key={id}>
-              <ImgContainer>
-                <Image src={img} alt={title} />
-              </ImgContainer>
-              <InfoContainer>
-                <Title>{title}</Title>
-                <Description>{desc}</Description>
-                <Button>SHOP NOW</Button>
-              </InfoContainer>
-            </Slide>
-          );
-        })}
-      </Wrapper>
-      <Arrow direction="right" onClick={() => handleClick("right")}>
-        <ArrowRightOutlined />
-      </Arrow>
-    </Container>
-  );
-};
+    <section className="section">
+      <div className="section-center">
+        {sliderItem.map((person, personIndex) => {
+            const { id, img, title, desc } = person;
 
-export default BigSlider;
+            let position = 'nextSlide';
+
+            if(personIndex === index){
+              position = 'activeSlide';
+            }
+
+            if(personIndex === index-1 || (index === 0 && personIndex === sliderItem.length -1)){
+              position = 'lastSlide';
+            }
+
+            return(
+              <article key={id} className={position}>
+
+                <div className="img">
+                    <img src={img} alt={title} className='person-img' />
+                </div>
+
+                <div className="action">
+                    <h4 className='title'>{title}</h4>
+                    <p className="text">{desc}</p> 
+                    <div className='button'>Shop Now</div>
+                </div>
+                
+              </article>
+            )
+        })}
+        <button className='prev' onClick={()=> setIndex(index - 1)}>
+          <FiChevronLeft />
+        </button>
+        <button className='next' onClick={()=> setIndex(index + 1)}>
+          <FiChevronRight />
+        </button>
+      </div>
+    </section>
+  )
+}
+export default Bigslider;
