@@ -10,7 +10,7 @@ const AsideMain = () => {
   const matchesLaptop = useMediaQuery(theme.breakpoints.down("laptop_1024"));
   return (
     <>
-      {/* <BigSlider /> */}
+      <BigSlider />
       <BestSellers>
         <Typography
           variant="h6"
