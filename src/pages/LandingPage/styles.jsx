@@ -45,57 +45,78 @@ export const listLabelStyles = {
 };
 
 export const CollectionsWrapper = styled(Box)(({ theme }) => ({
-  maxWidth: "1012px",
-  left: "358px",
+  width: "100%",
   display: "flex",
-  flexWrap: "wrap",
+  flexDirection: "column",
+  alignItems: "flex-start",
+  margin: "5% 0 2%",
+  padding: "4px",
 }));
 
 export const CollectionRow = styled(Box)(({ theme }) => ({
   width: "100%",
   display: "flex",
   flexDirection: "row",
-  margin: "3% auto",
+  alignItems: "flex-start",
+  justifyContent: "space-between",
+  marginTop: "3%",
+  padding: "0px",
+  [theme.breakpoints.down("tablet_650")]: {
+    flexWrap: "wrap",
+  },
+  [theme.breakpoints.down("mobile_375")]: {
+    alignItems: "center",
+    justifyContent: "center",
+  },
 }));
-export const collectionHeading = {
-  fontWeight: "600",
-  fontSize: "18.75px",
-  lineHeight: "22px",
-  color: "#8E8E8E",
-};
-export const CollectionCardStyle = {
+
+export const Card = styled(Box)(({ theme }) => ({
   display: "flex",
   flexDirection: "column",
   justifyContent: "space-between",
   alignItems: "flex-start",
-  padding: "15px 20px",
-  width: "290px",
+  padding: "2%",
+  width: "279px",
   height: "383px",
-  gab: "10px",
   background: "#FDFDFD",
   boxShadow: "0px 2px 2px rgba(142, 142, 142, 0.25)",
   borderRadius: "4px",
-  margin: "0 5px",
-};
-
-export const CardTextHeading = {
-  fontWeight: "600",
-  fontSize: "18.75px",
-  color: "#000000",
-  width: "230px",
-  height: "22px",
-  lineHeight: "22px",
-};
-
-export const buttonStyles = {
-  width: "114px",
-  height: "34px",
-  border: "none",
-  color: "#1F2839",
-  padding: "8px",
-  backgroundColor: "#F4F5EF",
-  "&:hover": {
-    backgroundColor: "#F4F5EF",
-    border: "none",
+  margin: "4px",
+  [theme.breakpoints.between("mobile_550", "tablet_834")]: {
+    width: "230px",
+    height: "340px",
+    marginBottom: "4%",
   },
-};
+  [theme.breakpoints.down("mobile_550")]: {
+    width: "166px",
+    height: "246px",
+    marginBottom: "5%",
+  },
+  [theme.breakpoints.down("mobile_414")]: {
+    width: "155px",
+    height: "235px",
+  },
+  [theme.breakpoints.down("mobile_375")]: {
+    width: "180px",
+  },
+}));
+
+export const BestSellers = styled(Box)(({ theme }) => ({
+  width: "100%",
+  display: "flex",
+  flexDirection: "column",
+  padding: "2%",
+  margin: "1% 0 2%",
+  background: "#FFFFFF",
+  boxShadow: "0px 2px 2px rgba(142, 142, 142, 0.25)",
+  borderRadius: "2px",
+}));
+
+export const Image = styled(Box)(({ image, theme }) => ({
+  width: "100%",
+  maxWidth: "250px",
+  height: "200px",
+  objectFit: "contain",
+  backgroundSize: "cover",
+  backgroundImage: `url(${image})`,
+}));

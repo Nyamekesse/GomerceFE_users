@@ -4,7 +4,6 @@ import CartMain from "./CartMain";
 import { CustomSection } from "./styles";
 import Summary from "./Summary";
 import Wrapper from "../../components/Wrapper/Wrapper";
-import RecommendedItems from "../../components/RecommendedItems";
 
 const Cart = () => {
   return (
@@ -17,15 +16,15 @@ const Cart = () => {
           mb={3}
           justifyContent="space-between"
         >
-          <Grid item mobile_large={7}>
+          <Grid item tablet_650={7}>
             <CartMain />
           </Grid>
-          <Grid item mobile_large={4}>
+          <Grid item tablet_650={4}>
             <Summary />
           </Grid>
         </Grid>
       </CustomSection>
-      <RecommendedItems />
+      {/* <RecommendedItems /> */}
     </Wrapper>
   );
 };

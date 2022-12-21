@@ -29,10 +29,10 @@ const DetailsMain = () => {
         mb={3}
         justifyContent="space-between"
       >
-        <Grid item mobile_large={4}>
+        <Grid item tablet_650={4}>
           <ItemImage />
         </Grid>
-        <Grid item mobile_large={8}>
+        <Grid item tablet_650={8}>
           <ItemDetails>
             <Box
               sx={{

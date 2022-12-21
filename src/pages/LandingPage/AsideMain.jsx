@@ -1,12 +1,24 @@
 import React from "react";
-import Slider from "../../components/Slider";
+import ItemsCarousel from "../../components/ItemsCarousel";
 import Collections from "./Collections";
-import BigSlider from "../../components/BigSlider/BigSlider";
+// import BigSlider from "../../components/BigSlider";
+import { Typography } from "@mui/material";
+import { BestSellers } from "./styles";
 const AsideMain = () => {
   return (
     <>
-      <BigSlider />
-      <Slider />
+      {/* <BigSlider /> */}
+      <BestSellers>
+        <Typography
+          variant="h6"
+          fontSize={"18.75px"}
+          fontWeight={"600"}
+          color={"#8E8E8E"}
+        >
+          Best sellers
+        </Typography>
+        <ItemsCarousel />
+      </BestSellers>
       <Collections />
     </>
   );
