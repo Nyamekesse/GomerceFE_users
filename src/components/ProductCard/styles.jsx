@@ -8,8 +8,11 @@ export const CardBox = styled(Box)(({ theme }) => ({
   width: "200px",
   filter: "drop-shadow(0px 2px 2px rgba(142, 142, 142, 0.1))",
   borderRadius: "4px",
-  [theme.breakpoints.down("mobile_450")]: {
-    margin: "0 auto",
+  [theme.breakpoints.between("laptop_1024", "laptop_1280")]: {
+    width: "165px",
+  },
+  [theme.breakpoints.down("mobile_550")]: {
+    width: "155px",
   },
 }));
 
@@ -17,8 +20,15 @@ export const Image = styled(Box)(({ image, theme }) => ({
   width: "200px",
   height: "200px",
   objectFit: "contain",
-  backgroundSize: "cover",
+  backgroundSize: "contain",
+  backgroundRepeat: "no-repeat",
   backgroundImage: `url(${image})`,
+  [theme.breakpoints.between("laptop_1024", "laptop_1280")]: {
+    width: "165px",
+  },
+  [theme.breakpoints.down("mobile_550")]: {
+    width: "155px",
+  },
 }));
 
 export const Details = styled(Box)(({ theme }) => ({

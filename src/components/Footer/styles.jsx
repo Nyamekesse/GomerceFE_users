@@ -10,12 +10,7 @@ export const ColumnWrapper = styled(Box)(({ theme }) => ({
     marginTop: "3%",
   },
 }));
-export const ColumnTitleStyle = {
-  fontWeight: "700",
-  fontSize: "18px",
-  lineHeight: "21px",
-  color: "#F4F5EF",
-};
+
 export const CustomListItems = styled("li")(({ theme }) => ({
   listStyle: "none",
   color: "#ffffff",
