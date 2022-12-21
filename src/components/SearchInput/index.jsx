@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import { useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import { getProducts } from "../../actions/products";
 import {
   Search,
   SearchIconWrapper,
@@ -13,14 +11,10 @@ import {
 const SearchInput = () => {
   const [searchWord, setSearchWord] = useState("");
   const navigate = useNavigate();
-  const dispatch = useDispatch();
 
   const searchProduct = () => {
     if (searchWord.trim()) {
-      // dispatch(getSearchProduct(searchWord));
-      dispatch(getProducts());
       setSearchWord("");
-      navigate(`/products/search?searchTerm=${searchWord || "none"}`);
     } else {
       navigate("/");
     }

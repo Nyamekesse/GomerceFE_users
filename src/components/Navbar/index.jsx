@@ -18,10 +18,8 @@ import MenuSearchInput from "../MobileSearchInput";
 const PrimarySearchAppBar = () => {
   const theme = useTheme();
   const navigate = useNavigate();
-  const matchesLaptop = useMediaQuery(theme.breakpoints.down("laptop"));
-  const matchesMobileLarge = useMediaQuery(
-    theme.breakpoints.up("mobile_large")
-  );
+  const matchesLaptop = useMediaQuery(theme.breakpoints.down("laptop_1024"));
+  const matchesMobileLarge = useMediaQuery(theme.breakpoints.up("mobile_650"));
   return (
     <AppBar position="sticky" sx={customAppBarStyle}>
       <Toolbar sx={toolBarStyles}>

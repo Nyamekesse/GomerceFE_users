@@ -10,12 +10,12 @@ const OrderItemDetails = () => {
   return (
     <>
       <Grid container direction="row">
-        <Grid item mobile_large={3}>
+        <Grid item mobile_650={3}>
           <Box>
             <img src={Phone} alt={Phone} />
           </Box>
         </Grid>
-        <Grid item mobile_large={9}>
+        <Grid item mobile_650={9}>
           <ListItem>
             <Typography variant="p" sx={textStyle} noWrap>
               Smart 6, 6.6", (2 gb ram + 32 gb rom),500mah

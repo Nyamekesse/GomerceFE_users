@@ -3,20 +3,11 @@ import { ResultContainer, Title, Label } from "./styles";
 import CustomSelect from "../../components/CustomSelect";
 import Grid from "@mui/material/Grid";
 import ProductCard from "../../components/ProductCard";
-import { useSelector } from "react-redux";
 import AppPagination from "../../components/Pagination";
-import { useLocation } from "react-router-dom";
 
-const useQuery = () => {
-  return new URLSearchParams(useLocation().search);
-};
 const options = ["color", "size", "brand"];
 const SearchResultsDisplay = () => {
-  let results = useSelector((state) => state.productReducer);
-  const query = useQuery();
-  const page = query.get("page") || 1;
-  // const search = query.get("searchQuery");
-  // console.log(results);
+  // const page = query.get("page") || 1;
 
   return (
     <ResultContainer>
@@ -30,14 +21,21 @@ const SearchResultsDisplay = () => {
           items={options}
         />
       </Title>
-      <Grid container spacing={5} mt={2} mb={5} justifyContent="space-between">
-        {results.map((result) => (
-          <Grid item key={result.id} sx={{ alignItems: "center" }}>
-            <ProductCard {...result} />
-          </Grid>
+      <Grid
+        container
+        spacing={5}
+        mt={2}
+        mb={5}
+        justifyContent="space-evenly"
+        alignItems={"center"}
+      >
+        {[...Array(6)].map((_, index) => (
+          // <Grid item key={index} sx={{ alignItems: "center" }}>
+          <ProductCard />
+          // </Grid>
         ))}
       </Grid>
-      <AppPagination count={10} page={page} mt={3} />
+      <AppPagination count={10} page={1} mt={3} />
     </ResultContainer>
   );
 };

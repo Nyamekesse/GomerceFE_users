@@ -43,10 +43,10 @@ export const FooterContent = styled(Box)(({ theme }) => ({
   justifyContent: "space-between",
   alignItems: "flex-start",
   padding: "5% 10% 2%",
-  [theme.breakpoints.down("laptop")]: {
+  [theme.breakpoints.down("laptop_1024")]: {
     padding: "5% 4% 2%",
   },
-  [theme.breakpoints.down("tablet")]: {
+  [theme.breakpoints.down("tablet_840")]: {
     flexDirection: "column",
     alignItems: "center",
   },
@@ -67,10 +67,10 @@ export const FooterBottom = styled(Box)(({ theme }) => ({
   width: "100%",
   height: "auto",
   alignSelf: "stretch",
-  [theme.breakpoints.down("laptop")]: {
+  [theme.breakpoints.down("laptop_1024")]: {
     padding: "1.5% 4% ",
   },
-  [theme.breakpoints.down("mobile_large")]: {
+  [theme.breakpoints.down("mobile_650")]: {
     flexDirection: "column",
   },
 }));
@@ -89,7 +89,7 @@ export const CopyRightStyling = (theme) => ({
   fontSize: "18px",
   lineHeight: "25px",
   color: "#F4F5EF",
-  [theme.breakpoints.down("mobile_large")]: {
+  [theme.breakpoints.down("mobile_650")]: {
     marginTop: "1%",
   },
 });

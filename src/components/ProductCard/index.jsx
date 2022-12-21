@@ -11,17 +11,19 @@ import {
   descriptionTag,
 } from "./styles";
 import Button from "@mui/material/Button";
-
-function ProductCard({ image, price, description }) {
+import Image from "../../Assets/Images/phone_1.jpg";
+function ProductCard() {
   return (
     <Card sx={cardStyles}>
-      <CardMedia component="img" sx={imgStyle} image={image} alt={image} />
+      <CardMedia component="img" sx={imgStyle} image={Image} alt={Image} />
       <CardContent sx={secondSection}>
         <Typography variant="body2" sx={descriptionTag}>
-          {description.substring(0, 17) + "..."}
+          {/* {description.substring(0, 17) + "..."} */}
+          Lorem ipsum dolor sit,
         </Typography>
         <Typography variant="h6" sx={priceTag}>
-          {`$ ${price}`}
+          {/* {`$ ${price}`} */}
+          $$$$
         </Typography>
         <Button variant="outlined">Add to Cart</Button>
       </CardContent>

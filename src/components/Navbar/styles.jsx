@@ -30,7 +30,7 @@ export const StyledButtonGroup = styled(Box)(({ theme }) => ({
   justifyContent: "space-between",
   width: "368px",
   height: "34px",
-  [theme.breakpoints.down("laptop")]: {
+  [theme.breakpoints.down("laptop_1024")]: {
     width: "100px",
   },
 }));

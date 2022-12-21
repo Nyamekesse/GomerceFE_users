@@ -30,7 +30,7 @@ const Footer = () => {
             width: "100%",
             display: "flex",
             justifyContent: "space-between",
-            flexWrap: { mobile_small: "wrap", tablet: "nowrap" },
+            flexWrap: { mobile_0: "wrap", tablet_840: "nowrap" },
           }}
         >
           {footerData.map((setup) => {

@@ -4,7 +4,6 @@ import Wrapper from "../../components/Wrapper/Wrapper";
 import DetailsMain from "./DetailsMain";
 import SpecificationsMain from "./SpecificationsMain";
 import ReviewsMain from "./ReviewsMain";
-import RecommendedItems from "../../components/RecommendedItems";
 
 const ItemPage = () => {
   const navigation = [
@@ -18,7 +17,7 @@ const ItemPage = () => {
       <DetailsMain />
       <SpecificationsMain />
       <ReviewsMain />
-      <RecommendedItems />
+      {/* <RecommendedItems /> */}
     </Wrapper>
   );
 };

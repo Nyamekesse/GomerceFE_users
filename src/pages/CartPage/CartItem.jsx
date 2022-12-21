@@ -28,14 +28,14 @@ const CartItem = () => {
         alignItems={"flex-start"}
         sx={{ padding: "2%" }}
       >
-        <Grid item mobile_large={3}>
+        <Grid item mobile_650={3}>
           <Box>
             <img src={Phone} alt={Phone} />
           </Box>
         </Grid>
         <Grid
           item
-          mobile_large={9}
+          mobile_650={9}
           container
           direction="row"
           justifyContent={"space-between"}
