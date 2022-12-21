@@ -9,6 +9,10 @@ export const Banner = styled(Box)(({ theme }) => ({
   alignItems: "center",
   padding: "0 5%",
   justifyContent: "space-between",
+
+  [theme.breakpoints.down("tablet_840")]: {
+    padding: "0 2%",
+  },
 }));
 
 export const BannerImage = styled(Box)(({ image, theme }) => ({
@@ -20,6 +24,16 @@ export const BannerImage = styled(Box)(({ image, theme }) => ({
   backgroundRepeat: "no-repeat",
   backgroundImage: `url(${image})`,
   backgroundColor: "#fff",
+
+  [theme.breakpoints.between("mobile_400", "tablet_600")]: {
+    width: "320px",
+    height: "180.88px",
+  },
+
+  [theme.breakpoints.down("mobile_400")]: {
+    width: "180px",
+    height: "142.88px",
+  },
 }));
 
 export const InfoSection = styled(Box)(({ theme }) => ({
@@ -29,7 +43,29 @@ export const InfoSection = styled(Box)(({ theme }) => ({
   alignItems: "flex-start",
   width: "487px",
   height: "244px",
-  //   paddingRight: "1%",
+  [theme.breakpoints.only("laptop_1280")]: {
+    marginLeft: "4%",
+  },
+
+  [theme.breakpoints.between("mobile_400", "tablet_800")]: {
+    width: "360px",
+    height: "230.88px",
+  },
+  [theme.breakpoints.between("tablet_840", "laptop_1024")]: {
+    marginLeft: "4%",
+  },
+
+  [theme.breakpoints.down("tablet_840")]: {
+    marginLeft: "4%",
+  },
+
+  [theme.breakpoints.down("mobile_400")]: {
+    width: "135px",
+    height: "128px",
+  },
+  [theme.breakpoints.down("mobile_375")]: {
+    marginLeft: "4%",
+  },
 }));
 
 export const Arrow = styled(Box)(({ theme }) => ({
@@ -46,7 +82,7 @@ export const Arrow = styled(Box)(({ theme }) => ({
   top: "45%",
 
   cursor: "pointer",
-  [theme.breakpoints.up("tablet_650")]: {
+  [theme.breakpoints.up("tablet_840")]: {
     display: "flex",
   },
 }));

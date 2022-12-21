@@ -82,17 +82,19 @@ export const Card = styled(Box)(({ theme }) => ({
   boxShadow: "0px 2px 2px rgba(142, 142, 142, 0.25)",
   borderRadius: "4px",
   margin: "4px",
+
   [theme.breakpoints.between("mobile_550", "tablet_834")]: {
     width: "230px",
     height: "340px",
     marginBottom: "4%",
   },
+
   [theme.breakpoints.down("mobile_550")]: {
     width: "166px",
     height: "246px",
     marginBottom: "5%",
   },
-  [theme.breakpoints.down("mobile_414")]: {
+  [theme.breakpoints.down("mobile_400")]: {
     width: "155px",
     height: "235px",
   },
