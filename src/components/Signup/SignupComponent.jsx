@@ -147,6 +147,11 @@ const SignupComponent = () => {
                       required
                       fullWidth
                       error={!isValidName && isUserFocus}
+                      helperText={
+                        !isValidName &&
+                        isUserFocus &&
+                        "Must be 4 to 24 characters  that must begin with a letter and may contain letters, numbers underscore and hyphens"
+                      }
                       autoComplete="off"
                       onChange={(event) => {
                         setUser(event.target.value);
@@ -165,6 +170,11 @@ const SignupComponent = () => {
                       required
                       fullWidth
                       error={!isValidEmail && isEmailFocus}
+                      helperText={
+                        !isValidEmail &&
+                        isEmailFocus &&
+                        "Must be in the form example@email.com"
+                      }
                       autoComplete="off"
                       onChange={(event) => {
                         setEmail(event.target.value);
@@ -182,6 +192,11 @@ const SignupComponent = () => {
                       id="pwd"
                       fullWidth
                       error={!isValidPwd && isPwdFocus}
+                      helperText={
+                        !isValidPwd &&
+                        isPwdFocus &&
+                        "Must be 8 to 24 characters  and may contain letters, numbers and special characters: !@#$%"
+                      }
                       required
                       autoComplete="off"
                       onChange={(event) => {
@@ -199,6 +214,11 @@ const SignupComponent = () => {
                       id="confirmPwd"
                       required
                       error={!isValidMatch && isMatchFocus}
+                      helperText={
+                        !isValidMatch &&
+                        isMatchFocus &&
+                        "Must match the above password input field"
+                      }
                       fullWidth
                       onChange={(event) => {
                         setMatchPwd(event.target.value);
