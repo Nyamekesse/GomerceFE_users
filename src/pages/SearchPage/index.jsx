@@ -15,11 +15,16 @@ const SearchPage = () => {
     { label: "Collection", link: "/" },
     { label: "Item Title", link: "/" },
   ];
+
   const theme = useTheme();
+  const matchesLaptop_1024 = useMediaQuery(
+    theme.breakpoints.down("laptop_1024")
+  );
   const matchesTablet = useMediaQuery(theme.breakpoints.down("tablet_840"));
+
   return (
     <Wrapper>
-      <BreadCrumbs navigation={navigation} />
+      <BreadCrumbs navigation={navigation} max={matchesLaptop_1024 ? 2 : 8} />
       <Grid
         container
         direction="row"

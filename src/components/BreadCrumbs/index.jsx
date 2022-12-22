@@ -4,13 +4,14 @@ import Link from "@mui/material/Link";
 import Stack from "@mui/material/Stack";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import Button from "@mui/material/Button";
+
 function handleClick(event) {
   event.preventDefault();
   console.info("You clicked a breadcrumb.");
 }
 
 const BreadCrumbs = (props) => {
-  const { navigation } = props;
+  const { navigation, max } = props;
   const breadcrumbs = [
     navigation.length > 0 &&
       navigation.map((item, index) => {
@@ -31,7 +32,7 @@ const BreadCrumbs = (props) => {
     <Stack spacing={2} mt={3} mb={3}>
       <Breadcrumbs
         separator={<NavigateNextIcon fontSize="small" />}
-        aria-label="breadcrumb"
+        maxItems={max}
       >
         {breadcrumbs}
       </Breadcrumbs>
