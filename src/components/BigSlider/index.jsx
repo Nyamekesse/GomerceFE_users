@@ -11,7 +11,7 @@ const BigSlider = () => {
   return (
     <Box
       sx={{
-        margin: "5% 0",
+        margin: "3% 0 5%",
         boxShadow: "0px 2px 2px rgba(142, 142, 142, 0.25)",
         backgroundColor: "yellow",
       }}

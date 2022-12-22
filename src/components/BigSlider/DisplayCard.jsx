@@ -13,14 +13,23 @@ const DisplayCard = ({ title, label, description, image }) => {
       <InfoSection>
         <Typography
           variant="h1"
-          fontSize={{ mobile_0: "14px", mobile_550: "32px" }}
+          fontSize={{
+            mobile_0: "14px",
+            mobile_400: "25px",
+            mobile_550: "28px",
+            mobile_600: "32px",
+          }}
           fontWeight={"700"}
         >
           {title}
         </Typography>
         <Typography
           variant="body1"
-          fontSize={{ mobile_0: "14px", mobile_550: "28px" }}
+          fontSize={{
+            mobile_0: "14px",
+            mobile_550: "22px",
+            mobile_600: "28px",
+          }}
           fontWeight={"400"}
           mt={"4%"}
           mb={"3%"}
