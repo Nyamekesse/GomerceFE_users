@@ -1,7 +1,15 @@
-import React from "react";
+import { ThemeProvider } from "@emotion/react";
 
-const SignUp = () => {
-  return <div>SIGN UP PAGE</div>;
+import { theme } from "./styles/custom-theme";
+import React from "react";
+import SignupComponent from "../../components/Signup/SignupComponent";
+
+const Signup = () => {
+  return (
+    <ThemeProvider theme={theme}>
+      <SignupComponent />
+    </ThemeProvider>
+  );
 };
 
-export default SignUp;
+export default Signup;
