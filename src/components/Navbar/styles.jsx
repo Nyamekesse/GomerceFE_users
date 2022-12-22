@@ -6,7 +6,7 @@ export const customAppBarStyle = (theme) => ({
   flexDirection: "column",
   // alignItems: "center",
   justifyContent: "center",
-  width: "98.7vw",
+  maxWidth: "100%",
   // maxWidth: "1440px",
   minHeight: "90px",
   // padding: "20px, 53px",
@@ -15,7 +15,7 @@ export const customAppBarStyle = (theme) => ({
 });
 
 export const toolBarStyles = {
-  width: "100%",
+  width: "100vw",
   display: "flex",
   flexDirection: "row",
   justifyContent: "space-between",

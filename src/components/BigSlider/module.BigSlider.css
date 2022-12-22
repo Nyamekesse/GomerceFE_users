@@ -16,13 +16,6 @@ body {
     align-items: flex-start;
 }
 
-h4 {
-    text-transform: capitalize;
-    line-height: 1.25;
-    margin-bottom: 0.75rem;
-    font-size: 0.875rem;
-}
-
 
 @media screen and (min-width: 800px) {
     h4 {
@@ -34,65 +27,64 @@ h4 {
     }
 }
 
-
-
-/* section */
-.section {
-    width: 100%;
-    height: 650px;
-    background-color: white;
-}
-
 /*
 =============== 
 Slider
 ===============
 */
-.title {
-    text-transform: capitalize;
-    margin-bottom: 0.1rem;
-    font-size: 35px;
-}
 
-.title h2 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 500;
-}
-
-.title span {
-    font-size: 0.85em;
-    margin-right: 1rem;
-    font-weight: 700;
+/* section */
+.section {
+    width: 50%;
+    height: 650px;
+    background-color: white;
+    margin: 0 auto;
 }
 
 .section-center {
     margin: 0 auto;
     margin-top: 0.25rem;
     margin-bottom: 10px;
-    width: 100vw;
-    height: 650px;
-    max-width: 800px;
+    width: 90vw;
+    height: 500px;
+    /* max-width: 800px; */
     text-align: center;
     position: relative;
     display: flex;
     overflow: hidden;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
+
+article {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 1.5s ease;
+}
+
 
 .person-img {
-    float: left;
-    width: 100%;
-    height: 550px;
+    float: center;
+    width: 80%;
+    height: 80%;
     object-fit: cover;
+    margin: 20px auto;
 }
 
-article h4 {
+
+.action h4{
     text-transform: uppercase;
+    font-size: 20px;
+    text-align: center;
+    margin: 0 auto;
 }
 
 .action {
-    width: 400px;
+    width: 200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -103,17 +95,19 @@ article h4 {
 }
 
 
-.text {
+.action p {
     display: none;
 }
 
 .button {
+    margin: 10px auto;
     width: fit-content;
     outline: none;
-    border: 2px solid lightgray;
-    padding: 3px 15px;
+    border-radius: 5px;
+    padding: 2px 15px;
+    color: #fff;
     font-size: 20px;
-    background: transparent;
+    background: #1f2839;
     font-family: monospace;
     text-transform: uppercase;
     cursor: pointer;
@@ -123,8 +117,8 @@ article h4 {
 
 .button:hover {
     border: 2px solid white;
-    color: white;
-    background-color: orange;
+    color: #000;
+    background-color: #b69d74;
     -webkit-transform: scale(0.98, 0.98);
     transform: scale(0.98, 0.99);
 }
@@ -143,12 +137,12 @@ article h4 {
     transform: translateY(-50%);
     background: rgba(99, 98, 98, 0.1);
     color: #fff;
-    width: 1.25rem;
-    height: 1.25rem;
+    width: 2.5rem;
+    height: 2.5rem;
     display: grid;
     place-items: center;
     border-color: transparent;
-    font-size: 1rem;
+    font-size: 2rem;
     border-radius: 0.25rem;
     cursor: pointer;
     transition: all 1.5s ease;
@@ -170,84 +164,109 @@ article h4 {
 @media screen and (min-width: 992px) {
     .section {
         width: 70vw;
-        min-height: 50vh;
+        max-height: 50vh;
         padding: 0;
-        margin: 0 auto;
+        margin: 20px auto;
     }
 
     .section-center {
         float: left;
         width: 100%;
+        padding: 0;
         max-width: 972px;
-        height: 650px;
+        max-height: 500px;
         text-align: center;
         position: relative;
         display: flex;
         overflow: hidden;
     }
 
-    .img {
-        min-width: 400px;
-        height: 100%;
-        margin: 0 20px;
-    }
-
-    .person-img {
-        float: left;
-        max-width: 450px;
-        height: 650px;
-        object-fit: cover;
-    }
-
     article {
         display: flex;
         flex-direction: row;
-        margin: 0px auto;
+        justify-content: center;
+        align-items: center;
         width: 100%;
-        /* background-color: red; */
     }
 
-    .text {
+    .img {
+        min-width: 400px;
+        height: fit-content;
+        margin: 0;
+    }
+    
+    .person-img {
+        float: left;
+        height: 100%;
+        max-width: 550px;
+        object-fit: cover;
+        margin: 0 0 0 30px;
+    }
+
+
+    .action {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        height: 300px;
+    }
+
+    .action h4 {
+        text-transform: uppercase;
+        font-size: 35px;
+        font-family: monospace;
+        letter-spacing: 0.1rem;
+        margin: 0;
+    }
+
+    .action p {
         display: contents;
         font-size: 18px;
         color: #333;
-        font-weight: 500;
-        padding: 0 30px;
+        margin: 0;
+        padding: 0;
     }
 
-    .action {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: space-between;
-        margin: 200px auto;
-        /* background-color: yellow; */
+    .button{
+        margin: 0;
     }
-}
 
-
-@media (min-width: 800px) {
-    .text {
-        max-width: 45em;
+    .icon {
+        font-size: 3rem;
+        margin-top: 1rem;
+        color: hsl(21, 62%, 45%);
     }
 
     .prev,
     .next {
-        width: 2rem;
-        height: 2rem;
-        font-size: 1.5rem;
+        position: absolute;
+        top: 45%;
+        transform: translateY(-50%);
+        background: rgba(99, 98, 98, 0.1);
+        color: #fff;
+        width: 3.5rem;
+        height: 3.5rem;
+        display: grid;
+        place-items: center;
+        border-color: transparent;
+        font-size: 3rem;
+        border-radius: 0.25rem;
+        cursor: pointer;
+        transition: all 1.5s ease;
+    }
+    
+    .prev {
+        left: 0;
+    }
+
+    .next {
+        right: 0;
     }
 }
 
-article {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: all 1.5s ease;
-}
+
 
 article.activeSlide {
     opacity: 1;

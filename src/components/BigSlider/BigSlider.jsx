@@ -45,10 +45,12 @@ function Bigslider() {
                 </div>
 
                 <div className="action">
-                    <h4 className='title'>{title}</h4>
-                    <p className="text">{desc}</p> 
+                    <h4>{title}</h4>
+                    <p>{desc}</p> 
                     <div className='button'>Shop Now</div>
                 </div>
+
+                <div className="control"></div>
                 
               </article>
             )
