@@ -22,7 +22,13 @@ const Footer = () => {
   return (
     <FooterContainer>
       <FooterContent>
-        <Typography variant="h6" mr={"6%"} sx={ColumnTitleStyle}>
+        <Typography
+          variant="h6"
+          mr={"6%"}
+          color={"#F4F5EF"}
+          fontWeight={700}
+          fontSize={18}
+        >
           Gomerce
         </Typography>
         <Box
@@ -31,6 +37,7 @@ const Footer = () => {
             display: "flex",
             justifyContent: "space-between",
             flexWrap: { mobile_0: "wrap", tablet_840: "nowrap" },
+            marginTop: { mobile_0: "3%", tablet_840: "0" },
           }}
         >
           {footerData.map((setup) => {

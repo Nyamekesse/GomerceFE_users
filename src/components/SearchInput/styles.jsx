@@ -15,7 +15,7 @@ export const Search = styled("div")(({ theme }) => ({
   alignItems: "center",
   padding: "10px 17px",
   color: "#ADADAD",
-  [theme.breakpoints.between("mobile_650", "tablet_840")]: {
+  [theme.breakpoints.between("tablet_650", "tablet_840")]: {
     width: "auto",
   },
 }));

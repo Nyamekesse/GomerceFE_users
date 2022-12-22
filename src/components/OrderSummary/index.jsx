@@ -21,7 +21,7 @@ const OrderSummary = () => {
           spacing={3}
           justifyContent="space-between"
         >
-          <Grid item mobile_650={6}>
+          <Grid item tablet_650={6}>
             <Box>
               <Typography variant="subtitle2" mt={1.5} mb={1.5} align={"left"}>
                 Subtotal
@@ -34,7 +34,7 @@ const OrderSummary = () => {
               </Typography>
             </Box>
           </Grid>
-          <Grid item mobile_650={6}>
+          <Grid item tablet_650={6}>
             <Box>
               <Typography variant="subtitle2" mt={1.5} mb={1.5} align={"right"}>
                 $$$$$$

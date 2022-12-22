@@ -61,8 +61,12 @@ export const CollectionRow = styled(Box)(({ theme }) => ({
   justifyContent: "space-between",
   marginTop: "3%",
   padding: "0px",
-  [theme.breakpoints.down("mobile_650")]: {
+  [theme.breakpoints.down("tablet_650")]: {
     flexWrap: "wrap",
+  },
+  [theme.breakpoints.down("mobile_375")]: {
+    alignItems: "center",
+    justifyContent: "center",
   },
 }));
 
@@ -78,49 +82,41 @@ export const Card = styled(Box)(({ theme }) => ({
   boxShadow: "0px 2px 2px rgba(142, 142, 142, 0.25)",
   borderRadius: "4px",
   margin: "4px",
-  [theme.breakpoints.down("tablet_840")]: {
-    width: "240px",
+  [theme.breakpoints.between("mobile_550", "tablet_834")]: {
+    width: "230px",
+    height: "340px",
+    marginBottom: "4%",
   },
-  [theme.breakpoints.down("mobile_650")]: {
-    width: "250px",
-    height: "",
+  [theme.breakpoints.down("mobile_550")]: {
+    width: "166px",
+    height: "246px",
+    marginBottom: "5%",
   },
-
-  [theme.breakpoints.down("mobile_450")]: {
-    margin: "4px auto",
+  [theme.breakpoints.down("mobile_414")]: {
+    width: "155px",
+    height: "235px",
+  },
+  [theme.breakpoints.down("mobile_375")]: {
+    width: "180px",
   },
 }));
-
-export const CardTextHeading = {
-  fontWeight: "600",
-  fontSize: "18.75px",
-  color: "#000000",
-  width: "230px",
-  height: "22px",
-  lineHeight: "22px",
-};
-
-export const buttonStyles = {
-  width: "114px",
-  height: "34px",
-  border: "none",
-  color: "#1F2839",
-  padding: "8px",
-  backgroundColor: "#F4F5EF",
-  "&:hover": {
-    backgroundColor: "#F4F5EF",
-    border: "none",
-  },
-};
 
 export const BestSellers = styled(Box)(({ theme }) => ({
   width: "100%",
   display: "flex",
   flexDirection: "column",
-  background: "#FFFFFF",
   padding: "2%",
   margin: "1% 0 2%",
   background: "#FFFFFF",
   boxShadow: "0px 2px 2px rgba(142, 142, 142, 0.25)",
   borderRadius: "2px",
+}));
+
+export const Image = styled(Box)(({ image, theme }) => ({
+  width: "100%",
+  maxWidth: "250px",
+  height: "200px",
+  objectFit: "contain",
+  backgroundSize: "cover",
+  backgroundImage: `url(${image})`,
 }));

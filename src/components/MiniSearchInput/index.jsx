@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import { useNavigate } from "react-router-dom";
-import { getProducts } from "../../actions/products";
 import {
   Search,
   SearchIconWrapper,
@@ -15,9 +14,9 @@ const MiniSearchInput = () => {
 
   const searchProduct = () => {
     if (searchWord.trim()) {
-      navigate("/products/search");
+      console.log(searchWord);
     } else {
-      navigate("/home");
+      navigate("/");
     }
   };
   const handleKeyPress = (e) => {

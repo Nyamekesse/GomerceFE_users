@@ -19,7 +19,7 @@ const PrimarySearchAppBar = () => {
   const theme = useTheme();
   const navigate = useNavigate();
   const matchesLaptop = useMediaQuery(theme.breakpoints.down("laptop_1024"));
-  const matchesMobileLarge = useMediaQuery(theme.breakpoints.up("mobile_650"));
+  const matchesMobileLarge = useMediaQuery(theme.breakpoints.up("tablet_650"));
   return (
     <AppBar position="sticky" sx={customAppBarStyle}>
       <Toolbar sx={toolBarStyles}>

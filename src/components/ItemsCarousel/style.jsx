@@ -14,7 +14,7 @@ const Arrow = styled(Box)(({ theme }) => ({
   zIndex: "5",
   top: "45%",
   cursor: "pointer",
-  [theme.breakpoints.up("mobile_650")]: {
+  [theme.breakpoints.up("tablet_650")]: {
     display: "flex",
   },
 }));

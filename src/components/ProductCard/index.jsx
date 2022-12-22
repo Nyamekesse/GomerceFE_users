@@ -1,33 +1,29 @@
 import React from "react";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import {
-  cardStyles,
-  imgStyle,
-  priceTag,
-  secondSection,
-  descriptionTag,
-} from "./styles";
+import { CardBox, Image, Details } from "./styles";
 import Button from "@mui/material/Button";
-import Image from "../../Assets/Images/phone_1.jpg";
-function ProductCard() {
+function ProductCard({ name, image, description, price }) {
   return (
-    <Card sx={cardStyles}>
-      <CardMedia component="img" sx={imgStyle} image={Image} alt={Image} />
-      <CardContent sx={secondSection}>
-        <Typography variant="body2" sx={descriptionTag}>
-          {/* {description.substring(0, 17) + "..."} */}
-          Lorem ipsum dolor sit,
+    <CardBox>
+      <Image image={image} />
+      <Details>
+        <Typography
+          variant="body2"
+          fontWeight={400}
+          textTransform="capitalize"
+          mt={"5%"}
+          mb={"5%"}
+        >
+          {description.substring(0, 17) + "..."}
         </Typography>
-        <Typography variant="h6" sx={priceTag}>
-          {/* {`$ ${price}`} */}
-          $$$$
+        <Typography variant="h6" fontWeight={600} fontSize="16px" mb={"3%"}>
+          {`$ ${price}`}
         </Typography>
-        <Button variant="outlined">Add to Cart</Button>
-      </CardContent>
-    </Card>
+        <Button variant="outlined" fullWidth>
+          Add to Cart
+        </Button>
+      </Details>
+    </CardBox>
   );
 }
 

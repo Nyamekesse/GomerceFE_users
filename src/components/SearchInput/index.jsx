@@ -15,6 +15,7 @@ const SearchInput = () => {
   const searchProduct = () => {
     if (searchWord.trim()) {
       setSearchWord("");
+      console.log(searchWord);
     } else {
       navigate("/");
     }
