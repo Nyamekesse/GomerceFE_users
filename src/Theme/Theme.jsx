@@ -13,13 +13,13 @@ const grey = "#6C757D";
 const theme = createTheme({
   breakpoints: {
     values: {
-      mobile_0: 0,
+      mobile_0: 0, //
       mobile_240: 240,
       mobile_320: 320,
       mobile_360: 360,
       mobile_375: 375,
       mobile_384: 384,
-      mobile_400: 400, //
+      mobile_400: 400,
       mobile_450: 450,
       mobile_550: 550,
       tablet_600: 600, //
@@ -29,10 +29,10 @@ const theme = createTheme({
       tablet_800: 800,
       tablet_834: 834,
       tablet_840: 840,
-      laptop_1024: 1024,
+      laptop_1024: 1024, //
       laptop_1152: 1152,
       laptop_1280: 1280,
-      desktop_1440: 1440,
+      desktop_1440: 1440, //
     },
   },
   styleOverrides: {
