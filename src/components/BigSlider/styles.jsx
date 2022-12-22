@@ -9,9 +9,12 @@ export const Banner = styled(Box)(({ theme }) => ({
   alignItems: "center",
   padding: "0 5%",
   justifyContent: "space-between",
-
+  marginLeft: "0.6em",
   [theme.breakpoints.down("tablet_840")]: {
     padding: "0 2%",
+  },
+  [theme.breakpoints.down("mobile_550")]: {
+    height: "200px",
   },
 }));
 

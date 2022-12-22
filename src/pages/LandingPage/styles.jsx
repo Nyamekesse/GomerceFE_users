@@ -14,8 +14,6 @@ export const CategoriesSideBar = styled(Box)(({ theme }) => ({
 }));
 
 export const categoryText = {
-  width: "68px",
-  height: "16px",
   fontSize: "1rem",
   display: "flex",
   alignItems: "center",
