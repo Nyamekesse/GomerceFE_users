@@ -4,7 +4,7 @@ import Footer from "./components/Footer";
 import React from "react";
 import { useLocation } from "react-router-dom";
 import { Box, styled } from "@mui/material";
-
+// import "./App.css";
 const App = () => {
   let location = useLocation();
 

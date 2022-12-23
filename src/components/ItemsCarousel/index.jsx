@@ -5,13 +5,13 @@ import "slick-carousel/slick/slick-theme.css";
 import items from "../../SetUpData/itemsCarousel";
 import ProductCard from "../ProductCard";
 import { carouselSettings } from "./settings";
-
 const ItemsCarousel = () => {
   return (
     <Slider {...carouselSettings} style={{ padding: "1% 0" }}>
       {items.map((item, index) => {
         return (
           <ProductCard
+            sx={{}}
             key={index}
             name={item.name}
             image={item.image}

@@ -49,7 +49,7 @@ export const carouselSettings = {
       },
     },
     {
-      breakpoint: 688,
+      breakpoint: 840,
       settings: {
         slidesToShow: 3,
         slidesToScroll: 1,

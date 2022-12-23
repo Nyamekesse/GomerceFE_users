@@ -9,14 +9,21 @@ import { CustomSummary } from "./styles";
 const Summary = () => {
   return (
     <CustomSummary>
-      <Typography variant="h6">Cart Summary</Typography>
+      <Typography
+        variant="h6"
+        fontWeight={400}
+        fontSize={"24px"}
+        sx={{ textAlign: { mobile_0: "center", tablet_600: "inherit" } }}
+      >
+        Cart Summary
+      </Typography>
       <CustomDivider />
       <Row mt={2} mb={1}>
         <Box>
           <Typography variant="body2">Subtotal (2 items)</Typography>
         </Box>
         <Box>
-          <Typography variant="body2" sx={{ fontSize: "20px" }}>
+          <Typography variant="body2" fontSize={"24px"} fontWeight={700}>
             <b>$ 59.9</b>
           </Typography>
         </Box>

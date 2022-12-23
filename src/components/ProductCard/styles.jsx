@@ -11,6 +11,7 @@ export const CardBox = styled(Box)(({ theme }) => ({
   [theme.breakpoints.between("laptop_1024", "laptop_1280")]: {
     width: "165px",
   },
+
   [theme.breakpoints.down("mobile_550")]: {
     width: "155px",
   },
