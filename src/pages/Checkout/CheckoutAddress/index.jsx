@@ -1,23 +1,19 @@
-import Button from "@mui/material/Button";
+import React, { useState } from "react";
 import Box from "@mui/material/Box";
 import FormControl from "@mui/material/FormControl";
 import MenuItem from "@mui/material/MenuItem";
 import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
-import React, { useState } from "react";
-import CustomCheckoutBreadcrumb from "../../components/CheckoutTimeLine";
-import { Group, Wrapper } from "./styles";
-
-const AddressMain = () => {
+import Button from "@mui/material/Button";
+import { Group } from "./styles";
+const CheckoutAddress = () => {
   const [pickupStation, setPickUpStation] = useState("");
 
   const handleChange = (event) => {
     setPickUpStation(event.target.value);
   };
   return (
-    <Wrapper>
-      <Typography variant="h5">Checkout</Typography>
-      <CustomCheckoutBreadcrumb />
+    <>
       <FormControl fullWidth>
         <Typography variant="subtitle1" mt={3} mb={3}>
           Address details
@@ -135,8 +131,8 @@ const AddressMain = () => {
       <Button variant="contained" sx={{ marginTop: "1%" }}>
         save and continue
       </Button>
-    </Wrapper>
+    </>
   );
 };
 
-export default AddressMain;
+export default CheckoutAddress;

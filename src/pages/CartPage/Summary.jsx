@@ -3,8 +3,8 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import React from "react";
 import CustomDivider from "../../components/CustomDivider";
-import { Row } from "../CheckoutDelivery/styles";
-import { CustomSummary } from "./styles";
+
+import { CustomSummary, Row } from "./styles";
 
 const Summary = () => {
   return (

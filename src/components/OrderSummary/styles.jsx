@@ -13,3 +13,12 @@ export const Wrapper = styled(Box)(({ theme }) => ({
   borderRadius: "4px",
   width: "100%",
 }));
+
+export const ListItem = styled(Box)(({ theme }) => ({
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "flex-start",
+  justifyContent: "space-between",
+  borderRadius: "4px",
+  width: "100%",
+}));

@@ -71,7 +71,6 @@ export const ListItem = styled(Box)(({ theme }) => ({
   flexDirection: "column",
   alignItems: "flex-start",
   justifyContent: "space-between",
-  // padding: "3%",
   borderRadius: "4px",
   width: "100%",
 }));

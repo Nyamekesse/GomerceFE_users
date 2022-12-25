@@ -37,3 +37,10 @@ export const CustomSummary = styled(Box)(({ theme }) => ({
     marginTop: "1em",
   },
 }));
+export const Row = styled(Box)({
+  display: "flex",
+  flexDirection: "row",
+  alignItems: "center",
+  justifyContent: "space-between",
+  marginBottom: "2%",
+});

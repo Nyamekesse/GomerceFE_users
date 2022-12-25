@@ -4,7 +4,7 @@ import Grid from "@mui/material/Grid";
 import Phone from "../../Assets/Images/phone1.jfif";
 import Typography from "@mui/material/Typography";
 import CustomDivider from "../CustomDivider";
-import { ListItem } from "../../pages/CheckoutDelivery/styles";
+import { ListItem } from "./styles";
 const OrderItemDetails = () => {
   return (
     <>

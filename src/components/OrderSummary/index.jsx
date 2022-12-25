@@ -10,7 +10,9 @@ import Box from "@mui/material/Box";
 const OrderSummary = () => {
   return (
     <>
-      <Typography variant="h5">Order summary</Typography>
+      <Typography variant="h3" fontWeight={400} fontSize={"24px"}>
+        Order summary
+      </Typography>
       <Wrapper>
         <Typography variant="subtitle2">Your Order (2 items)</Typography>
         <OrderItemDetails />
