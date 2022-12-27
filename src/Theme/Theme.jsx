@@ -169,6 +169,22 @@ const theme = createTheme({
         },
       },
     },
+    MuiTablePagination: {
+      styleOverrides: {
+        root: {
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "space-between",
+          width: "100%",
+          margin: "1em 0",
+        },
+        actions: {
+          width: "100px",
+          display: "flex",
+          flexDirection: "row",
+        },
+      },
+    },
   },
 });
 
