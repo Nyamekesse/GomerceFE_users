@@ -8,13 +8,13 @@ import { ListItem } from "./styles";
 const OrderItemDetails = () => {
   return (
     <>
-      <Grid container direction="row">
-        <Grid item tablet_650={3}>
+      <Grid container direction="row" justifyContent={"space-between"}>
+        <Grid item mobile_0={3}>
           <Box>
             <img src={Phone} alt={Phone} />
           </Box>
         </Grid>
-        <Grid item tablet_650={9}>
+        <Grid item mobile_0={7} mobile_375={8} tablet_600={9}>
           <ListItem>
             <Typography variant="p" fontSize={"14px"} fontWeight={400}>
               Smart 6, 6.6", (2 gb ram + 32 gb rom),500mah

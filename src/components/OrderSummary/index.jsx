@@ -6,11 +6,22 @@ import Grid from "@mui/material/Grid";
 import OrderItemDetails from "./OrderItemDetails";
 import CustomDivider from "../CustomDivider";
 import Box from "@mui/material/Box";
+import { useTheme } from "@mui/material/styles";
+import { useMediaQuery } from "@mui/material";
 
 const OrderSummary = () => {
+  const theme = useTheme();
+  const matchesLaptop_1024Down = useMediaQuery(
+    theme.breakpoints.down("laptop_1024")
+  );
   return (
-    <>
-      <Typography variant="h3" fontWeight={400} fontSize={"24px"}>
+    <Box sx={{ width: "100%" }}>
+      <Typography
+        variant="h3"
+        fontWeight={400}
+        fontSize={"24px"}
+        align={matchesLaptop_1024Down ? "center" : "inherit"}
+      >
         Order summary
       </Typography>
       <Wrapper>
@@ -23,7 +34,7 @@ const OrderSummary = () => {
           spacing={3}
           justifyContent="space-between"
         >
-          <Grid item tablet_650={6}>
+          <Grid item mobile_0={6}>
             <Box>
               <Typography variant="subtitle2" mt={1.5} mb={1.5} align={"left"}>
                 Subtotal
@@ -36,7 +47,7 @@ const OrderSummary = () => {
               </Typography>
             </Box>
           </Grid>
-          <Grid item tablet_650={6}>
+          <Grid item mobile_0={6}>
             <Box>
               <Typography variant="subtitle2" mt={1.5} mb={1.5} align={"right"}>
                 $$$$$$
@@ -55,7 +66,7 @@ const OrderSummary = () => {
           Modify cart
         </Button>
       </Wrapper>
-    </>
+    </Box>
   );
 };
 

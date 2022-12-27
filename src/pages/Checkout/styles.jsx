@@ -13,3 +13,11 @@ export const Container = styled(Box)(({ theme }) => ({
   boxShadow: "0px 2px 2px rgba(142, 142, 142, 0.25)",
   borderRadius: " 4px",
 }));
+
+export const Navigate = styled(Box)(({ theme }) => ({
+  display: "flex",
+  flexDirection: "row",
+  justifyContent: "space-between",
+  width: "100%",
+  marginTop: "1em",
+}));

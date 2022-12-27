@@ -22,3 +22,10 @@ export const Group = styled(Box)(({ theme }) => ({
   height: "auto",
   width: "100%",
 }));
+
+export const InputGroup = styled(Box)(({ theme }) => ({
+  width: "500px",
+  [theme.breakpoints.down("tablet_600")]: {
+    width: "100%",
+  },
+}));

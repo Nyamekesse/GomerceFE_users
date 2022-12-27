@@ -38,17 +38,22 @@ const CheckoutPayment = () => {
       </Typography>
       <Box
         sx={{
-          width: "410px",
+          width: { mobile_0: "100%", tablet_600: "410px" },
           display: "flex",
-          flexDirection: "row",
-          alignItems: "center",
+          flexDirection: { mobile_0: "column", tablet_600: "row" },
+          alignItems: { mobile_0: "flex-start", tablet_600: "center" },
+
           justifyContent: "space-between",
         }}
       >
         <Box sx={{ width: "272px" }}>
           <TextField size="small" fullWidth />
         </Box>
-        <Button size="medium" variant="outlined">
+        <Button
+          size="medium"
+          variant="outlined"
+          sx={{ marginTop: { mobile_0: "1.2em", tablet_600: "0" } }}
+        >
           add voucher
         </Button>
       </Box>
@@ -57,7 +62,7 @@ const CheckoutPayment = () => {
         {summary.map((row, index) => {
           const { label, value } = row;
           return index === 4 ? (
-            <>
+            <Box key={index}>
               <CustomDivider />
               <Row key={index}>
                 <Box>
@@ -72,7 +77,7 @@ const CheckoutPayment = () => {
                   >{`$ ${value}`}</Typography>
                 </Box>
               </Row>
-            </>
+            </Box>
           ) : (
             <Row key={index}>
               <Box>
@@ -90,7 +95,6 @@ const CheckoutPayment = () => {
           );
         })}
       </Summary>
-      <Button variant="contained">submit order</Button>
     </>
   );
 };

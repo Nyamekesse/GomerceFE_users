@@ -5,7 +5,7 @@ import MenuItem from "@mui/material/MenuItem";
 import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
-import { Group } from "./styles";
+import { Group, InputGroup } from "./styles";
 const CheckoutAddress = () => {
   const [pickupStation, setPickUpStation] = useState("");
 
@@ -21,8 +21,8 @@ const CheckoutAddress = () => {
         <Box
           sx={{
             display: "Flex",
-            flexDirection: "row",
-            alignItems: "center",
+            flexDirection: { mobile_0: "column", tablet_600: "row" },
+            alignItems: { mobile_0: "flex-start", tablet_600: "center" },
             flexWrap: "wrap",
             width: "100%",
           }}
@@ -31,7 +31,7 @@ const CheckoutAddress = () => {
             <Typography variant="subtitle2" mt={1.2} mb={2}>
               Firstname
             </Typography>
-            <Box sx={{ width: "272px" }}>
+            <Box sx={{ width: { mobile_0: "100%", mobile_360: "272px" } }}>
               <TextField size="small" fullWidth />
             </Box>
           </Box>
@@ -39,12 +39,11 @@ const CheckoutAddress = () => {
             <Typography variant="subtitle2" mt={1.2} mb={2}>
               Lastname
             </Typography>
-            <Box sx={{ width: "272px" }}>
+            <Box sx={{ width: { mobile_0: "100%", mobile_360: "272px" } }}>
               <TextField size="small" fullWidth />
             </Box>
           </Box>
         </Box>
-
         <Group>
           <Typography variant="subtitle2" mt={1.2} mb={2}>
             Mobile Number
@@ -72,14 +71,18 @@ const CheckoutAddress = () => {
               </TextField>
             </Box>
 
-            <TextField sx={{ width: "272px" }} size="small" fullWidth />
+            <TextField
+              // width={{ mobile_0: "10px", tablet_600: "260px" }}
+              size="small"
+              fullWidth
+            />
           </Box>
         </Group>
         <Group>
           <Typography variant="subtitle2" mt={1.2} mb={2}>
             Delivery address
           </Typography>
-          <Box sx={{ width: "500px" }}>
+          <InputGroup>
             <TextField
               size="small"
               fullWidth
@@ -87,13 +90,13 @@ const CheckoutAddress = () => {
               minRows={2}
               maxRows={2}
             />
-          </Box>
+          </InputGroup>
         </Group>
         <Group>
           <Typography variant="subtitle2" mt={1.2} mb={2}>
             Additional info
           </Typography>
-          <Box sx={{ width: "500px" }}>
+          <InputGroup>
             <TextField
               size="small"
               fullWidth
@@ -101,36 +104,33 @@ const CheckoutAddress = () => {
               minRows={2}
               maxRows={2}
             />
-          </Box>
+          </InputGroup>
         </Group>
         <Group>
           <Typography variant="subtitle2" mt={1.2} mb={2}>
             Region/State
           </Typography>
-          <Box sx={{ width: "500px" }}>
+          <InputGroup>
             <TextField select size="small" fullWidth>
               <MenuItem value={"london"}>London</MenuItem>
               <MenuItem value={"abuja"}>Abuja</MenuItem>
               <MenuItem value={"ghana"}>Ghana</MenuItem>
             </TextField>
-          </Box>
+          </InputGroup>
         </Group>
         <Group>
           <Typography variant="subtitle2" mt={1.2} mb={2}>
             City
           </Typography>
-          <Box sx={{ width: "500px" }}>
+          <InputGroup>
             <TextField select size="small" fullWidth>
               <MenuItem value={"london"}>London</MenuItem>
               <MenuItem value={"abuja"}>Abuja</MenuItem>
               <MenuItem value={"ghana"}>Ghana</MenuItem>
             </TextField>
-          </Box>
+          </InputGroup>
         </Group>
       </FormControl>
-      <Button variant="contained" sx={{ marginTop: "1%" }}>
-        save and continue
-      </Button>
     </>
   );
 };
