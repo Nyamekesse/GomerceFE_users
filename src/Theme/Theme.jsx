@@ -19,6 +19,7 @@ const theme = createTheme({
       mobile_360: 360,
       mobile_375: 375,
       mobile_384: 384,
+      mobile_393: 393,
       mobile_400: 400,
       mobile_450: 450,
       mobile_550: 550,

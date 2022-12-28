@@ -36,74 +36,84 @@ const rows = [
 ];
 const SummaryTable = () => {
   return (
-    <TableContainer sx={{ margin: "1% auto" }}>
-      <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table">
-        <TableHead>
-          <TableRow>
-            <TableCell padding="none">
-              <b>#</b>
-            </TableCell>
-            <TableCell align="left">
-              <b>Item</b>
-            </TableCell>
-            <TableCell align="center">
-              <b>Quantity</b>
-            </TableCell>
-            <TableCell align="center">
-              <b>Unit cost</b>
-            </TableCell>
-            <TableCell align="right" padding="none">
-              <b>Subtotal</b>
-            </TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {rows.map((row) => (
-            <TableRow key={row.id}>
-              <TableCell component="th" scope="row" sx={{ paddingLeft: "0px" }}>
-                {row.id}
+    <Box sx={{ width: "100%" }}>
+      <TableContainer sx={{ marginTop: "25px", marginBottom: "25px" }}>
+        <Table>
+          <TableHead>
+            <TableRow>
+              <TableCell padding="none">
+                <b>#</b>
               </TableCell>
-              <TableCell align="left" sx={{ width: "168px" }} padding="normal">
-                {row.item.map((item, index) => {
-                  return (
-                    <Typography variant="caption" key={index}>{`${item +
-                      " "}`}</Typography>
-                  );
-                })}
+              <TableCell align="left">
+                <b>Item</b>
               </TableCell>
-              <TableCell align="center">{row.quantity}</TableCell>
-              <TableCell align="center">{row.unitCost}</TableCell>
+              <TableCell align="center">
+                <b>Quantity</b>
+              </TableCell>
+              <TableCell align="center">
+                <b>Unit cost</b>
+              </TableCell>
               <TableCell align="right" padding="none">
-                {row.subTotal}
+                <b>Subtotal</b>
               </TableCell>
             </TableRow>
-          ))}
-        </TableBody>
-      </Table>
-      <Box display={"flex"} flexDirection={"column"} mt={3}>
-        <Typography
-          variant="caption"
-          sx={{ textTransform: "uppercase" }}
-          align={"right"}
-        >
-          <b>Taxes &emsp;&ensp; {"N/A"}</b>
-        </Typography>
-        <Typography
-          variant="caption"
-          sx={{ textTransform: "uppercase", margin: "1% 0" }}
-          align={"right"}
-        >
-          <b>total &emsp;&ensp; {"$$$$"}</b>
-        </Typography>
-        <Typography
-          variant="caption"
-          sx={{ textTransform: "uppercase" }}
-          align={"right"}
-        >
-          <b>payment status &emsp;&ensp; {"paid"}</b>
-        </Typography>
-      </Box>
-    </TableContainer>
+          </TableHead>
+          <TableBody>
+            {rows.map((row) => (
+              <TableRow key={row.id}>
+                <TableCell
+                  component="th"
+                  scope="row"
+                  sx={{ paddingLeft: "0px" }}
+                >
+                  {row.id}
+                </TableCell>
+                <TableCell
+                  align="left"
+                  sx={{ width: "168px" }}
+                  padding="normal"
+                >
+                  {row.item.map((item, index) => {
+                    return (
+                      <Typography variant="caption" key={index}>{`${item +
+                        " "}`}</Typography>
+                    );
+                  })}
+                </TableCell>
+                <TableCell align="center">{row.quantity}</TableCell>
+                <TableCell align="center">{row.unitCost}</TableCell>
+                <TableCell align="right" padding="none">
+                  {row.subTotal}
+                </TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+        <Box display={"flex"} flexDirection={"column"} mt={3}>
+          <Typography
+            variant="caption"
+            sx={{ textTransform: "uppercase" }}
+            align={"right"}
+          >
+            <b>Taxes &emsp;&ensp; {"N/A"}</b>
+          </Typography>
+          <Typography
+            variant="caption"
+            sx={{ textTransform: "uppercase", margin: "1% 0" }}
+            align={"right"}
+          >
+            <b>total &emsp;&ensp; {"$$$$"}</b>
+          </Typography>
+          <Typography
+            variant="caption"
+            sx={{ textTransform: "uppercase" }}
+            align={"right"}
+          >
+            <b>payment status &emsp;&ensp; {"paid"}</b>
+          </Typography>
+        </Box>
+      </TableContainer>
+    </Box>
   );
 };
 

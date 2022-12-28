@@ -318,7 +318,7 @@ const OrderHistory = () => {
         <PageHeader sx={{ justifyContent: "flex-end" }}>
           <MiniSearchInput />
         </PageHeader>
-        <TableContainer style={{ marginTop: "25px", marginBottom: "25px" }}>
+        <TableContainer sx={{ marginTop: "25px", marginBottom: "25px" }}>
           <Table>
             <TableHead>
               <TableRow>
