@@ -1,4 +1,4 @@
-import Image from "../Assets/Images/BannerImage.png";
+import Image from "../assets/images/BannerImage.png";
 export const bannerInfo = [
   {
     title: "Fashion Fridays",

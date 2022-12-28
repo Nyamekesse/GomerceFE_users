@@ -1,5 +1,5 @@
-import dress from "../Assets/Images/istockphoto-1217970962-612x612.jpg";
-import collectionsImage from "../Assets/Images/collections.jpg";
+import dress from "../assets/images/istockphoto-1217970962-612x612.jpg";
+import collectionsImage from "../assets/images/collections.jpg";
 const collectionData = [
   {
     id: 1,

@@ -1,7 +1,7 @@
-import image1 from "../Assets/Images/bag1.jpg";
-import image2 from "../Assets/Images/bag2.jpg";
-import image3 from "../Assets/Images/shoe.jpg";
-import image4 from "../Assets/Images/shoe2.jpg";
+import image1 from "../assets/images/bag1.jpg";
+import image2 from "../assets/images/bag2.jpg";
+import image3 from "../assets/images/shoe.jpg";
+import image4 from "../assets/images/shoe2.jpg";
 export const summary = [
   {
     title: "Fashion Fridays",

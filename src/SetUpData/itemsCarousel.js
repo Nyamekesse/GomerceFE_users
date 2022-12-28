@@ -1,6 +1,6 @@
-import phone_1 from "../Assets/Images/phone_1.jpg";
-import phone_2 from "../Assets/Images/phone_2.jpg";
-import phone_3 from "../Assets/Images/phone_3.jpg";
+import phone_1 from "../assets/images/phone_1.jpg";
+import phone_2 from "../assets/images/phone_2.jpg";
+import phone_3 from "../assets/images/phone_3.jpg";
 
 const items = [
   {

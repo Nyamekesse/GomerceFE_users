@@ -1,15 +1,15 @@
-import Item1 from "../Assets/Images/Afcs.jpg";
-import Item2 from "../Assets/Images/Afcs_2.jpg";
-import Item3 from "../Assets/Images/Afcs_3.jpg";
-import Item4 from "../Assets/Images/Afcs_4.jpg";
-import Item5 from "../Assets/Images/Afcs_5.jpg";
-import Item6 from "../Assets/Images/Afcs_6.jpg";
-import Item7 from "../Assets/Images/Afcs_7.jpg";
-import Item8 from "../Assets/Images/Afcs_8.jpg";
-import Item9 from "../Assets/Images/Afcs_9.jpg";
-import Item10 from "../Assets/Images/Afcs_10.jpg";
-import Item11 from "../Assets/Images/shoe.jpg";
-import Item12 from "../Assets/Images/shoe2.jpg";
+import Item1 from "../assets/images/Afcs.jpg";
+import Item2 from "../assets/images/Afcs_2.jpg";
+import Item3 from "../assets/images/Afcs_3.jpg";
+import Item4 from "../assets/images/Afcs_4.jpg";
+import Item5 from "../assets/images/Afcs_5.jpg";
+import Item6 from "../assets/images/Afcs_6.jpg";
+import Item7 from "../assets/images/Afcs_7.jpg";
+import Item8 from "../assets/images/Afcs_8.jpg";
+import Item9 from "../assets/images/Afcs_9.jpg";
+import Item10 from "../assets/images/Afcs_10.jpg";
+import Item11 from "../assets/images/shoe.jpg";
+import Item12 from "../assets/images/shoe2.jpg";
 
 export const sliderItem = [
   {

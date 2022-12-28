@@ -9,7 +9,7 @@ import Select from "@mui/material/Select";
 import Typography from "@mui/material/Typography";
 import React from "react";
 import { ActionRow } from "./styles";
-import Phone from "../../Assets/Images/phone1.jfif";
+import Phone from "../../assets/images/phone1.jfif";
 import CustomDivider from "../../components/CustomDivider";
 import { useMediaQuery } from "@mui/material";
 import { useTheme } from "@mui/material";
