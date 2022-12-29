@@ -1,12 +1,12 @@
 import React from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 import LandingPage from "../pages/LandingPage";
 import Cart from "../pages/CartPage";
 import ItemPage from "../pages/ItemPage/";
 import OrdersDetail from "../pages/OrdersDetail";
 import OrdersHistory from "../pages/OrderHistory";
 import SearchPage from "../pages/SearchPage";
-import PageNotFound from "../pages/404 page/PageNotFound";
+import PageNotFound from "../pages/404 page";
 import SignUp from "../pages/SignUp";
 import LogIn from "../pages/Login";
 import Checkout from "../pages/Checkout";
@@ -22,7 +22,8 @@ const Views = () => {
       <Route exact path="/products/search" element={<SearchPage />} />
       <Route exact path="/login" element={<LogIn />} />
       <Route exact path="/signup" element={<SignUp />} />
-      <Route path="*" element={<PageNotFound />} />
+      <Route exact path="/page-not-found" element={<PageNotFound />} />
+      <Route path="*" element={<Navigate to="/page-not-found" />} />
     </Routes>
   );
 };

@@ -2,9 +2,10 @@ import Views from "./Views/Views";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import React from "react";
-import { useLocation } from "react-router-dom";
 import { Box, styled } from "@mui/material";
-// import "./App.css";
+import { Route, Routes, Navigate, useLocation } from "react-router-dom";
+
+import "./App.css";
 const App = () => {
   let location = useLocation();
 
@@ -14,15 +15,14 @@ const App = () => {
     display: "flex",
     flexDirection: "column",
   }));
+  const exceptPath = ["/login", "/signup", "/page-not-found"];
+
   return (
     <AppContainer>
-      {location.pathname !== "/login" && location.pathname !== "/signup" && (
-        <Navbar />
-      )}
+      {!exceptPath.includes(location.pathname) && <Navbar />}
       <Views />
-      {location.pathname !== "/login" && location.pathname !== "/signup" && (
-        <Footer />
-      )}
+
+      {!exceptPath.includes(location.pathname) && <Footer />}
     </AppContainer>
   );
 };
