@@ -10,6 +10,9 @@ import PageNotFound from "../pages/404 page";
 import SignUp from "../pages/SignUp";
 import LogIn from "../pages/Login";
 import Checkout from "../pages/Checkout";
+import PageInternalSeverError from "../pages/500 page";
+import PageUnderMaintenance from "../pages/UnderMaintenance";
+
 const Views = () => {
   return (
     <Routes>
@@ -22,6 +25,16 @@ const Views = () => {
       <Route exact path="/products/search" element={<SearchPage />} />
       <Route exact path="/login" element={<LogIn />} />
       <Route exact path="/signup" element={<SignUp />} />
+      <Route
+        exact
+        path="/page-under-maintenance"
+        element={<PageUnderMaintenance />}
+      />
+      <Route
+        exact
+        path="/internal-server-error"
+        element={<PageInternalSeverError />}
+      />
       <Route exact path="/page-not-found" element={<PageNotFound />} />
       <Route path="*" element={<Navigate to="/page-not-found" />} />
     </Routes>

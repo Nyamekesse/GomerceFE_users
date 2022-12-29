@@ -3,7 +3,7 @@ import { Container, Wrap, Image } from "./styles";
 import maintenancePage from "../../assets/images/page-under-maintenance.png";
 import { Typography, Box, Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-const PageNotFound = () => {
+const PageUnderMaintenance = () => {
   const navigate = useNavigate();
   return (
     <Wrap>
@@ -37,4 +37,4 @@ const PageNotFound = () => {
   );
 };
 
-export default PageNotFound;
+export default PageUnderMaintenance;

@@ -3,7 +3,7 @@ import { Container, Wrap, Image } from "./styles";
 import pageInternalSeverError from "../../assets/images/internal-server-error.png";
 import { Typography, Box, Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-const PageNotFound = () => {
+const PageInternalSeverError = () => {
   const navigate = useNavigate();
   return (
     <Wrap>
@@ -11,11 +11,11 @@ const PageNotFound = () => {
         <Image src={pageInternalSeverError} alt={pageInternalSeverError} />
         <Typography
           variant="body1"
-          fontSize={{ mobile_0: 30, mobile_393: 40 }}
+          fontSize={{ mobile_0: 25, mobile_393: 30, mobile_393: 40 }}
           fontWeight={400}
-          mb={{ mobile_0: 0, mobile_393: 1 }}
+          mb={{ mobile_393: 1 }}
         >
-          Nothing to see here
+          Something bad just happened...
         </Typography>
         <Box
           width={{ mobile_0: "100%", tablet_600: "419px" }}
@@ -26,17 +26,23 @@ const PageNotFound = () => {
           margin={"0 auto"}
         >
           <Typography variant="caption" fontSize={12} fontWeight={400} mb={1}>
-            Page you are trying to open does not exist. You may have mistyped
-            the address, or the page has been moved to another URL. If you think
-            this is an error contact support.
+            Our servers could not handle your request. Don't worry, our
+            development team was already notified. Try refreshing the page.
+            <br />
+            Refresh the page
           </Typography>
         </Box>
-        <Button variant="contained" onClick={() => navigate("/")}>
-          take me back to homepage
+        <Button
+          variant="contained"
+          onClick={() => {
+            window.location.reload();
+          }}
+        >
+          refresh page
         </Button>
       </Container>
     </Wrap>
   );
 };
 
-export default PageNotFound;
+export default PageInternalSeverError;

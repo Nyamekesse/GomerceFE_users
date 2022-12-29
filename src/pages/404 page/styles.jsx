@@ -24,7 +24,9 @@ export const Container = styled(Box)(({ theme }) => ({
 }));
 export const Image = styled("img")(({ theme }) => ({
   width: "100%",
-
   height: "400px",
   objectFit: "contain",
+  [theme.breakpoints.down("tablet_600")]: {
+    height: "auto",
+  },
 }));

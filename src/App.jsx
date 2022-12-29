@@ -15,7 +15,13 @@ const App = () => {
     display: "flex",
     flexDirection: "column",
   }));
-  const exceptPath = ["/login", "/signup", "/page-not-found"];
+  const exceptPath = [
+    "/login",
+    "/signup",
+    "/page-not-found",
+    "/page-under-maintenance",
+    "/internal-server-error",
+  ];
 
   return (
     <AppContainer>

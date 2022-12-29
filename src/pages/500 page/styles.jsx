@@ -21,10 +21,15 @@ export const Container = styled(Box)(({ theme }) => ({
   [theme.breakpoints.down("mobile_550")]: {
     width: "100%",
   },
+  [theme.breakpoints.down("mobile_320")]: {
+    top: "60%",
+  },
 }));
 export const Image = styled("img")(({ theme }) => ({
   width: "100%",
-
   height: "400px",
   objectFit: "contain",
+  [theme.breakpoints.down("tablet_600")]: {
+    height: "auto",
+  },
 }));
