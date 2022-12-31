@@ -3,9 +3,9 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import React from "react";
 import { Box, styled } from "@mui/material";
-import { Route, Routes, Navigate, useLocation } from "react-router-dom";
-
+import { useLocation } from "react-router-dom";
 import "./App.css";
+import FloatingButton from "./components/FloatingButton";
 const App = () => {
   let location = useLocation();
 
@@ -27,7 +27,7 @@ const App = () => {
     <AppContainer>
       {!exceptPath.includes(location.pathname) && <Navbar />}
       <Views />
-
+      <FloatingButton />
       {!exceptPath.includes(location.pathname) && <Footer />}
     </AppContainer>
   );

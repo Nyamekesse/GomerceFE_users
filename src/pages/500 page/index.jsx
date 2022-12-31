@@ -11,7 +11,7 @@ const PageInternalSeverError = () => {
         <Image src={pageInternalSeverError} alt={pageInternalSeverError} />
         <Typography
           variant="body1"
-          fontSize={{ mobile_0: 25, mobile_393: 30, mobile_393: 40 }}
+          fontSize={{ mobile_0: 25, mobile_393: 30, tablet_600: 40 }}
           fontWeight={400}
           mb={{ mobile_393: 1 }}
         >
