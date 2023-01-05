@@ -261,7 +261,7 @@ const SignupComponent = () => {
             mobile_550={5}
             tablet_840={6}
             laptop_1024={8}
-          ></Grid>
+          />
         </Grid>
       )}
     </>
