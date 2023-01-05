@@ -4,7 +4,7 @@ import CustomSelect from "../../components/CustomSelect";
 import Grid from "@mui/material/Grid";
 import ProductCard from "../../components/ProductCard";
 import AppPagination from "../../components/Pagination";
-
+import items from "../../SetUpData/itemsCarousel";
 const options = ["color", "size", "brand"];
 const SearchResultsDisplay = () => {
   // const page = query.get("page") || 1;
@@ -12,10 +12,10 @@ const SearchResultsDisplay = () => {
   return (
     <ResultContainer>
       <Title>
-        <Label>Displaying 8 out 100 results</Label>
+        <Label>Displaying {"8"} out 100 results</Label>
         <CustomSelect
-          showBackground={true}
-          showBorder={false}
+          background={"true"}
+          border={"false"}
           width={"111px"}
           label="sort by"
           items={options}
@@ -29,10 +29,16 @@ const SearchResultsDisplay = () => {
         justifyContent="space-evenly"
         alignItems={"center"}
       >
-        {[...Array(6)].map((_, index) => (
-          // <Grid item key={index} sx={{ alignItems: "center" }}>
-          <ProductCard />
-          // </Grid>
+        {items.map((item, index) => (
+          <Grid item key={index} sx={{ alignItems: "center" }}>
+            <ProductCard
+              key={index}
+              name={item.name}
+              image={item.image}
+              price={item.price}
+              description={item.desc}
+            />
+          </Grid>
         ))}
       </Grid>
       <AppPagination count={10} page={1} mt={3} />

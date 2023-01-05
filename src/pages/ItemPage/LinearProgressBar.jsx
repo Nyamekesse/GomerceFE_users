@@ -28,7 +28,12 @@ const LinearProgressBar = (props) => {
       }}
     >
       <Typography variant="body1">{props.label}</Typography>
-      <Box sx={{ width: "689px", marginLeft: "2%" }}>
+      <Box
+        sx={{
+          width: { mobile_0: "100%", laptop_1152: "689px" },
+          marginLeft: "2%",
+        }}
+      >
         <BorderLinearProgress variant="determinate" value={props.value} />
       </Box>
     </Box>

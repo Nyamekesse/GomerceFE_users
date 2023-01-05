@@ -1,13 +1,13 @@
 import React from "react";
 import ItemsCarousel from "../../components/ItemsCarousel";
 import Collections from "./Collections";
-// import BigSlider from "../../components/BigSlider";
+import BigSlider from "../../components/BigSlider";
 import { Typography } from "@mui/material";
 import { BestSellers } from "./styles";
 const AsideMain = () => {
   return (
     <>
-      {/* <BigSlider /> */}
+      <BigSlider />
       <BestSellers>
         <Typography
           variant="h6"

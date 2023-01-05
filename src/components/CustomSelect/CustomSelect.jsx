@@ -1,12 +1,10 @@
 import { styled } from "@mui/material/styles";
 import TextField from "@mui/material/TextField";
 
-export const StyledSelect = styled(TextField)(
-  ({ showBackground, showBorder }) => ({
-    background: showBackground ? "#F4F5EF" : "",
-    border: showBorder ? "1px solid #CED4DA" : "none",
-  })
-);
+export const StyledSelect = styled(TextField)(({ background, border }) => ({
+  background: background === "true" ? "#F4F5EF" : "",
+  border: border === "true" ? "1px solid #CED4DA" : "none",
+}));
 
 export const sortLabelStyle = {
   width: "63px",

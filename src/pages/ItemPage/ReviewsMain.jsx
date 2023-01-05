@@ -15,8 +15,21 @@ const ReviewsMain = () => {
   return (
     <ReviewsSection>
       <ReviewsHeadWrap>
-        <Typography variant="h6">Ratings and reviews</Typography>
-        <Typography variant="caption">
+        <Typography
+          variant="h6"
+          fontSize={{
+            mobile_0: "16px",
+            tablet_600: "20px",
+            laptop_1024: "28px",
+          }}
+        >
+          Ratings and reviews
+        </Typography>
+        <Typography
+          variant="caption"
+          fontSize={"14px"}
+          sx={{ display: { mobile_0: "none", tablet_600: "inline-block" } }}
+        >
           <b>Ratings and reviews are verified</b>
         </Typography>
       </ReviewsHeadWrap>

@@ -111,8 +111,8 @@ const OrdersHistory = () => {
         >
           <Typography variant="body2">show</Typography>
           <CustomSelect
-            showBorder={true}
-            showBackground={false}
+            border={true}
+            background={false}
             width={"70px"}
             items={options}
             margin="0 5%"

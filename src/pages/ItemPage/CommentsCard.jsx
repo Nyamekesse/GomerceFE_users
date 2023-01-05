@@ -14,6 +14,7 @@ const CommentsCard = () => {
           width: "100%",
           alignItems: "center",
           justifyContent: "space-between",
+          marginBottom: { mobile_0: "1em", mobile_600: "0" },
         }}
       >
         <Typography variant="body2">John Doe</Typography>
@@ -45,7 +46,11 @@ const CommentsCard = () => {
         <Ratings margin={"0 2% 0 0"} readOnly={true} />
         <Typography variant="caption">September 6, 2022</Typography>
       </Box>
-      <Typography variant="body1">
+      <Typography
+        variant="body1"
+        fontSize={"14px"}
+        mt={{ mobile_0: "5%", tablet_600: "0" }}
+      >
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ex
         perferendis modi, labore inventore, neque nobis maxime esse est
         voluptates nesciunt vero. Cumque cupiditate odit nesciunt ducimus

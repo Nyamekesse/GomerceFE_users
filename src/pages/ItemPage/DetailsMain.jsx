@@ -24,15 +24,15 @@ const DetailsMain = () => {
     <Details>
       <Grid
         container
-        direction="row"
+        direction={{ mobile_0: "column", laptop_1024: "row" }}
         mt={2}
         mb={3}
         justifyContent="space-between"
       >
-        <Grid item tablet_650={4}>
+        <Grid item mobile_0={12} laptop_1024={4}>
           <ItemImage />
         </Grid>
-        <Grid item tablet_650={8}>
+        <Grid item mobile_0={12} laptop_1024={8}>
           <ItemDetails>
             <Box
               sx={{
@@ -46,21 +46,35 @@ const DetailsMain = () => {
                 sx={{
                   display: "flex",
                   flexDirection: "row",
-                  alignItems: "center",
+                  // alignItems: "center",
                   justifyContent: "space-between",
                 }}
               >
-                <Typography variant="body2" noWrap>
+                <Typography
+                  variant="body2"
+                  display={"flex"}
+                  flexDirection={{ mobile_0: "column", mobile_550: "row" }}
+                >
                   Infinix Smart 6,6.6", 2GB RAM, 5000mAh, Polar Black
                 </Typography>
-                <IconButton size="small" disableRipple>
+                <IconButton
+                  size="small"
+                  disableRipple
+                  sx={{ marginRight: { mobile_0: "5px", mobile_550: "0" } }}
+                >
                   <FavoriteIcon fontSize="small" />
                 </IconButton>
               </Box>
-              <Typography variant="caption" sx={{ margin: "2% 0" }} noWrap>
+              <Typography variant="caption" sx={{ margin: "2% 0" }}>
                 Brand: {"Infinix"} Similar products to infinix
               </Typography>
-              <Box sx={{ display: "flex", flexDirection: "row" }}>
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "row",
+                  width: "100%",
+                }}
+              >
                 <Ratings readOnly={true} /> &nbsp;&nbsp;
                 <Typography variant="caption" noWrap>
                   from {"27"} verified viewers
@@ -72,18 +86,16 @@ const DetailsMain = () => {
               <Typography
                 variant="body2"
                 sx={{ fontSize: "24px", fontWeight: "600" }}
-                noWrap
               >
                 ${"10.99"}
               </Typography>
               <Typography
                 variant="caption"
                 sx={{ margin: "2% 0", fontSize: "12px" }}
-                noWrap
               >
                 In Stock
               </Typography>
-              <Typography variant="caption" noWrap>
+              <Typography variant="caption">
                 + shipping from {"---"} to {"---"}
               </Typography>
               <Box mt={2} mb={1}>
@@ -95,12 +107,10 @@ const DetailsMain = () => {
                   Add to cart
                 </Button>
               </Box>
+              <CustomDivider />
             </DetailsWrap>
-            <CustomDivider />
             <ShareSection>
-              <Typography variant="body2" noWrap>
-                Share this product
-              </Typography>
+              <Typography variant="body2">Share this product</Typography>
               <IconsWrapper>
                 <IconButton>
                   <FacebookIcon />
