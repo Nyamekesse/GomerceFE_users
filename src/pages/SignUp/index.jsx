@@ -1,6 +1,6 @@
 import { ThemeProvider } from "@emotion/react";
 
-import { theme } from "./styles/custom-theme";
+import theme from "../../Theme/Theme";
 import React from "react";
 import SignupComponent from "../../components/Signup/SignupComponent";
 

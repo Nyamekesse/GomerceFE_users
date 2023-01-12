@@ -9,6 +9,8 @@ import {
   TextField,
   Typography,
 } from "@mui/material";
+import "./styles.css";
+
 // Regex
 const USER_REGEX = /^[a-zA-Z][a-zA-Z0-9-_]{3,23}$/;
 const PWD_REGEX = /^[a-zA-Z0-9-!@#$%][a-zA-Z0-9-!@#$%]{7,24}$/;
@@ -119,10 +121,32 @@ const SignupComponent = () => {
           container
           component="section"
           direction="row"
-          sx={{ height: "100vh" }}
+          // className="content"
+          sx={{
+            height: "100vh",
+            background: "url(images/signup.jpg)",
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
+          }}
+          justifyContent="center"
+          alignContent="center"
         >
-          <Grid item alignSelf="center" lg={4} md={4} sm={6} xs={12}>
-            <Grid container direction="column" sx={{ p: 4 }}>
+          <Grid
+            item
+            mobile_0={10}
+            mobile_550={7}
+            tablet_840={6}
+            laptop_1024={4}
+            sx={{ background: "white" }}
+          >
+            <Grid
+              className="full_height550"
+              container
+              direction="column"
+              sx={{ p: 4 }}
+              justifyContent="center"
+            >
               <Grid container direction="column" rowGap={2}>
                 <Grid container direction="column" alignItems="center">
                   <p
@@ -133,11 +157,11 @@ const SignupComponent = () => {
                     {errMsg}
                   </p>
                   <Typography variant="h5">Create an account</Typography>
-                  <Typography variant="body2">Let's get started</Typography>
+                  <Typography variant="body2">Let's get you started</Typography>
                 </Grid>
 
                 <Stack component="form" spacing={2} onSubmit={handleSubmit}>
-                  <Grid item>
+                  <Box>
                     <InputLabel>Username</InputLabel>
                     <TextField
                       size="small"
@@ -147,11 +171,6 @@ const SignupComponent = () => {
                       required
                       fullWidth
                       error={!isValidName && isUserFocus}
-                      helperText={
-                        !isValidName &&
-                        isUserFocus &&
-                        "Must be 4 to 24 characters  that must begin with a letter and may contain letters, numbers underscore and hyphens"
-                      }
                       autoComplete="off"
                       onChange={(event) => {
                         setUser(event.target.value);
@@ -159,9 +178,9 @@ const SignupComponent = () => {
                       onFocus={() => setIsUserFocus(true)}
                       onBlur={() => setIsUserFocus(false)}
                     />
-                  </Grid>
+                  </Box>
 
-                  <Grid item>
+                  <Box>
                     <InputLabel>Email</InputLabel>
                     <TextField
                       size="small"
@@ -170,11 +189,6 @@ const SignupComponent = () => {
                       required
                       fullWidth
                       error={!isValidEmail && isEmailFocus}
-                      helperText={
-                        !isValidEmail &&
-                        isEmailFocus &&
-                        "Must be in the form example@email.com"
-                      }
                       autoComplete="off"
                       onChange={(event) => {
                         setEmail(event.target.value);
@@ -182,9 +196,9 @@ const SignupComponent = () => {
                       onFocus={() => setIsEmailFocus(true)}
                       onBlur={() => setIsEmailFocus(false)}
                     />
-                  </Grid>
+                  </Box>
 
-                  <Grid item>
+                  <Box>
                     <InputLabel>Password</InputLabel>
                     <TextField
                       size="small"
@@ -192,11 +206,6 @@ const SignupComponent = () => {
                       id="pwd"
                       fullWidth
                       error={!isValidPwd && isPwdFocus}
-                      helperText={
-                        !isValidPwd &&
-                        isPwdFocus &&
-                        "Must be 8 to 24 characters  and may contain letters, numbers and special characters: !@#$%"
-                      }
                       required
                       autoComplete="off"
                       onChange={(event) => {
@@ -205,8 +214,8 @@ const SignupComponent = () => {
                       onFocus={() => setIsPwdFocus(true)}
                       onBlur={() => setIsPwdFocus(false)}
                     />
-                  </Grid>
-                  <Grid item>
+                  </Box>
+                  <Box>
                     <InputLabel>Confirm Password</InputLabel>
                     <TextField
                       size="small"
@@ -226,25 +235,15 @@ const SignupComponent = () => {
                       onFocus={() => setIsMatchFocus(true)}
                       onBlur={() => setIsMatchFocus(false)}
                     />
-                  </Grid>
+                  </Box>
                   <Grid
                     container
                     direction="column"
                     rowGap={2}
                     alignItems="center"
                   >
-                    <Button
-                      disabled={
-                        !isValidName ||
-                        !isValidEmail ||
-                        !isValidPwd ||
-                        !isValidMatch
-                      }
-                      variant="contained"
-                      type="submit"
-                      sx={{ px: 6 }}
-                    >
-                      Sign up
+                    <Button variant="contained" type="submit" sx={{ px: 6 }}>
+                      Create Account
                     </Button>
 
                     <Typography variant="body2">
@@ -258,17 +257,11 @@ const SignupComponent = () => {
           </Grid>
           <Grid
             item
-            lg={8}
-            md={8}
-            sm={6}
-            xs={false}
-            sx={{
-              backgroundImage: "url(Images/login.jpg)",
-              backgroundPosition: "center",
-              backgroundSize: "cover",
-              backgroundRepeat: "no-repeat",
-            }}
-          ></Grid>
+            mobile_0={0}
+            mobile_550={5}
+            tablet_840={6}
+            laptop_1024={8}
+          />
         </Grid>
       )}
     </>
